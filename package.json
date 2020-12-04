@@ -55,7 +55,7 @@
   },
   "scripts": {
     "bs": "build serve",
-    "build": "npm-run-all build:lib build:doc",
+    "build": "npm-run-all build:lib",
     "build:lib": "gatsby build",
     "build:doc": "bl-docs-build",
     "build:env-vars": "generate-env-vars",
@@ -67,7 +67,7 @@
     "prestart": "run-s build:env-vars build:doc",
     "start": "run-p -r dev-backend dev-frontend",
     "serve": "gatsby serve",
-    "heroku-postbuild": "gatsby serve"
+    "heroku-postbuild": "npm-run-all build:lib"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.4.0",
