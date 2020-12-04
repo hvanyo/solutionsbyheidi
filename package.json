@@ -1,8 +1,8 @@
 {
-  "name": "@bodiless/gatsby-starter-bodiless",
+  "name": "@bodiless/solutionsbyheidi",
   "version": "0.0.62",
-  "description": "This is a Gatsby starter for a bodiless website",
-  "author": "e2thex <esummerfield@phase2technology.com>",
+  "description": "Solutions by Heidi",
+  "author": "hvanyo <solutionsbyheidi@gmail.com>",
   "homepage": "",
   "license": "Apache-2.0",
   "private": true,
@@ -51,7 +51,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/johnsonandjohnson/bodiless-js.git"
+    "url": "https://github.com/hvanyo/solutionsbyheidi"
   },
   "scripts": {
     "bs": "build serve",
@@ -67,7 +67,7 @@
     "prestart": "run-s build:env-vars build:doc",
     "start": "run-p -r dev-backend dev-frontend",
     "serve": "gatsby serve",
-    "heroku-postbuild": "serve"
+    "heroku-postbuild": "gatsby serve"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.4.0",
