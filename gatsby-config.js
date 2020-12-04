@@ -34,7 +34,7 @@ module.exports = {
     app.use('/___docs', express.static('doc'));
   },
   siteMetadata: {
-    siteUrl: 'http://solutionsbyheidi.com/',,
+    siteUrl: 'http://solutionsbyheidi.com/',
   },
   plugins,
 };
