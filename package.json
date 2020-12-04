@@ -26,7 +26,6 @@
     "@bodiless/gatsby-theme-bodiless": "^0.0.61",
     "@bodiless/layouts": "^0.0.61",
     "@bodiless/layouts-ui": "^0.0.61",
-    "@bodiless/migration-tool": "^0.0.61",
     "@bodiless/organisms": "^0.0.61",
     "@bodiless/richtext": "^0.0.61",
     "@bodiless/richtext-ui": "^0.0.61",
@@ -54,6 +53,7 @@
     "url": "https://github.com/johnsonandjohnson/bodiless-js.git"
   },
   "scripts": {
+    "bs": "build serve",
     "build": "npm-run-all build:env-vars build:lib build:doc",
     "build:lib": "gatsby build",
     "build:doc": "bl-docs-build",
@@ -65,11 +65,7 @@
     "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx .",
     "prestart": "run-s build:env-vars build:doc",
     "start": "run-p -r dev-backend dev-frontend",
-    "serve": "gatsby serve",
-    "migrate": "cross-env DEBUG=migration_tool migration_tool",
-    "migrate:debug": "cross-env DEBUG=migration_tool:* migration_tool",
-    "migrate:postbuild": "cross-env DEBUG=migration_tool migration_tool postbuild public",
-    "migrate:full": "npm run migrate && npm run build && npm run migrate:postbuild && npm run serve"
+    "serve": "gatsby serve"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.4.0",
