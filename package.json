@@ -66,7 +66,8 @@
     "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx .",
     "prestart": "run-s build:env-vars build:doc",
     "start": "run-p -r dev-backend dev-frontend",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "heroku-postbuild": "serve"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.4.0",
