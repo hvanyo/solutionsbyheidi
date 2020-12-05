@@ -14,12 +14,15 @@
 
 import { flow } from 'lodash';
 import {
+  asMark,
   asBlock,
+  withKey,
   withButton,
 } from '@bodiless/richtext';
 import { RichText } from '@bodiless/richtext-ui';
 import {
   withDesign,
+  addClasses,
 } from '@bodiless/fclasses';
 import {
   asBold,
@@ -58,12 +61,20 @@ export const withQuoteBlockMeta = flow(
   withButton('format_quote'),
 );
 
+const asGradient = flow(
+  addClasses('bg-clip-text text-transparent bg-gradient-to-r from-brandRed via-brandYellow to-brandRed'),
+  asMark,
+  withKey('gradient'),
+  withButton('gradient'),
+);
+
 const fullFeaturedDesign = {
   Bold: asBold,
   Italic: asItalic,
   Underline: asUnderline,
   Link: flow(asEditableLink(), asLink),
   SuperScript: asSuperScript,
+  Gradient: asGradient,  
   AlignLeft: asAlignLeft,
   AlignRight: asAlignRight,
   AlignJustify: asAlignJustify,
