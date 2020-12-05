@@ -46,7 +46,7 @@ const BaseLayout = ({ children, components }) => {
     <>
       <SeoHelmet />
       <SiteHeader />
-      <Container className="leading-normal tracking-normal text-indigo-400 m-6 bg-cover bg-fixed">
+      <Container className="flex flex-col min-h-screen overflow-hidden">
         { Breadcrumbs && <Breadcrumbs />}
         {children}
       </Container>

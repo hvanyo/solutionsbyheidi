@@ -17,12 +17,17 @@ import { graphql } from 'gatsby';
 import { Page } from '@bodiless/gatsby-theme-bodiless';
 import Layout from '../../components/Layout';
 import { FlowContainerDefault } from '../../components/FlowContainer';
+import FeaturesBlocks from '../../components/FeatureBlocks';
 
 export default (props: any) => (
   <Page {...props}>
     <Layout>
 
       <FlowContainerDefault nodeKey="homepage" />
+      
+
+        <FeaturesBlocks />
+
     </Layout>
   </Page>
 );
