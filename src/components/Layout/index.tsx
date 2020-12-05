@@ -18,7 +18,7 @@ import {
   Div, designable, addClasses, replaceWith,
 } from '@bodiless/fclasses';
 import { useNode, withNodeKey, ifToggledOn } from '@bodiless/core';
-import Header from './header';
+import Header from './header2';
 import Footer from './footer';
 import SeoHelmet from './meta';
 
@@ -32,7 +32,7 @@ import MenuBreadcrumbs from '../Breadcrumbs/MenuBreadcrumbs';
 import { asPageContainer, asYMargin } from '../Elements.token';
 import { asSiteHeader, asSiteFooter } from './token';
 
-const SiteHeader = asSiteHeader(Header);
+// const SiteHeader = asSiteHeader(Header);
 const SiteFooter = asSiteFooter(Footer);
 
 const Container = flow(
@@ -45,7 +45,7 @@ const BaseLayout = ({ children, components }) => {
   return (
     <>
       <SeoHelmet />
-      <SiteHeader />
+      <Header />
       <Container className="flex flex-col min-h-screen overflow-hidden">
         { Breadcrumbs && <Breadcrumbs />}
         {children}

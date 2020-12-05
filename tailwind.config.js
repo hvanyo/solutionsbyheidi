@@ -100,6 +100,9 @@ module.exports = mergeWithBodilessConfigs({
         '10': '2.5rem',
         '48': '12rem',
       },
+      maxWidth: {
+        '15': '15rem',
+      },      
       opacity: {
         '90': '0.9',
       },

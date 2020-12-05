@@ -18,12 +18,16 @@ import { Page } from '@bodiless/gatsby-theme-bodiless';
 import Layout from '../../components/Layout';
 import { FlowContainerDefault } from '../../components/FlowContainer';
 import FeaturesBlocks from '../../components/FeatureBlocks';
+import Features from '../../components/Features';
 import Testimonials from '../../components/Testimonials';
+import HeroHome from '../../components/HeroHome';
 
 export default (props: any) => (
   <Page {...props}>
     <Layout>
       <FlowContainerDefault nodeKey="homepage" />
+        <HeroHome />
+        <Features />
         <FeaturesBlocks />
         <Testimonials />
     </Layout>

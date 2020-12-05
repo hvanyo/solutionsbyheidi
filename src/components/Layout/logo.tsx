@@ -22,6 +22,7 @@ import {
   Img,
   replaceWith,
   withDesign,
+  addClasses,
 } from '@bodiless/fclasses';
 import { asEditableImage } from '../Elements.token';
 
@@ -60,7 +61,10 @@ const LogoImg = asEditableImage({ nodeKey: 'image', nodeCollection: 'site' })(Im
 const asLogo = flow(
   designable(logoComponents, 'Logo'),
   withDesign({
-    SiteLogo: replaceWith(LogoImg),
+    SiteLogo: flow(
+      replaceWith(LogoImg),
+      addClasses('max-w-15'),
+    ),      
   }),
 );
 

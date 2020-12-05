@@ -12,8 +12,18 @@
  * limitations under the License.
  */
 
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=fallback');
+
 /* purgecss start ignore */
 @tailwind base;
 @tailwind components;
+
+
+@import 'additional-styles/utility-patterns.scss';
+
+@import 'additional-styles/toggle-switch.scss';
+@import 'additional-styles/theme.scss';
+
 /* purgecss end ignore */
 @tailwind utilities;

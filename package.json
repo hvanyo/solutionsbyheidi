@@ -45,7 +45,8 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.0",
-    "tailwindcss": "^1.0"
+    "react-transition-group": "^4.4.1",
+    "tailwindcss": "^1.8"
   },
   "files": [
     "lib"
