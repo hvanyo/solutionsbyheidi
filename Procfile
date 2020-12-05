@@ -1,1 +1,1 @@
-web: gatsby serve --port ${PORT}
+web: gatsby serve --port $PORT --host 0.0.0.0 
