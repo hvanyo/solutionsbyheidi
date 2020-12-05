@@ -39,9 +39,9 @@ function Testimonials() {
                   
                 </div>
                 <blockquote className="text-xl font-medium mb-4">
-                  “ I love this product and would recommend it to anyone. Could be not easier to use, and our multiple websites are wonderful. We get nice comments all the time. “
+                  “Sometimes you come across a genuinely talented, easy to work with and technically reassuring engineer. Heidi is better than that. She’s excellent with her communication and her suggestions were relevant. You should hire her.“
                 </blockquote>
-                <cite className="block font-bold text-lg not-italic mb-1">Darya Finger</cite>
+                <cite className="block font-bold text-lg not-italic mb-1">- dpark</cite>
               </div>
 
             </div>
