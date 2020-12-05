@@ -21,9 +21,9 @@ import { withSimpleMenuDesign } from '@bodiless/organisms';
  * ===========================================
  */
 const withBaseMenuStyles = withDesign({
-  Wrapper: addClasses('w-full bg-teal-600 text-white'),
-  Item: addClasses('hover:bg-teal-500 leading-loose text-sm'),
-  Title: addClasses('block w-full px-3'),
+  Wrapper: addClasses('flex flex-grow justify-end flex-wrap items-center'),
+  Item: addClasses(''),  
+  Title: addClasses('font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out'),
 });
 
 /**
@@ -31,11 +31,7 @@ const withBaseMenuStyles = withDesign({
  * ===========================================
  */
 const withBaseSubMenuStyles = withDesign({
-  Wrapper: withDesign({
-    List: addClasses('bg-teal-600 text-white z-10'),
-  }),
-  Item: addClasses('leading-loose text-sm'),
-  Title: addClasses('hover:bg-teal-500 block w-full px-3'),
+  Title: addClasses('font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out'),
 });
 
 /**

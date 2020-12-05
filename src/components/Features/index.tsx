@@ -30,7 +30,7 @@ function Features() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 mb-4">Solutions Offered</h1>
+            <h1 className="h2 mb-4">Solutions <span className="bg-clip-text text-transparent bg-gradient-to-r from-brandRed via-brandYellow to-brandRed">Offered</span></h1>
             <p className="text-xl text-gray-600">My priority is to provide best quality services to my clients.</p>
           </div>
 
@@ -48,7 +48,7 @@ function Features() {
                 >
                   <div>
                     <div className="font-bold leading-snug tracking-tight mb-1">Technical Business Analyst</div>
-                    <div className="text-gray-600">Provide a service to analyze and develop web-base services base on business requirements.</div>
+                    <div className="text-gray-600">Providing service to analyze and develop web-base services based on business requirements.</div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
                     <svg className="w-3 h-3 fill-current" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
@@ -77,7 +77,7 @@ function Features() {
                   onClick={(e) => { e.preventDefault(); setTab(3); }}
                 >
                   <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">Product Owner</div>
+                    <div className="font-bold leading-snug tracking-tight mb-1">Technical Product Owner</div>
                     <div className="text-gray-600">Works in the agile process for defining and prioritizing project.</div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">

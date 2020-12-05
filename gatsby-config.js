@@ -25,6 +25,15 @@ const plugins = [
   {
     resolve: 'gatsby-plugin-sitemap',
   },
+  {
+    resolve: `gatsby-plugin-postcss`,
+    options: {
+      postCssPlugins: [
+        require(`tailwindcss`),        
+        require(`autoprefixer`)
+      ],
+    },
+  },
 ];
 
 module.exports = {

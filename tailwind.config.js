@@ -34,6 +34,8 @@ module.exports = mergeWithBodilessConfigs({
           800: '#0059C2',
           900: '#004391',
         },
+        brandRed: '#d72027',
+        brandYellow: '#F3EED9',
       },
       boxShadow: {
         xs: '0 0 0 1px rgba(0, 0, 0, 0.16)',

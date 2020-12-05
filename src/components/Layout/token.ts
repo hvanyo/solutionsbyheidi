@@ -19,20 +19,23 @@ import {
 } from '@bodiless/fclasses';
 import {
   asPageContainer,
-  asPrimaryColorBackground,
 } from '../Elements.token';
 
 const asDefaultLogoStyle = withDesign({
-  SiteReturn: addClasses('flex-shrink px-2'),
+  SiteReturn: addClasses('block'),
   SiteLogo: addClasses('h-16 max-w-1'),
   // Do not addClasses to SiteLink as by default its Gatsby Link and not designable.
 });
 
+
 const asSiteHeader = withDesign({
-  Wrapper: flow(addClasses('')),
-  Container: flow(asPageContainer, addClasses('flex min-h-16 items-end')),
+  Wrapper: addClasses('fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out'),
+  Container: addClasses('max-w-6xl mx-auto px-5 sm:px-6'),
   MenuContainer: asPageContainer,
+  SiteBranding: addClasses('flex-shrink-0 mr-4'),
   SiteLogoReturn: asDefaultLogoStyle,
+  SiteLogoContainer: addClasses("flex items-center justify-between h-16 md:h-20"),
+  SiteNav: addClasses('flex flex-grow justify-end'),
 });
 
 const asSiteFooter = withDesign({

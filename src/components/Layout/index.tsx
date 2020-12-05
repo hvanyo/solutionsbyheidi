@@ -18,26 +18,19 @@ import {
   Div, designable, addClasses, replaceWith,
 } from '@bodiless/fclasses';
 import { useNode, withNodeKey, ifToggledOn } from '@bodiless/core';
-import Header from './header2';
+import FullHeader from './header';
 import Footer from './footer';
 import SeoHelmet from './meta';
 
 import MenuBreadcrumbs from '../Breadcrumbs/MenuBreadcrumbs';
 
-/*
- * Comment out above import & uncomment below import, to use a
- * simple non-editable, non-designable footer.
- */
-// import Footer from './footerBasic';
-import { asPageContainer, asYMargin } from '../Elements.token';
 import { asSiteHeader, asSiteFooter } from './token';
 
-// const SiteHeader = asSiteHeader(Header);
+const SiteHeader = asSiteHeader(FullHeader);
 const SiteFooter = asSiteFooter(Footer);
 
 const Container = flow(
-  asPageContainer,
-  asYMargin,
+  
 )(Div);
 
 const BaseLayout = ({ children, components }) => {
@@ -45,7 +38,7 @@ const BaseLayout = ({ children, components }) => {
   return (
     <>
       <SeoHelmet />
-      <Header />
+      <SiteHeader />
       <Container className="flex flex-col min-h-screen overflow-hidden">
         { Breadcrumbs && <Breadcrumbs />}
         {children}
@@ -65,7 +58,7 @@ const Layout = designable({
     // hide breadcrumbs on home page
     ifToggledOn(isHomePage)(replaceWith(React.Fragment)),
   )(MenuBreadcrumbs),
-  */
+*/
 })(BaseLayout);
 
 export default Layout;

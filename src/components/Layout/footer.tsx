@@ -91,6 +91,7 @@ const FooterClean: FC<DesignableProps> = ({ components }) => {
                 </svg>
               </Link>
             </li>
+            <li>add Linked In</li>
           </ul>
           </div>            
           </SiteCopyright>
