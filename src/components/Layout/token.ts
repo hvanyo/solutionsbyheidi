@@ -39,8 +39,8 @@ const asSiteHeader = withDesign({
 });
 
 const asSiteFooter = withDesign({
-  // Wrapper: asPrimaryColorBackground,
-  Container: flow(asPageContainer, addClasses('py-3')),
+  Wrapper: addClasses('bg-gray-200'),
+  Container: flow(asPageContainer, addClasses('p-3')),
 });
 
 export {

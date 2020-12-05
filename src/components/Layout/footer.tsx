@@ -25,13 +25,13 @@ import {
   withDesign,
   addClasses,
 } from '@bodiless/fclasses';
-import { asEditable } from '../Elements.token';
+import { withEditorFullFeatured } from '../Editors';
 
 
 const MySocialLinks = () => {
   return (
     <div>
-      <ul className="flex mb-4 md:order-1 md:ml-4 md:mb-0">
+      <ul className="flex mb-4 md:order-1 md:ml-4 md:mb-0 justify-center">
         <li>
           <Link to="http://twitter.com/hejeva" className="flex justify-center items-center text-gray-600 hover:text-gray-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out" aria-label="Twitter">
             <svg className="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -115,12 +115,11 @@ const FooterClean: FC<DesignableProps> = ({ components }) => {
 const asFooterHeader = flow(
   designable(footerComponents, 'Footer'),
   withDesign({
-    SiteTitleCopyrightEditable: asEditable({ nodeKey: 'sitetitle', nodeCollection: 'site' }, 'Insert Site Title', 'site'),
-    SiteCopyright: addClasses('md:flex md:items-center md:justify-between py-4 md:py-8 border-t border-gray-200'),
-    SiteCopyrightEditable: flow(
-      asEditable({ nodeKey: 'copyright', nodeCollection: 'site' }, 'Insert Copyright', 'site'),
-      addClasses('text-sm text-gray-600 mr-4'),
+    SiteTitleCopyrightEditable: flow(
+      withEditorFullFeatured({ nodeKey: 'sitetitle', nodeCollection: 'site' }, 'Insert Site Title', 'site'),
+      addClasses('text-sm text-gray-600 text-left my-3'),
     ),
+    SiteCopyright: addClasses('flex items-center justify-between py-4 md:py-8 border-t border-gray-200'),
   }),
 );
 

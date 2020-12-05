@@ -1,3 +1,42 @@
 {
-  "text": "Made by Solutions By Heidi LLC. All rights reserved."
+  "document": {
+    "object": "document",
+    "data": {},
+    "nodes": [
+      {
+        "object": "block",
+        "type": "paragraph",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "Made by Solutions By Heidi LLC. ",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "paragraph",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "All rights reserved.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
