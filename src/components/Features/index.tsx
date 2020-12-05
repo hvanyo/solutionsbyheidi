@@ -106,7 +106,7 @@ function Features() {
                 >
                   <div className="relative inline-flex flex-col">
                     <ul>
-                      <li>List Item</li>
+                      <li>Bullets Coming Soon</li>
                     </ul>
                   </div>
                 </Transition>
@@ -124,7 +124,7 @@ function Features() {
                 >
                   <div className="relative inline-flex flex-col">
                     <ul>
-                      <li>List Item</li>
+                      <li>Bullets Coming Soon</li>
                     </ul>
                   </div>
                 </Transition>
@@ -142,7 +142,7 @@ function Features() {
                 >
                   <div className="relative inline-flex flex-col">
                     <ul>
-                      <li>List Item</li>
+                     <li>Bullets Coming Soon</li>
                     </ul>
                   </div>
                 </Transition>
