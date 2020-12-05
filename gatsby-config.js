@@ -1,7 +1,5 @@
 const express = require('express');
 
-
-
 // Gatsby plugins list.
 const plugins = [
   'gatsby-plugin-root-import',
