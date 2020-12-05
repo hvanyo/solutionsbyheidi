@@ -1,8 +1,43 @@
-import React from 'react';
+import React, { FC, ComponentType, HTMLProps } from 'react';
+import { flow } from 'lodash';
+import {
+  designable,
+  DesignableComponentsProps,
+  DesignableProps,
+  Div,
+  H1,
+  withDesign,
+  addClasses,
+  Blockquote,
+  Cite,
+  Section,
+} from '@bodiless/fclasses';
+import { withEditorFullFeatured } from '../Editors';
 
-function Testimonials() {
+
+type TestimonialsComponents = {
+  Wrapper: ComponentType<any>,
+  Quote: ComponentType<any>,
+  Submitter: ComponentType<any>,
+};
+
+export type Props = DesignableComponentsProps<HeroComponents> & HTMLProps<HTMLElement>;
+
+const testimonialsComponents: TestimonialsComponents = {
+  Wrapper: Section,
+  Quote: Blockquote,
+  Submitter: Cite,
+};
+
+const TestimonialsClean: FC<DesignableProps> = ({ components }) => {
+  const {
+    Wrapper,
+    Quote,
+    Submitter,
+  } = components;
+
   return (
-    <section className="relative">
+    <Wrapper>
 
       {/* Illustration behind content */}
       <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -mb-32" aria-hidden="true">
@@ -24,8 +59,6 @@ function Testimonials() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:py-20">
 
-
-
           {/* Testimonials */}
           <div className="max-w-3xl mx-auto mt-20" data-aos="zoom-y-out">
             <div className="relative flex items-start border-2 border-gray-200 rounded bg-white">
@@ -38,10 +71,8 @@ function Testimonials() {
                   </svg>
                   
                 </div>
-                <blockquote className="text-xl font-medium mb-4">
-                  “Sometimes you come across a genuinely talented, easy to work with and technically reassuring engineer. Heidi is better than that. She’s excellent with her communication and her suggestions were relevant. You should hire her.“
-                </blockquote>
-                <cite className="block font-bold text-lg not-italic mb-1">- dpark</cite>
+                <Quote />
+                <Submitter />
               </div>
 
             </div>
@@ -49,8 +80,98 @@ function Testimonials() {
 
         </div>
       </div>
-    </section>
+    </Wrapper>
   );
-}
+};
+
+/* TODO add data-aos="zoom-y-out" to Title */
+
+const asTestimonials = flow(
+  designable(testimonialsComponents, 'Footer'),
+  withDesign({
+    Wrapper: addClasses('relative'),    
+    Title: flow(
+      withEditorFullFeatured({ nodeKey: 'herotitle' }, 'Insert Hero Title'),
+      addClasses('text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4 z-30'),
+    ),
+    Quote: flow(
+      withEditorFullFeatured({ nodeKey: 'quote' }, 'Insert Quote'),
+      addClasses('text-xl font-medium mb-4'),
+    ),
+    Submitter: flow(
+      withEditorFullFeatured({ nodeKey: 'submitter' }, 'Insert Submitter Name'),
+      addClasses('block font-bold text-lg not-italic mb-1'),
+    ),    
+  }),
+);
+
+const Testimonials = asTestimonials(TestimonialsClean);
 
 export default Testimonials;
+
+
+/* Preserving other testimonials from website if I want to put testimonials as slider 
+
+TESTIMONIALS
+Was a pleasure working with Heidi. We were able to get the job done under a tight schedule, and she took the extra time to make tools easy to use so i can maintain going forward. Very good experience
+
+brockracer
+Always does an excellent job. I highly recommend!
+
+txentre
+Heidi did exactly what I needed, very promptly, and then went beyond the assigned work to provide instructions on how to solve the problem myself in the future.
+
+mchurleysr
+Excellent provider. Delivered exact what was order, on time and on budget. Already working with her on more projects. Thanks, Jeff
+
+Jeff
+Great job! Very professional and flexible with my schedule.
+
+Rovertrip
+Awesome. simply terrific, and we will continue to work together in the future!
+
+digguys
+She is a great find and very professional and fast. She is pragmatic with her approach and executes at a more than reasonable time frame.
+
+dpark
+Sometimes you come across a genuinely talented, easy to work with and technically reassuring engineer. Heidi is better than that. She’s excellent with her communication and her suggestions were relevant. You should hire her.
+
+dpark
+Heidi did a fantastic job. I am very happy with her level of expertise and how quickly she worked with me and got back to me on what I was trying to accomplish.
+
+brendageiger
+Heidi did an excellent job defining and fulfilling user requirements for this complex Drupal project which included a lot of customizations and integration between Drupal and MailChimp to allow users to populate the website content and calendar and push out information via email.
+
+WMBR
+Heidi did an excellent on this project, and I highly recommend her. I would definitely work with her again.
+
+mekinney
+Heidi is professional, responsive and provides a great product. It was a pleasure working with her and I would recommend her to others without hesitation.
+
+benross
+I found Heidi to be highly knowledgeable of the drupal system and very easy to work with.. All the work was done in a timely manner and most projects were finished ahead of schedule. I highly recommend Heidi to anyone looking for a top notch developer!
+
+aaronnechama
+Fabulous provider! I look forward to working with her again…fast, professional, great communication. Highly recommended.
+
+JessLL
+Appreciated Heidi’s identifying affordable solution options and recommendations to address client requirements.
+
+WMBR
+Heidi was a pleasure to work with. Very professional, knowledgeable, and personable. She would be the first person I would refer friends or colleagues to who need assistance with a WordPress related project.
+
+smallbizpr
+Heidi is a WordPress guru! She’s knowledgeable, talented and professional. She walked me thru so much of its functionality I couldn’t find elsewhere. I couldn’t have asked for a better freelancer!
+
+Mary_Frederick
+Heidi is very reliable, very responsive and in my case very patient. I would not hesitate in recommending her.
+
+chateaugm
+Heidi, I’m so proud at my website thanks to all your work, help and knowledge. I loved working with you. All those videos and instructions you made, had really learned me a lot. Your service is amazing and for any question (and I know I asked a lot) you had the perfect answer! I get so many great comments from family & friends and they all say it looks very professional. I just can’t wait to get it out to the rest of the world.
+
+Love, Petra Prijs
+Woweeeeeee, Heidi!! My revamped blog looks fantastic! I’m blown away by your extraordinarily diligent, prompt, and courteous service. What a delight to work with you – you’re truly in a class of your own.
+
+Mari Smith ~ Success Coach
+
+*/
