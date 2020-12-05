@@ -29,14 +29,14 @@ const asDefaultLogoStyle = withDesign({
 });
 
 const asSiteHeader = withDesign({
-  Wrapper: flow(asPrimaryColorBackground, addClasses('')),
+  Wrapper: flow(addClasses('')),
   Container: flow(asPageContainer, addClasses('flex min-h-16 items-end')),
   MenuContainer: asPageContainer,
   SiteLogoReturn: asDefaultLogoStyle,
 });
 
 const asSiteFooter = withDesign({
-  Wrapper: asPrimaryColorBackground,
+  // Wrapper: asPrimaryColorBackground,
   Container: flow(asPageContainer, addClasses('py-3')),
 });
 

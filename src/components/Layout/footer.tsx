@@ -22,6 +22,7 @@ import {
   P,
   Span,
   withDesign,
+  addClasses,
 } from '@bodiless/fclasses';
 import { asEditable } from '../Elements.token';
 
@@ -63,16 +64,13 @@ const FooterClean: FC<DesignableProps> = ({ components }) => {
     <Wrapper>
       <Container>
         <SiteTitleCopyright>
-          ©
           <SiteTitleCopyrightEditable />
-          &nbsp;
-          {year}
+          <SiteCopyright>
+            &nbsp;
+            &nbsp;Last Updated:&nbsp;
+            {date}
+          </SiteCopyright>
         </SiteTitleCopyright>
-        <SiteCopyright>
-          <SiteCopyrightEditable />
-          &nbsp;Last Updated:&nbsp;
-          {date}
-        </SiteCopyright>
       </Container>
     </Wrapper>
   );
@@ -82,7 +80,10 @@ const asFooterHeader = flow(
   designable(footerComponents, 'Footer'),
   withDesign({
     SiteTitleCopyrightEditable: asEditable({ nodeKey: 'sitetitle', nodeCollection: 'site' }, 'Insert Site Title', 'site'),
-    SiteCopyrightEditable: asEditable({ nodeKey: 'copyright', nodeCollection: 'site' }, 'Insert Copyright', 'site'),
+    SiteCopyrightEditable: flow(
+      asEditable({ nodeKey: 'copyright', nodeCollection: 'site' }, 'Insert Copyright', 'site'),
+      addClasses('text-sm text-gray-600 mr-4'),
+    ),
   }),
 );
 
