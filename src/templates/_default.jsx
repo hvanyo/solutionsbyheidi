@@ -21,7 +21,9 @@ import { FlowContainerDefault } from '../components/FlowContainer';
 export default props => (
   <Page {...props}>
     <Layout>
-      <FlowContainerDefault nodeKey="page" />
+      <div className='mt-16 container mx-auto'>
+        <FlowContainerDefault nodeKey="page" />
+      </div>
     </Layout>
   </Page>
 );
