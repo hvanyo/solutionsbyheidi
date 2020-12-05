@@ -1,1 +1,1 @@
-web: node https://solutions-by-heidi.herokuapp.com/
+web: gatsby serve
