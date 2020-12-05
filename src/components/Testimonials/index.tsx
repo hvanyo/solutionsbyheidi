@@ -87,7 +87,7 @@ const TestimonialsClean: FC<DesignableProps> = ({ components }) => {
 /* TODO add data-aos="zoom-y-out" to Title */
 
 const asTestimonials = flow(
-  designable(testimonialsComponents, 'Footer'),
+  designable(testimonialsComponents, 'FeaturesBlocks'),
   withDesign({
     Wrapper: addClasses('relative'),    
     Title: flow(

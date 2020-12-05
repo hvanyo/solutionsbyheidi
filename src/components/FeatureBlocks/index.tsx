@@ -1,8 +1,47 @@
-import React from 'react';
+import React, { FC, ComponentType, HTMLProps } from 'react';
+import { flow } from 'lodash';
+import { asBodilessList } from '@bodiless/components';
+import {
+  designable,
+  DesignableComponentsProps,
+  DesignableProps,
+  withDesign,
+  addClasses,
+  Section,
+  Div,
+  P,
+  H2,
+  replaceWith,
+} from '@bodiless/fclasses';
+import { withEditorFullFeatured } from '../Editors';
+import FeatureBlock, { asFeatureBlock } from './FeatureBlock';
 
-function FeaturesBlocks() {
+type FeaturesBlocksComponents = {
+  Wrapper: ComponentType<any>,
+  Featured: ComponentType<any>,
+  Title: ComponentType<any>,
+  Summary: ComponentType<any>,
+};
+
+export type Props = DesignableComponentsProps<FeaturesBlocksComponents> & HTMLProps<HTMLElement>;
+
+const featuresBlocksComponents: FeaturesBlocksComponents = {
+  Wrapper: Section,
+  Featured: Div,
+  Title: H2,
+  Summary: P,
+};
+
+const FeaturesBlocksClean: FC<DesignableProps> = ({ components }) => {
+  const {
+    Wrapper,
+    Featured,
+    Title,
+    Summary,
+  } = components;
+
   return (
-    <section className="relative">
+    <Wrapper>
 
       {/* Section background (needs .relative class on parent and next sibling elements) */}
       <div className="absolute inset-0 top-1/2 md:mt-24 lg:mt-0 bg-gray-700 pointer-events-none" aria-hidden="true"></div>
@@ -13,29 +52,16 @@ function FeaturesBlocks() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4"><span className="bg-clip-text text-transparent bg-gradient-to-r from-brandRed-400 via-brandRed-700 to-brandRed-400">Bridging</span> the Gap </h2>
-            <p className="text-xl text-gray-600">between technical team and business to deliver quality to the client.</p>
+            <Title />
+            <Summary />
           </div>
 
           {/* Items */}
           <div className="max-w-sm mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start md:max-w-2xl lg:max-w-none">
 
-            {/* 1st item */}
-            <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl">
-              <svg className="w-16 h-16 p-1 -mt-1 mb-2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" fillRule="evenodd">
-                  <rect className="fill-current text-brandRed-400" width="64" height="64" rx="32" />
-                  <g strokeWidth="2">
-                    <path className="stroke-current text-brandRed-100" d="M34.514 35.429l2.057 2.285h8M20.571 26.286h5.715l2.057 2.285" />
-                    <path className="stroke-current text-white" d="M20.571 37.714h5.715L36.57 26.286h8" />
-                    <path className="stroke-current text-brandRed-100" strokeLinecap="square" d="M41.143 34.286l3.428 3.428-3.428 3.429" />
-                    <path className="stroke-current text-white" strokeLinecap="square" d="M41.143 29.714l3.428-3.428-3.428-3.429" />
-                  </g>
-                </g>
-              </svg>
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Gather & Define Requirements</h4>
-              <p className="text-gray-600 text-center">Collaborate with business users, product owners, and business partners</p>
-            </div>
+            <Featured />
+
+
 
             {/* 2nd item */}
             <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl">
@@ -121,8 +147,37 @@ function FeaturesBlocks() {
 
         </div>
       </div>
-    </section>
+
+    </Wrapper>
   );
-}
+};
+
+const FeatureBlockList = flow(
+  asBodilessList('list'),
+  withDesign({
+    Title: flow(
+      replaceWith(FeatureBlock),
+    ),
+  }),
+)('ul');
+
+const asFeaturesBlocks = flow(
+  designable(featuresBlocksComponents, 'FeaturesBlocks'),
+  withDesign({
+    Wrapper: addClasses('relative'),
+    Title: flow(
+      withEditorFullFeatured({ nodeKey: 'sectiontitle' }, 'Insert Section Title'),
+      addClasses('h2 mb-4'),
+    ),
+    Summary: flow(
+      withEditorFullFeatured({ nodeKey: 'sectionsummary' }, 'Insert Summary'),
+      addClasses('text-xl text-gray-600'),
+    ),
+    Featured: replaceWith(FeatureBlock),
+    // Featured: replaceWith(FeatureBlockList),
+  }),
+);
+
+const FeaturesBlocks = asFeaturesBlocks(FeaturesBlocksClean);
 
 export default FeaturesBlocks;

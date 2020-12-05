@@ -1,0 +1,36 @@
+{
+  "document": {
+    "object": "document",
+    "data": {},
+    "nodes": [
+      {
+        "object": "block",
+        "type": "AlignCenter",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "Bridging",
+                "marks": [
+                  {
+                    "object": "mark",
+                    "type": "Gradient",
+                    "data": {}
+                  }
+                ]
+              },
+              {
+                "object": "leaf",
+                "text": " the Gap",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
