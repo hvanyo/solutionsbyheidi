@@ -18,6 +18,8 @@ import FeatureBlockFlowContainer from './FeatureBlockContainer';
 
 type FeaturesBlocksComponents = {
   Wrapper: ComponentType<any>,
+  GrayBackground: ComponentType<any>,
+  GrayLine: ComponentType<any>,
   Featured: ComponentType<any>,
   Title: ComponentType<any>,
   Summary: ComponentType<any>,
@@ -27,6 +29,8 @@ export type Props = DesignableComponentsProps<FeaturesBlocksComponents> & HTMLPr
 
 const featuresBlocksComponents: FeaturesBlocksComponents = {
   Wrapper: Section,
+  GrayBackground: Div,
+  GrayLine: Div,
   Featured: Div,
   Title: H2,
   Summary: P,
@@ -35,6 +39,8 @@ const featuresBlocksComponents: FeaturesBlocksComponents = {
 const FeaturesBlocksClean: FC<DesignableProps> = ({ components }) => {
   const {
     Wrapper,
+    GrayBackground,
+    GrayLine,
     Featured,
     Title,
     Summary,
@@ -44,8 +50,8 @@ const FeaturesBlocksClean: FC<DesignableProps> = ({ components }) => {
     <Wrapper>
 
       {/* Section background (needs .relative class on parent and next sibling elements) */}
-      <div className="absolute inset-0 top-1/2 md:mt-24 lg:mt-0 bg-gray-700 pointer-events-none" aria-hidden="true"></div>
-      <div className="absolute left-0 right-0 bottom-0 m-auto w-px p-px h-20 bg-gray-200 transform translate-y-1/2"></div>
+      <GrayBackground />
+      <GrayLine /> 
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:py-20">
@@ -68,6 +74,9 @@ const asFeaturesBlocks = flow(
   designable(featuresBlocksComponents, 'FeaturesBlocks'),
   withDesign({
     Wrapper: addClasses('relative'),
+    // TODO add aria-hidden="true" to GrayBackground 
+    GrayBackground: addClasses('absolute inset-0 top-1/2 md:mt-24 lg:mt-0 bg-gray-700 pointer-events-none'),
+    GrayLine: addClasses('absolute left-0 right-0 bottom-0 m-auto w-px p-px h-20 bg-gray-200 transform translate-y-1/2'),
     Title: flow(
       withEditorFullFeatured('sectiontitle', 'Insert Section Title'),
       addClasses('h2 mb-4'),
