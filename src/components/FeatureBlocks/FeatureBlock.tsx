@@ -12,7 +12,7 @@ import {
   P,
   replaceWith,
 } from '@bodiless/fclasses';
-import { withNodeKey } from '@bodiless/core';
+import { withNode } from '@bodiless/core';
 import { SquareImage } from '../Image';
 import { withEditorFullFeatured } from '../Editors';
 import { imgRequirements } from '../Image/svgimages';
@@ -56,22 +56,20 @@ const FeaturesBlockClean: FC<DesignableProps> = ({ components }) => {
 
 const asFeaturesBlock = flow(
   designable(featuresBlockComponents, 'FeaturesBlock'),
+  withNode,  
   withDesign({
-    Wrapper: addClasses(''),
-    BlockWrapper: addClasses('relative flex flex-col items-center p-6 bg-white rounded shadow-xl'),
-    SVGImage: flow(
-      replaceWith(imgRequirements),
-    ),
+    Wrapper: addClasses('shadow-xl m-3 mb-6 bg-white rounded p-3'),
+    BlockWrapper: addClasses(' '),
+    SVGImage: addClasses('w-16 h-16 p-1 -mt-1 mb-2 mx-auto'),
     Title: flow(
-      withEditorFullFeatured({ nodeKey: 'title' }, 'Insert Title'),
-      addClasses('text-xl font-bold leading-snug tracking-tight mb-1'),
+      withEditorFullFeatured('title', 'Insert Title'),
+      addClasses('text-xl font-bold leading-snug tracking-tight mb-1 text-center'),
     ),
     Body: flow(
-      withEditorFullFeatured({ nodeKey: 'body' }, 'Insert Summary'),
+      withEditorFullFeatured('body', 'Insert Summary'),
       addClasses('text-gray-600 text-center'),
     ),
   }),
-  withNodeKey({ nodeKey: 'FeatureBlock' }),
 );
 
 const FeaturesBlock = asFeaturesBlock(FeaturesBlockClean);

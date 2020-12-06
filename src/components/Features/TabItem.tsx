@@ -62,11 +62,11 @@ const asTabItem = flow(
   withDesign({
     Wrapper: addClasses('relative'),    
     Title: flow(
-      withEditorFullFeatured({ nodeKey: 'tab_title' }, 'Insert Title'),
+      withEditorFullFeatured('tab_title', 'Insert Title'),
       addClasses('font-bold leading-snug tracking-tight mb-1'),
     ),
     Summary: flow(
-      withEditorFullFeatured({ nodeKey: 'tab_summary' }, 'Insert Summary'),
+      withEditorFullFeatured('tab_summary', 'Insert Summary'),
       addClasses('text-gray-600'),
     ),
     SVGImgWrapper: addClasses('flex justify-center items-center w-8 h-8 bg-brandRed-300 text-white rounded-full shadow flex-shrink-0 ml-3'),

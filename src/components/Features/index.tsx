@@ -72,11 +72,11 @@ const asFeatures = flow(
   withDesign({
     Wrapper: addClasses('relative'),    
     Title: flow(
-      withEditorFullFeatured({ nodeKey: 'feature_sectiontitle' }, 'Insert Section Title'),
+      withEditorFullFeatured('feature_sectiontitle', 'Insert Section Title'),
       addClasses('h2 mb-4'),
     ),
     Summary: flow(
-      withEditorFullFeatured({ nodeKey: 'feature_sectionsummary' }, 'Insert Summary'),
+      withEditorFullFeatured('feature_sectionsummary', 'Insert Summary'),
       addClasses('text-xl text-gray-600'),
     ),
     TabbedArea: flow(

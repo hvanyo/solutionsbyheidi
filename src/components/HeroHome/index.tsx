@@ -70,7 +70,7 @@ const asHero = flow(
   designable(heroComponents, 'Footer'),
   withDesign({
     Title: flow(
-      withEditorFullFeatured({ nodeKey: 'herotitle' }, 'Insert Hero Title'),
+      withEditorFullFeatured('herotitle', 'Insert Hero Title'),
       addClasses('text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4 z-30'),
     ),
     Wrapper: addClasses(''),

@@ -91,15 +91,15 @@ const asTestimonials = flow(
   withDesign({
     Wrapper: addClasses('relative'),    
     Title: flow(
-      withEditorFullFeatured({ nodeKey: 'herotitle' }, 'Insert Hero Title'),
+      withEditorFullFeatured('herotitle', 'Insert Hero Title'),
       addClasses('text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4 z-30'),
     ),
     Quote: flow(
-      withEditorFullFeatured({ nodeKey: 'quote' }, 'Insert Quote'),
+      withEditorFullFeatured('quote', 'Insert Quote'),
       addClasses('text-xl font-medium mb-4'),
     ),
     Submitter: flow(
-      withEditorFullFeatured({ nodeKey: 'submitter' }, 'Insert Submitter Name'),
+      withEditorFullFeatured('submitter', 'Insert Submitter Name'),
       addClasses('block font-bold text-lg not-italic mb-1'),
     ),    
   }),
