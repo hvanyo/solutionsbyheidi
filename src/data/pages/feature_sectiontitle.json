@@ -1,0 +1,36 @@
+{
+  "document": {
+    "object": "document",
+    "data": {},
+    "nodes": [
+      {
+        "object": "block",
+        "type": "paragraph",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "Solutions ",
+                "marks": []
+              },
+              {
+                "object": "leaf",
+                "text": "Offered",
+                "marks": [
+                  {
+                    "object": "mark",
+                    "type": "Gradient",
+                    "data": {}
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
