@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "uuid": "da9b94b0-3815-11eb-86c1-91e6b00020c6",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "e7a8e490-381b-11eb-a74c-61fd2f83bd6a",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "SquareImage"
+    },
+    {
+      "uuid": "6a112b20-3819-11eb-86c1-91e6b00020c6",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "eaab2810-381b-11eb-a74c-61fd2f83bd6a",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "SquareImage"
+    },
+    {
+      "uuid": "7be28f90-381b-11eb-84cb-c32a7e5d05e9",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
+    }
+  ]
+}

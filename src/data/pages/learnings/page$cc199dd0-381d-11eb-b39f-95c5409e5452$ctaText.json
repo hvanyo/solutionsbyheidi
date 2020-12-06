@@ -5,7 +5,7 @@
     "nodes": [
       {
         "object": "block",
-        "type": "H2",
+        "type": "paragraph",
         "data": {},
         "nodes": [
           {
@@ -13,7 +13,7 @@
             "leaves": [
               {
                 "object": "leaf",
-                "text": "A series of entries describing my learnings...",
+                "text": "Read More",
                 "marks": []
               }
             ]

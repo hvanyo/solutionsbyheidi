@@ -1,0 +1,91 @@
+{
+  "document": {
+    "object": "document",
+    "data": {},
+    "nodes": [
+      {
+        "object": "block",
+        "type": "H2",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "Bodiless Static:",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "paragraph",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "paragraph",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "Once you are happy with your site, you can build a build and it will produce ",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "object": "inline",
+            "type": "Link",
+            "data": {
+              "openModal": false,
+              "slatenode": {
+                "href": "https://www.gatsbyjs.com/docs/glossary/static-site-generator/"
+              }
+            },
+            "nodes": [
+              {
+                "object": "text",
+                "leaves": [
+                  {
+                    "object": "leaf",
+                    "text": "static generated html site",
+                    "marks": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": " without the editing interface. This is deployed to internet and you get benefit of improved performance and security. ",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "document": {
+    "object": "document",
+    "data": {},
+    "nodes": [
+      {
+        "object": "block",
+        "type": "H2",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "Hosting a Static Site",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "paragraph",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "paragraph",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "There are many ways to host a static site.  I chose ",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "object": "inline",
+            "type": "Link",
+            "data": {
+              "openModal": false,
+              "slatenode": {
+                "href": "https://dashboard.heroku.com/"
+              }
+            },
+            "nodes": [
+              {
+                "object": "text",
+                "leaves": [
+                  {
+                    "object": "leaf",
+                    "text": "Heroku",
+                    "marks": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": " as an economical way that proved to be easy to setup and work with BodilessJS.   Since the technically is built off Gatsby, you can just follow their ",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "object": "inline",
+            "type": "Link",
+            "data": {
+              "openModal": false,
+              "slatenode": {
+                "href": "https://www.gatsbyjs.com/docs/deploying-to-heroku/"
+              }
+            },
+            "nodes": [
+              {
+                "object": "text",
+                "leaves": [
+                  {
+                    "object": "leaf",
+                    "text": "directions",
+                    "marks": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": " to deploy to Heroku by adding app.json and static.json.   There was addition step to server the site with creating a Procfile  and putting in \"web: gatsby serve --port $PORT --host 0.0.0.0 \"",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "paragraph",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "H2",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "Adding New Content to the Site",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "paragraph",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "paragraph",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "Anytime I need to add copy, I locally start up the edit environment and make the necessary changes, commit and push to the master branch and my static website is updated. ",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "paragraph",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "paragraph",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "Site design inspiration started from Cruip's ",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "object": "inline",
+            "type": "Link",
+            "data": {
+              "openModal": false,
+              "slatenode": {
+                "href": "https://github.com/cruip/tailwind-landing-page-template"
+              }
+            },
+            "nodes": [
+              {
+                "object": "text",
+                "leaves": [
+                  {
+                    "object": "leaf",
+                    "text": "tailwind landing page template",
+                    "marks": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": ".",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

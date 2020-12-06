@@ -33,6 +33,7 @@ import {
   asToutNoBody,
   asToutNoBodyNoTitle,
   asToutDefaultStyle,
+  asNoImage,
 } from '../Tout/token';
 import { withType } from './Categories';
 
@@ -57,6 +58,7 @@ const verticalVariations = varyDesign(
     NoTitle: withStructureFacet('No Title')(asToutNoTitle as HOC),
     NoBody: withStructureFacet('No Body')(asToutNoBody as HOC),
     NoTitleBody: withStructureFacet('No Title and Body')(asToutNoBodyNoTitle as HOC),
+    NoImage: withStructureFacet('No Image')(asNoImage as HOC),
   },
 );
 // Lets make Tout version that are Horizontal and vary the fields that are used
@@ -68,6 +70,7 @@ const horizontalVariations = varyDesign(
     WithTitleBody: withStructureFacet('With Title and Body')(),
     NoTitle: withStructureFacet('No Title')(asToutNoTitle as HOC),
     NoBody: withStructureFacet('No Body')(asToutNoBody as HOC),
+    NoImage: withStructureFacet('No Image')(asNoImage as HOC),
   },
 );
 // LEts combine the Vertical and Horizontal

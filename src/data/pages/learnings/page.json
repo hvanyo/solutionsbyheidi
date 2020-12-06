@@ -6,6 +6,20 @@
         "className": "w-full"
       },
       "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "e1031f10-381c-11eb-9f7d-3d307d0394c5",
+      "wrapperProps": {
+        "className": "w-full lg:w-1/2"
+      },
+      "type": "ToutVerticalNoImageWithCTA"
+    },
+    {
+      "uuid": "cc199dd0-381d-11eb-b39f-95c5409e5452",
+      "wrapperProps": {
+        "className": "w-full lg:w-1/2"
+      },
+      "type": "ToutVerticalNoImageWithCTA"
     }
   ]
 }

@@ -16,6 +16,7 @@ import { flow } from 'lodash';
 import {
   addClasses,
   withDesign,
+  remove,
 } from '@bodiless/fclasses';
 import {
   asToutVertical as asBToutVertical,
@@ -51,8 +52,17 @@ const asToutVertical = flow(
   asBToutVertical,
 );
 
+const asNoImage = withDesign({
+    Image: remove,
+    ImageLink: remove,
+    ImageWrapper: remove,
+});
+
 const asToutDefaultStyle = withDesign({
-  Wrapper: asTextColorPrimary,
+  Wrapper: flow(
+    asTextColorPrimary,
+    addClasses('shadow p-2'),
+  ),
   Image: asImageRounded,
   Title: asHeader2,
   Link: asCta,
@@ -86,4 +96,5 @@ export {
   asToutWithPaddings,
   asToutTextWhite,
   asToutMainMenu,
+  asNoImage,
 };

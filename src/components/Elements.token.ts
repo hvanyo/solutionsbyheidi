@@ -58,7 +58,7 @@ const asTealBackground = addClasses('bg-teal-600');
 /* Typography */
 const asBold = addClasses('');
 const asItalic = addClasses('');
-const asLink = addClasses('text-blue-700 underline');
+const asLink = addClasses('text-brandRed-400 underline');
 const asSuperScript = addClasses('');
 
 const asHeader1 = flow(addClasses('text-3xl'), asTextColorPrimary);
@@ -80,7 +80,7 @@ const asEditableLink = asBodilessLink;
 const asEditable = asEditableCore;
 
 // Tout Components
-const asCta = addClasses('bg-orange-700 hover:bg-orange-600 text-center text-white p-2 rounded');
+const asCta = addClasses('bg-brandRed-400 hover:bg-brandRed-600 text-center text-white p-2 rounded');
 
 /* Utility Classes */
 const asDisabled = addClasses('pointer-events-none');

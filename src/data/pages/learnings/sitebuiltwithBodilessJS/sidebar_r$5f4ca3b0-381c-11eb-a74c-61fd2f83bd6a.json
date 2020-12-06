@@ -1,0 +1,57 @@
+{
+  "document": {
+    "object": "document",
+    "data": {},
+    "nodes": [
+      {
+        "object": "block",
+        "type": "paragraph",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "More ",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "object": "inline",
+            "type": "Link",
+            "data": {
+              "openModal": false,
+              "slatenode": {
+                "href": "/learnings/"
+              }
+            },
+            "nodes": [
+              {
+                "object": "text",
+                "leaves": [
+                  {
+                    "object": "leaf",
+                    "text": "Learnings",
+                    "marks": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
