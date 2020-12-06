@@ -13,7 +13,39 @@
             "leaves": [
               {
                 "object": "leaf",
-                "text": "Made by Solutions By Heidi LLC. ",
+                "text": "Made by ",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "object": "inline",
+            "type": "Link",
+            "data": {
+              "openModal": false,
+              "slatenode": {
+                "href": "https://solutionsbyheidi.com/"
+              }
+            },
+            "nodes": [
+              {
+                "object": "text",
+                "leaves": [
+                  {
+                    "object": "leaf",
+                    "text": "Solutions By Heidi LLC. ",
+                    "marks": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "",
                 "marks": []
               }
             ]

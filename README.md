@@ -1,4 +1,4 @@
-# Gatsby Starter for [BodilessJS](https://github.com/johnsonandjohnson/Bodiless-JS)
+# Solutions By Heidi
 
 ## Prerequisites
 
@@ -15,10 +15,16 @@ Currently, you must install it from the main repository as follows:
 
 [Create a New Starter Site](https://johnsonandjohnson.github.io/Bodiless-JS/#/About/GettingStarted?id=creating-a-new-site)
 
+For this site: 
+```
+git clone https://github.com/hvanyo/solutionsbyheidi
+```
+
 You can then launch the editor:
 
 ```
 cd /path/to/new/site
+npm i
 npm start
 ```
 
