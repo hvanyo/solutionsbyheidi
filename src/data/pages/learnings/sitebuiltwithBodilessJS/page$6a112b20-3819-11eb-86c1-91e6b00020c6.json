@@ -47,7 +47,7 @@
             "leaves": [
               {
                 "object": "leaf",
-                "text": "Once you are happy with your site, you can build a build and it will produce ",
+                "text": "Once you are happy with your site, you can run a build and it will produce a ",
                 "marks": []
               }
             ]
@@ -79,7 +79,7 @@
             "leaves": [
               {
                 "object": "leaf",
-                "text": " without the editing interface. This is deployed to internet and you get benefit of improved performance and security. ",
+                "text": " without the editing interface. This is deployed to hosting/internet and you get benefit of improved performance and security compared to traditional CMS systems. ",
                 "marks": []
               }
             ]

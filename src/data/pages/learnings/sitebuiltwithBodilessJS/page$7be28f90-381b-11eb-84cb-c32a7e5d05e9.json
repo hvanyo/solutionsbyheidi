@@ -111,7 +111,7 @@
             "leaves": [
               {
                 "object": "leaf",
-                "text": " to deploy to Heroku by adding app.json and static.json.   There was addition step to server the site with creating a Procfile  and putting in \"web: gatsby serve --port $PORT --host 0.0.0.0 \"",
+                "text": " to deploy to Heroku by adding app.json and static.json.   There was an addition step to serve the site with creating a Procfile  and putting in \"web: gatsby serve --port $PORT --host 0.0.0.0 \"",
                 "marks": []
               }
             ]
@@ -179,7 +179,7 @@
             "leaves": [
               {
                 "object": "leaf",
-                "text": "Anytime I need to add copy, I locally start up the edit environment and make the necessary changes, commit and push to the master branch and my static website is updated. ",
+                "text": "Anytime, I need to add content, I locally start up the edit environment, make the necessary changes, commit and push to the master branch and my static website is updated automatically ",
                 "marks": []
               }
             ]
@@ -197,6 +197,23 @@
               {
                 "object": "leaf",
                 "text": "",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "paragraph",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "Credits:",
                 "marks": []
               }
             ]

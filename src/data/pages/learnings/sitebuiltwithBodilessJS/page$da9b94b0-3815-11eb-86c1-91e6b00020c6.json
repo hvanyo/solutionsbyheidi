@@ -45,7 +45,7 @@
             "leaves": [
               {
                 "object": "leaf",
-                "text": ", BodilessJS is a toolset for building editable websites in a JAMStack.  ",
+                "text": ", BodilessJS is a toolset for building editable websites in a JAMstack technology.  ",
                 "marks": []
               }
             ]
@@ -145,7 +145,7 @@
             "leaves": [
               {
                 "object": "leaf",
-                "text": ", a JAMSTACK framework, ",
+                "text": ": a JAMSTACK framework, ",
                 "marks": []
               }
             ]
@@ -177,7 +177,7 @@
             "leaves": [
               {
                 "object": "leaf",
-                "text": ", utility-first CSS framework and ",
+                "text": ": utility-first CSS framework and ",
                 "marks": []
               }
             ]
@@ -209,7 +209,7 @@
             "leaves": [
               {
                 "object": "leaf",
-                "text": ", a simple rich text editors.",
+                "text": ": a simple rich text editor.",
                 "marks": []
               }
             ]
@@ -277,7 +277,7 @@
             "leaves": [
               {
                 "object": "leaf",
-                "text": "BodilessJS provides an editing app that allows you to edit the content inline on your page.  Much like a traditional CMS, but instead of the content being saved in database, it is saved to with the site in the sites's code repository as .json files. Components can be easily added to extend the site functionality and each components manage their own data.   ",
+                "text": "BodilessJS provides an editing app that allows you to edit the content inline on your page.  Similar to a traditional CMS, but instead of the content being saved in database, it is saved with the site in the site's code repository as .json files. Components can be easily added to extend the site functionality and each components manage their own data.   ",
                 "marks": []
               }
             ]
