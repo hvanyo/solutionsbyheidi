@@ -79,7 +79,7 @@
             "leaves": [
               {
                 "object": "leaf",
-                "text": " as an economical way that proved to be easy to setup and work with BodilessJS.   Since the technically is built off Gatsby, you can just follow their ",
+                "text": " as an economical way that proved to be easy to setup and work with BodilessJS. Since this is built off Gatsby, you can follow their ",
                 "marks": []
               }
             ]
@@ -111,7 +111,7 @@
             "leaves": [
               {
                 "object": "leaf",
-                "text": " to deploy to Heroku by adding app.json and static.json.   There was an addition step to serve the site with creating a Procfile  and putting in \"web: gatsby serve --port $PORT --host 0.0.0.0 \"",
+                "text": " to deploy to Heroku by adding app.json and static.json. There was an addition step to serve the site with creating a Procfile  and putting in \"web: gatsby serve --port $PORT --host 0.0.0.0 \"",
                 "marks": []
               }
             ]

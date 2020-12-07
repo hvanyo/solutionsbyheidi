@@ -79,7 +79,7 @@
             "leaves": [
               {
                 "object": "leaf",
-                "text": " without the editing interface. This is deployed to hosting/internet and you get benefit of improved performance and security compared to traditional CMS systems. ",
+                "text": " without the editing interface. This is directly deployed on hosting/internet, with the benefits of improved performance and security compared to traditional CMS systems.",
                 "marks": []
               }
             ]
