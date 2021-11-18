@@ -66,7 +66,7 @@ export const withQuoteBlockMeta = flow(
 );
 
 const asGradient = flow(
-  addClasses('bg-clip-text text-transparent bg-gradient-to-r from-brandRed-400 via-brandRed-700 to-brandRed-400'),
+  addClasses('bg-clip-text text-transparent bg-gradient-to-r from-brandRed-400 via-brandRed-700 to-brandRed-400 bg-clip-text'),
   asMark,
   withKey('gradient'),
   withButton('gradient'),

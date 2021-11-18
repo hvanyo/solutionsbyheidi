@@ -1,19 +1,5 @@
-/**
- * Copyright © 2019 Johnson & Johnson
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * http://www.apache.org/licenses/LICENSE-2.0
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 import { flow } from 'lodash';
-import { addClasses } from '@bodiless/fclasses';
+import { addClasses, asToken, Token } from '@bodiless/fclasses';
 import {
   asBodilessLink,
   asEditable as asEditableCore,
@@ -33,6 +19,14 @@ import {
   asAlignJustify,
 } from './ElementDefault.token';
 
+export const withCategory = <P extends object>(category?: string) => (...hocs: Token[]) => (
+  asToken(
+    {}, // see https://github.com/microsoft/TypeScript/issues/28010
+    ...hocs,
+    category ? asToken.meta.term('Category')(category) : undefined,
+  )
+);
+
 /* Page Structure */
 const asBlockItem = addClasses('p-1 w-full');
 const asPageContainer = addClasses('container mx-auto');
@@ -51,6 +45,7 @@ const asDesktopOnly = addClasses('hidden lg:flex');
 /* Primary coloring */
 const asPrimaryColorBackground = addClasses('bg-gray-200');
 const asTextColorPrimary = addClasses('text-black');
+const asTextWhite = addClasses('text-white');
 
 /* Coloring */
 const asTealBackground = addClasses('bg-teal-600');
@@ -61,7 +56,7 @@ const asItalic = addClasses('');
 const asLink = addClasses('text-brandRed-400 underline');
 const asSuperScript = addClasses('');
 
-const asHeader1 = flow(addClasses('text-3xl'), asTextColorPrimary);
+const asHeader1 = flow(addClasses('text-4xl'), asTextColorPrimary);
 const asHeader2 = addClasses('text-2xl');
 const asHeader3 = addClasses('text-xl');
 
@@ -112,6 +107,7 @@ export {
   asMobileOnly,
   asSuperScript,
   asTextColorPrimary,
+  asTextWhite,
   asXMargin,
   asYMargin,
   asNegXMargin,

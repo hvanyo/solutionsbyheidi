@@ -1,9 +1,13 @@
 [
   {
-    "type": "paragraph",
+    "type": "H2",
     "children": [
       {
-        "text": "Bridging the Gap"
+        "text": "Bridging",
+        "Gradient": true
+      },
+      {
+        "text": " the Gap"
       }
     ]
   }

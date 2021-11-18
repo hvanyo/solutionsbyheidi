@@ -1,289 +1,158 @@
-{
-  "document": {
-    "object": "document",
-    "data": {},
-    "nodes": [
+[
+  {
+    "type": "paragraph",
+    "children": [
       {
-        "object": "block",
-        "type": "paragraph",
-        "data": {},
-        "nodes": [
+        "text": "This site was built with "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://github.com/johnsonandjohnson/Bodiless-JS"
+          }
+        },
+        "type": "Link",
+        "children": [
           {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "This site was built with ",
-                "marks": []
-              }
-            ]
-          },
-          {
-            "object": "inline",
-            "type": "Link",
-            "data": {
-              "openModal": false,
-              "slatenode": {
-                "href": "https://github.com/johnsonandjohnson/Bodiless-JS"
-              }
-            },
-            "nodes": [
-              {
-                "object": "text",
-                "leaves": [
-                  {
-                    "object": "leaf",
-                    "text": "BodilessJS",
-                    "marks": []
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": ", BodilessJS is a toolset for building editable websites in a JAMstack technology.  ",
-                "marks": []
-              }
-            ]
+            "text": "BodilessJS"
           }
         ]
       },
       {
-        "object": "block",
-        "type": "paragraph",
-        "data": {},
-        "nodes": [
+        "text": ", BodilessJS is a toolset for building editable websites in a JAMstack technology.  ﻿"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Technology behind BodilessJS"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "﻿"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "BodilessJS is built off three popular tools.  "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.gatsbyjs.com/"
+          }
+        },
+        "type": "Link",
+        "children": [
           {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "",
-                "marks": []
-              }
-            ]
+            "text": "Gatsby"
           }
         ]
       },
       {
-        "object": "block",
-        "type": "H2",
-        "data": {},
-        "nodes": [
+        "text": ": a JAMstack framework, "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://tailwindcss.com/"
+          }
+        },
+        "type": "Link",
+        "children": [
           {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "Technology behind BodilessJS",
-                "marks": []
-              }
-            ]
+            "text": "TailwindCss"
           }
         ]
       },
       {
-        "object": "block",
-        "type": "paragraph",
-        "data": {},
-        "nodes": [
+        "text": ": utility-first CSS framework and "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.slatejs.org/examples/richtext"
+          }
+        },
+        "type": "Link",
+        "children": [
           {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "",
-                "marks": []
-              }
-            ]
+            "text": "SlateJS"
           }
         ]
       },
       {
-        "object": "block",
-        "type": "paragraph",
-        "data": {},
-        "nodes": [
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "BodilessJS is built off three popular tools.  ",
-                "marks": []
-              }
-            ]
-          },
-          {
-            "object": "inline",
-            "type": "Link",
-            "data": {
-              "openModal": false,
-              "slatenode": {
-                "href": "https://www.gatsbyjs.com/"
-              }
-            },
-            "nodes": [
-              {
-                "object": "text",
-                "leaves": [
-                  {
-                    "object": "leaf",
-                    "text": "Gatsby",
-                    "marks": []
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": ": a JAMstack framework, ",
-                "marks": []
-              }
-            ]
-          },
-          {
-            "object": "inline",
-            "type": "Link",
-            "data": {
-              "openModal": false,
-              "slatenode": {
-                "href": "https://tailwindcss.com/"
-              }
-            },
-            "nodes": [
-              {
-                "object": "text",
-                "leaves": [
-                  {
-                    "object": "leaf",
-                    "text": "TailwindCss",
-                    "marks": []
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": ": utility-first CSS framework and ",
-                "marks": []
-              }
-            ]
-          },
-          {
-            "object": "inline",
-            "type": "Link",
-            "data": {
-              "openModal": false,
-              "slatenode": {
-                "href": "https://www.slatejs.org/examples/richtext"
-              }
-            },
-            "nodes": [
-              {
-                "object": "text",
-                "leaves": [
-                  {
-                    "object": "leaf",
-                    "text": "SlateJS",
-                    "marks": []
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": ": a simple rich text editor.",
-                "marks": []
-              }
-            ]
-          }
-        ]
-      },
+        "text": ": a simple rich text editor."
+      }
+    ]
+  },
+  {
+    "type": "H2",
+    "children": [
       {
-        "object": "block",
-        "type": "H2",
-        "data": {},
-        "nodes": [
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "",
-                "marks": []
-              }
-            ]
-          }
-        ]
-      },
+        "text": "﻿"
+      }
+    ]
+  },
+  {
+    "type": "H2",
+    "children": [
       {
-        "object": "block",
-        "type": "H2",
-        "data": {},
-        "nodes": [
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "BodilessJS Edit:",
-                "marks": []
-              }
-            ]
-          }
-        ]
-      },
+        "text": "BodilessJS Edit:"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
       {
-        "object": "block",
-        "type": "paragraph",
-        "data": {},
-        "nodes": [
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "",
-                "marks": []
-              }
-            ]
-          }
-        ]
-      },
+        "text": "﻿"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
       {
-        "object": "block",
-        "type": "paragraph",
-        "data": {},
-        "nodes": [
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "BodilessJS provides an editing app that allows you to edit the content inline on your page.  Similar to a traditional CMS, but instead of the content being saved in database, it is saved with the site in the site's code repository as .json files. Components can be easily added to extend the site functionality and each components manage their own data.   ",
-                "marks": []
-              }
-            ]
-          }
-        ]
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "BodilessJS provides an editing app that allows you to edit the content inline on your page.  Similar to a traditional CMS, but instead of the content being saved in database, it is saved with the site in the site's code repository as .json files. Components can be easily added to extend the site functionality and each components manage their own data.   "
       }
     ]
   }
-}
+]

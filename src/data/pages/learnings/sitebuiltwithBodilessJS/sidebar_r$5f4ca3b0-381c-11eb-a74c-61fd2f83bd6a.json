@@ -1,57 +1,27 @@
-{
-  "document": {
-    "object": "document",
-    "data": {},
-    "nodes": [
+[
+  {
+    "type": "paragraph",
+    "children": [
       {
-        "object": "block",
-        "type": "paragraph",
-        "data": {},
-        "nodes": [
+        "text": "More "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "/learnings/"
+          }
+        },
+        "type": "Link",
+        "children": [
           {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "More ",
-                "marks": []
-              }
-            ]
-          },
-          {
-            "object": "inline",
-            "type": "Link",
-            "data": {
-              "openModal": false,
-              "slatenode": {
-                "href": "/learnings/"
-              }
-            },
-            "nodes": [
-              {
-                "object": "text",
-                "leaves": [
-                  {
-                    "object": "leaf",
-                    "text": "Learnings",
-                    "marks": []
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "",
-                "marks": []
-              }
-            ]
+            "text": "Learnings"
           }
         ]
+      },
+      {
+        "text": ""
       }
     ]
   }
-}
+]

@@ -22,3 +22,4 @@ tailwind.config.js
 # environment variables
 .env.development
 .env.production
+tailwind.config.js
