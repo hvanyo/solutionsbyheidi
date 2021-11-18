@@ -1,25 +1,10 @@
-{
-  "document": {
-    "object": "document",
-    "data": {},
-    "nodes": [
+[
+  {
+    "type": "paragraph",
+    "children": [
       {
-        "object": "block",
-        "type": "AlignCenter",
-        "data": {},
-        "nodes": [
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "between technical team and business to deliver quality to the client.",
-                "marks": []
-              }
-            ]
-          }
-        ]
+        "text": "between technical team and business to deliver quality to the client."
       }
     ]
   }
-}
+]

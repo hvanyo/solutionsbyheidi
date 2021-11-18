@@ -23,7 +23,11 @@ import { RichText } from '@bodiless/richtext-ui';
 import {
   withDesign,
   addClasses,
+  startWith,
+  Design,
+  asToken,
 } from '@bodiless/fclasses';
+import { GatsbyLink } from '@bodiless/gatsby-theme-bodiless';
 import {
   asBold,
   asItalic,
@@ -68,13 +72,13 @@ const asGradient = flow(
   withButton('gradient'),
 );
 
-const fullFeaturedDesign = {
+const fullFeaturedDesign: Design = {
   Bold: asBold,
   Italic: asItalic,
   Underline: asUnderline,
-  Link: flow(asEditableLink(), asLink),
+  Link: asToken(asEditableLink(), asLink, startWith(GatsbyLink)),
   SuperScript: asSuperScript,
-  Gradient: asGradient,  
+  Gradient: asGradient,
   AlignLeft: asAlignLeft,
   AlignRight: asAlignRight,
   AlignJustify: asAlignJustify,

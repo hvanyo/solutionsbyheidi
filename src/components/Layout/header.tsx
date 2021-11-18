@@ -67,7 +67,7 @@ const headerComponents:HeaderComponents = {
   Container: Div,
   SiteLogoContainer: Div,
   SiteNav: Div,
-  Menu: SimpleMenu,
+  Menu: Div, // SimpleMenu,
   SiteBranding: Div,
   SiteLogoReturn: Logo,
 };
