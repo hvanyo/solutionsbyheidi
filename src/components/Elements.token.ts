@@ -1,5 +1,5 @@
 import { flow } from 'lodash';
-import { addClasses, asToken, Token } from '@bodiless/fclasses';
+import { addClasses, asToken, Token, removeClasses } from '@bodiless/fclasses';
 import {
   asBodilessLink,
   asEditable as asEditableCore,
@@ -40,7 +40,10 @@ const withPadding5 = addClasses('p-5');
 
 /* Responsive design */
 const asMobileOnly = addClasses('lg:hidden');
-const asDesktopOnly = addClasses('hidden lg:flex');
+const asDesktopOnly = asToken(
+  addClasses('hidden lg:flex'),
+  removeClasses('flex'),
+);
 
 /* Primary coloring */
 const asPrimaryColorBackground = addClasses('bg-gray-200');
@@ -48,7 +51,7 @@ const asTextColorPrimary = addClasses('text-black');
 const asTextWhite = addClasses('text-white');
 
 /* Coloring */
-const asTealBackground = addClasses('bg-teal-600');
+const asTealBackground = addClasses('bg-gray-200');
 
 /* Typography */
 const asBold = addClasses('');

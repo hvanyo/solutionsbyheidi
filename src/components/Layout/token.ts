@@ -16,25 +16,24 @@ import { flow } from 'lodash';
 import {
   addClasses,
   withDesign,
+  asToken,
 } from '@bodiless/fclasses';
 import {
   asPageContainer,
 } from '../Elements.token';
 
 const asDefaultLogoStyle = withDesign({
-  SiteReturn: addClasses('block'),
-  SiteLogo: addClasses('h-16 max-w-1'),
-  // Do not addClasses to SiteLink as by default its Gatsby Link and not designable.
+  SiteReturn: addClasses('flex-shrink px-2 order-0'),
+  SiteLogo: addClasses('h-126 lg:h-16 max-w-1'),
 });
 
-
 const asSiteHeader = withDesign({
-  Wrapper: addClasses('fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out'),
-  Container: addClasses('max-w-6xl mx-auto px-5 sm:px-6'),
-  MenuContainer: asPageContainer,
-  SiteBranding: addClasses('flex-shrink-0 mr-4'),
+  Container: asToken(
+    asPageContainer,
+    addClasses('flex justify-between h-16 lg:h-auto items-center flex-wrap lg:bg-transparent px-4 lg:px-0'),
+  ),
+  MenuContainer: addClasses('flex lg:order-1'),
   SiteLogoReturn: asDefaultLogoStyle,
-  SiteLogoContainer: addClasses("flex items-center justify-between h-16 md:h-20"),
   SiteNav: addClasses('flex flex-grow justify-end'),
 });
 

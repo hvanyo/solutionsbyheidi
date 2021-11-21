@@ -1,25 +1,25 @@
 import { withAppendChild } from '@bodiless/core';
 import {
-  Div, asToken, replaceWith, startWith, withDesign, addClasses, withoutProps,
+  Div, asToken, replaceWith, startWith, withDesign, addClasses, withoutProps, removeClassesIf, addClassesIf,
 } from '@bodiless/fclasses';
 import {
-  asBurgerMenu, withMenuDesign, BurgerMenuDefaultToggler, asSlideLeft,
+  asBurgerMenu, withMenuDesign, BurgerMenuDefaultToggler, asSlideLeft, useIsBurgerMenuVisible,
 } from '@bodiless/navigation';
 
 import { $withTitleEditors } from './Menu.token';
 import Logo from '../Layout/logo';
 import { asDefaultLogoStyle } from '../Layout/token';
 import {
-  asTealBackground, asTextWhite, asMobileOnly, asBold,
+  asTealBackground, asMobileOnly, asBold,
 } from '../Elements.token';
 
 /**
  * Tokens
  * ===========================================
  */
-const $withTogglerStyles = asToken(
+ const $withTogglerStyles = asToken(
   withDesign({
-    Button: asToken(asTextWhite, asMobileOnly),
+    Button: asToken(asMobileOnly),
     Wrapper: asToken(
       replaceWith(Div),
       asMobileOnly,
@@ -66,6 +66,13 @@ const $withMenuStyles = asToken(
   withMenuDesign('Columns')($withColumnSubMenuStyles),
 );
 
+const withRemoveOverflow = withDesign({
+  Wrapper: asToken(
+    removeClassesIf(useIsBurgerMenuVisible)('overflow-y-scroll'),
+  ),
+  Nav: addClasses('bg-gray-200'),
+});
+
 const $withBurgerMenuStyles = asToken(
   withDesign({
     Menu: $withMenuStyles,
@@ -76,6 +83,7 @@ const $withBurgerMenuStyles = asToken(
     ),
   }),
   asSlideLeft,
+  withRemoveOverflow,
 );
 
 export {

@@ -41,7 +41,6 @@ type HeaderComponents = {
   Container: ComponentType<any>,
   SiteLogoContainer: ComponentType<any>,
   MenuContainer: ComponentType<any>,
-
   Menu: ComponentType<any>,
   MenuToggler: ComponentType<any>,
   SiteBranding: ComponentType<any>,
@@ -63,26 +62,20 @@ const HeaderClean: FC<Props> = ({ components }) => {
   const {
     Wrapper,
     Container,
-    SiteLogoContainer,
     MenuContainer,
     Menu,
     MenuToggler,
-    SiteBranding,
     SiteLogoReturn,
   } = components;
 
   return (
     <Wrapper>
       <Container>
-        <SiteLogoContainer>
-          <SiteBranding>
-            <SiteLogoReturn />
-          </SiteBranding>
-          <MenuContainer>
-            <MenuToggler />
-            <Menu />
-          </MenuContainer>
-        </SiteLogoContainer>
+        <SiteLogoReturn />
+        <MenuContainer>
+          <MenuToggler />
+          <Menu />
+        </MenuContainer>
       </Container>
     </Wrapper>
   );
