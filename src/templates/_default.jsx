@@ -20,10 +20,12 @@ import Layout from '../components/Layout';
 import { FlowContainerDefault } from '../components/FlowContainer';
 import { withEditorSimple } from '../components/Editors';
 import { addClasses, H1 } from '@bodiless/fclasses';
+import { asHeader1 } from '../components/Elements.token';
 
 const HeaderTitle = flow(
   withEditorSimple('header', 'H1 Title'),
-  addClasses('h1 py-6 text-center'),
+  addClasses('py-6 text-center'),
+  asHeader1,
 )(H1);
 
 export default props => (

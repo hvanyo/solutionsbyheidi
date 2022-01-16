@@ -1,0 +1,83 @@
+[
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Summary "
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "﻿"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Experienced Independent Contractor with a demonstrated history of working in the computer software industry. Skilled in website architecture using CMS technologies and Software Development.﻿"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Project"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "﻿"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "A contributor to "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://github.com/johnsonandjohnson/Bodiless-JS"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "BodilessJS"
+          }
+        ]
+      },
+      {
+        "text": " : BodilessJS is a toolset for building editable websites in a JAMStack. "
+      }
+    ]
+  }
+]

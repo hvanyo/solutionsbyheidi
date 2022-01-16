@@ -26,7 +26,7 @@ import {
   withDesign,
 } from '@bodiless/fclasses';
 import resolveConfig from 'tailwindcss/resolveConfig';
-import tailWindConfig from '../../../tailwind.config';
+import tailWindConfig from '../../../site.tailwind.config';
 import FeatureBlock from './FeatureBlock';
 import { withType } from '../FlowContainer/Categories';
 

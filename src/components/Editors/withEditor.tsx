@@ -12,28 +12,25 @@
  * limitations under the License.
  */
 
-import { flow } from 'lodash';
-import React, { ComponentType } from 'react';
-import { withChild, withNodeKey } from '@bodiless/core';
-import { addClasses } from '@bodiless/fclasses';
-
-type WithInitialValue = {
-  placeholder: string;
-};
-const withPlaceholder = (placeholder: string) => (
-  <P extends Object> (Component: ComponentType<P & WithInitialValue>) => (props:P) => (
-    <Component placeholder={placeholder} {...props} />
-  )
-);
-
-const withEditor = (Editor:ComponentType<any>) => (nodeKey?: string, placeholder?: string) => (
-  flow(
-    addClasses('overflow-hidden'),
-    withChild(flow(
-      withPlaceholder(placeholder),
-      withNodeKey(nodeKey),
-    )(Editor)),
-  )
-);
-export default withEditor;
-export { withPlaceholder };
+ import { ComponentType } from 'react';
+ import { withChild, withNodeKey } from '@bodiless/core';
+ import {
+   addClasses, withoutProps, asToken, addProps, Token,
+ } from '@bodiless/fclasses';
+ 
+ const withPlaceholder = (
+   placeholder?: string,
+ ): Token|undefined => (placeholder === undefined ? undefined : addProps({ placeholder }));
+ 
+ const withEditor = (Editor:ComponentType<any>) => (nodeKey?: string, placeholder?: string) => (
+   asToken(
+     addClasses('overflow-hidden'),
+     withChild(asToken(
+       withPlaceholder(placeholder),
+       withNodeKey(nodeKey),
+       withoutProps(['design']),
+     )(Editor), 'Editor'),
+   )
+ );
+ export default withEditor;
+ export { withPlaceholder };

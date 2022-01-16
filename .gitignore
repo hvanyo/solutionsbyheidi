@@ -8,6 +8,7 @@ yarn-error.log
 /public
 /src/components/index.css
 /src/components/bodiless.index.css
+tailwind.config.js
 
 # Temporary files
 .DS_Store
@@ -21,3 +22,5 @@ yarn-error.log
 # environment variables
 .env.development
 .env.production
+tailwind.config.js
+tailwind.config.js

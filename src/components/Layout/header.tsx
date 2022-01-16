@@ -1,17 +1,3 @@
-/**
- * Copyright © 2020 Johnson & Johnson
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * http://www.apache.org/licenses/LICENSE-2.0
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 import React, { FC, ComponentType, HTMLProps, useState, useEffect, useContext } from 'react';
 import { flow } from 'lodash';
 import {
@@ -23,7 +9,7 @@ import {
   addClassesIf,
 } from '@bodiless/fclasses';
 import { withNodeKey } from '@bodiless/core';
-import { SimpleMenu } from '../Menu';
+import ResponsiveMenu, { BurgerMenuToggler } from '../Menu';
 import Logo from './logo';
 
 const IsTopContext = React.createContext({
@@ -55,8 +41,8 @@ type HeaderComponents = {
   Container: ComponentType<any>,
   SiteLogoContainer: ComponentType<any>,
   MenuContainer: ComponentType<any>,
-  SiteNav: ComponentType<any>,
   Menu: ComponentType<any>,
+  MenuToggler: ComponentType<any>,
   SiteBranding: ComponentType<any>,
   SiteLogoReturn: ComponentType<any>,  
 };
@@ -66,8 +52,9 @@ const headerComponents:HeaderComponents = {
   Wrapper: Header,
   Container: Div,
   SiteLogoContainer: Div,
-  SiteNav: Div,
-  Menu: SimpleMenu,
+  MenuContainer: Div,
+  Menu: ResponsiveMenu,
+  MenuToggler: BurgerMenuToggler,
   SiteBranding: Div,
   SiteLogoReturn: Logo,
 };
@@ -75,24 +62,20 @@ const HeaderClean: FC<Props> = ({ components }) => {
   const {
     Wrapper,
     Container,
-    SiteLogoContainer,
-    SiteNav,
+    MenuContainer,
     Menu,
-    SiteBranding,
+    MenuToggler,
     SiteLogoReturn,
   } = components;
 
   return (
     <Wrapper>
       <Container>
-        <SiteLogoContainer>
-          <SiteBranding>
-            <SiteLogoReturn />
-          </SiteBranding>
-          <SiteNav>
-            <Menu />
-          </SiteNav>
-        </SiteLogoContainer>
+        <SiteLogoReturn />
+        <MenuContainer>
+          <MenuToggler />
+          <Menu />
+        </MenuContainer>
       </Container>
     </Wrapper>
   );

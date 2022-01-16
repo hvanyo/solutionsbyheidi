@@ -1,36 +1,14 @@
-{
-  "document": {
-    "object": "document",
-    "data": {},
-    "nodes": [
+[
+  {
+    "type": "H1",
+    "children": [
       {
-        "object": "block",
-        "type": "paragraph",
-        "data": {},
-        "nodes": [
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "Solutions ",
-                "marks": []
-              },
-              {
-                "object": "leaf",
-                "text": "Offered",
-                "marks": [
-                  {
-                    "object": "mark",
-                    "type": "Gradient",
-                    "data": {}
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "text": "Solutions "
+      },
+      {
+        "text": "Offered",
+        "Gradient": true
       }
     ]
   }
-}
+]

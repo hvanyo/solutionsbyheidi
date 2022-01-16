@@ -1,74 +1,35 @@
-{
-  "document": {
-    "object": "document",
-    "data": {},
-    "nodes": [
+[
+  {
+    "type": "paragraph",
+    "children": [
       {
-        "object": "block",
-        "type": "paragraph",
-        "data": {},
-        "nodes": [
+        "text": "Made by "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.solutionsbyheidi.com/"
+          }
+        },
+        "type": "Link",
+        "children": [
           {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "Made by ",
-                "marks": []
-              }
-            ]
-          },
-          {
-            "object": "inline",
-            "type": "Link",
-            "data": {
-              "openModal": false,
-              "slatenode": {
-                "href": "https://solutionsbyheidi.com/"
-              }
-            },
-            "nodes": [
-              {
-                "object": "text",
-                "leaves": [
-                  {
-                    "object": "leaf",
-                    "text": "Solutions By Heidi LLC. ",
-                    "marks": []
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "",
-                "marks": []
-              }
-            ]
+            "text": "Solutions By Heidi LLC"
           }
         ]
       },
       {
-        "object": "block",
-        "type": "paragraph",
-        "data": {},
-        "nodes": [
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "All rights reserved.",
-                "marks": []
-              }
-            ]
-          }
-        ]
+        "text": ". "
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "All rights reserved."
       }
     ]
   }
-}
+]

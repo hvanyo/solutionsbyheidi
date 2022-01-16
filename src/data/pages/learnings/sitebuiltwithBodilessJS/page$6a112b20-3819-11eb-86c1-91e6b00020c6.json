@@ -1,91 +1,43 @@
-{
-  "document": {
-    "object": "document",
-    "data": {},
-    "nodes": [
+[
+  {
+    "type": "H2",
+    "children": [
       {
-        "object": "block",
-        "type": "H2",
-        "data": {},
-        "nodes": [
+        "text": "Bodiless Static:"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "﻿"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Once you are happy with your site, you can run a build and it will produce a "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.gatsbyjs.com/docs/glossary/static-site-generator/"
+          }
+        },
+        "type": "Link",
+        "children": [
           {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "Bodiless Static:",
-                "marks": []
-              }
-            ]
+            "text": "static generated html site "
           }
         ]
       },
       {
-        "object": "block",
-        "type": "paragraph",
-        "data": {},
-        "nodes": [
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "",
-                "marks": []
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "object": "block",
-        "type": "paragraph",
-        "data": {},
-        "nodes": [
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "Once you are happy with your site, you can run a build and it will produce a ",
-                "marks": []
-              }
-            ]
-          },
-          {
-            "object": "inline",
-            "type": "Link",
-            "data": {
-              "openModal": false,
-              "slatenode": {
-                "href": "https://www.gatsbyjs.com/docs/glossary/static-site-generator/"
-              }
-            },
-            "nodes": [
-              {
-                "object": "text",
-                "leaves": [
-                  {
-                    "object": "leaf",
-                    "text": "static generated html site",
-                    "marks": []
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": " without the editing interface. This is directly deployed on hosting/internet, with the benefits of improved performance and security compared to traditional CMS systems.",
-                "marks": []
-              }
-            ]
-          }
-        ]
+        "text": "without the editing interface. This is directly deployed on hosting/internet, with the benefits of improved performance and security compared to traditional CMS systems."
       }
     ]
   }
-}
+]

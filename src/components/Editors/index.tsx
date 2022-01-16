@@ -23,7 +23,11 @@ import { RichText } from '@bodiless/richtext-ui';
 import {
   withDesign,
   addClasses,
+  startWith,
+  Design,
+  asToken,
 } from '@bodiless/fclasses';
+import { GatsbyLink } from '@bodiless/gatsby-theme-bodiless';
 import {
   asBold,
   asItalic,
@@ -62,19 +66,19 @@ export const withQuoteBlockMeta = flow(
 );
 
 const asGradient = flow(
-  addClasses('bg-clip-text text-transparent bg-gradient-to-r from-brandRed-400 via-brandRed-700 to-brandRed-400'),
+  addClasses('bg-clip-text text-transparent bg-gradient-to-r from-brandRed-400 via-brandRed-700 to-brandRed-400 bg-clip-text'),
   asMark,
   withKey('gradient'),
   withButton('gradient'),
 );
 
-const fullFeaturedDesign = {
+const fullFeaturedDesign: Design = {
   Bold: asBold,
   Italic: asItalic,
   Underline: asUnderline,
-  Link: flow(asEditableLink(), asLink),
+  Link: asToken(asEditableLink(), asLink, startWith(GatsbyLink)),
   SuperScript: asSuperScript,
-  Gradient: asGradient,  
+  Gradient: asGradient,
   AlignLeft: asAlignLeft,
   AlignRight: asAlignRight,
   AlignJustify: asAlignJustify,

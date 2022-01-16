@@ -1,25 +1,10 @@
-{
-  "document": {
-    "object": "document",
-    "data": {},
-    "nodes": [
+[
+  {
+    "type": "H2",
+    "children": [
       {
-        "object": "block",
-        "type": "H2",
-        "data": {},
-        "nodes": [
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "A series of entries describing my learnings...",
-                "marks": []
-              }
-            ]
-          }
-        ]
+        "text": "A series of entries describing my learnings..."
       }
     ]
   }
-}
+]
