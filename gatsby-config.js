@@ -1,4 +1,11 @@
+const { getDisabledPages } = require('@bodiless/components/node-api');
+
 const express = require('express');
+
+const disablePageList = getDisabledPages();
+const disabledPages = Object.keys(disablePageList).filter(
+  item => disablePageList[item].pageDisabled === true || disablePageList[item].indexingDisabled,
+);
 
 // Gatsby plugins list.
 const plugins = [
@@ -22,17 +29,21 @@ const plugins = [
     },
   },
   {
-    resolve: 'gatsby-plugin-sitemap',
+    resolve: 'gatsby-plugin-advanced-sitemap',
+    options: { exclude: disabledPages },
   },
+  {
+    resolve: 'gatsby-plugin-robots-txt',
+  },  
   {
     resolve:'gatsby-plugin-postcss',
     options: {
       postCssPlugins: [
-        require('tailwindcss'),        
-        require('autoprefixer')
+        require('tailwindcss'),
+        require('autoprefixer'),
       ],
     },
-  },  
+  },
   {
     resolve: 'gatsby-plugin-google-gtag',
     options: {

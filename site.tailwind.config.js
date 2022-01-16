@@ -60,7 +60,7 @@ module.exports = {
         '1/1': '100%',
       },
       fontFamily: {
-        inter: ['Inter', 'sans-serif']
+        inter: ['Inter', 'sans-serif'],
       },
       fontSize: {
         xs: '0.75rem',
@@ -114,54 +114,11 @@ module.exports = {
         '90': '0.9',
       },
       scale: {
-        '98': '.98'
+        '98': '.98',
       },
       animation: {
         float: 'float 3s ease-in-out infinite',
       },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0)', },
-          '50%': { transform: 'translateY(-5%)', },
-        },
-      },
-      customForms: theme => ({
-        default: {
-          'input, textarea, multiselect, select, checkbox, radio': {
-            backgroundColor: theme('colors.white'),
-            borderColor: theme('colors.gray.300'),
-            borderRadius: theme('borderRadius.default'),
-            '&:focus': {
-              outline: undefined,
-              boxShadow: undefined,
-              borderColor: theme('colors.gray.500'),
-            },
-          },
-          'input, textarea, multiselect, select': {
-            backgroundColor: theme('colors.white'),
-            fontSize: undefined,
-            lineHeight: undefined,
-            paddingTop: theme('spacing.3'),
-            paddingRight: theme('spacing.4'),
-            paddingBottom: theme('spacing.3'),
-            paddingLeft: theme('spacing.4'),
-          },
-          'input, textarea': {
-            '&::placeholder': {
-              color: theme('colors.gray.500'),
-            },
-          },
-          select: {
-            paddingRight: theme('spacing.10'),
-            iconColor: theme('colors.gray.400'),
-          },
-          'checkbox, radio': {
-            color: theme('colors.gray.800'),
-            backgroundColor: theme('colors.white'),
-            borderRadius: theme('borderRadius.sm'),
-          },
-        },
-      }),
     },
   },
 
