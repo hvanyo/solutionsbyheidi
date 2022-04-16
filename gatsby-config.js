@@ -34,6 +34,11 @@ const plugins = [
   },
   {
     resolve: 'gatsby-plugin-robots-txt',
+    options: {
+      host: 'https://www.solutionsbyheidi.com',
+      sitemap: 'https://www.solutionsbyheidi.com/sitemap.xml',
+      policy: [{ userAgent: '*', allow: '/' }],
+    },
   },  
   {
     resolve:'gatsby-plugin-postcss',
