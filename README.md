@@ -40,31 +40,6 @@ npm run serve
 ```
 
 Visit http://localhost:9000/ in your browser to view the site.
-
-
-### Recommended Getting Started Steps
-
-#### Update environment variables within `.env.site`
-As part of the installation process, you may want to configure specific
-environment variables for the site. You may do so by adding or updating
-`.env.site` file in the root folder of the site. This file allows us to
-overwrite env variables defined in `@bodiless` packages and/or add new env
-variables. The variables within the system are provided with the majority commented out
-and not actively being used.
-
-Many of the plugins have a dependency to know the absolute url. This can be set
-once with SITE_URL. This URL is used by Canonical & Sitemap.xml plugins.
-
-#### Add the Favicon
-This can be done by replacing the favicon.png in `src/images/`.  It uses
-[gatsby-plugin-manifest](https://www.gatsbyjs.org/packages/gatsby-plugin-manifest/)
-to generate a set of favicons for your site to use. For more information on
-options, please read the documentation for
-[gatsby-plugin-manifest](https://www.gatsbyjs.org/packages/gatsby-plugin-manifest/).
-
-If desired, this can be overridden by specifying custom options within the site's
-`gatsby-config.js`.
-
 #### Start the Editing Site and add the Logo
 Start your site with:
 ```
