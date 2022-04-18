@@ -40,17 +40,13 @@ npm run serve
 ```
 
 Visit http://localhost:9000/ in your browser to view the site.
+
 #### Start the Editing Site and add the Logo
 Start your site with:
 ```
 npm start
 ```
 and view the site at [http://localhost:8000](http://localhost:8000).
-
-Click the Edit icon in toolbar.
-
-Click on the image and you will see context menu that lets you set the image and
-alt text for your logo.
 
 For further details we highly recommend visiting the built in documentation:
 
