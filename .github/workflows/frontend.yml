@@ -1,4 +1,4 @@
-name: Deploy to Heroku with Editor Mode
+name: Deploy to Heroku (Frontend)
 
 on:
   push:
@@ -10,9 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Development Code
         uses: actions/checkout@v2
-      - name: Deploy to Heroku
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.9
+      - run: npm install
+      - run: npm run build --if-present
+      - name: Deploy to Heroku Please
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
