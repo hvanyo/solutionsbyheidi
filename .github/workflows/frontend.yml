@@ -1,4 +1,4 @@
-name: Deploy to Heroku (Editor)
+name: Deploy to Heroku with Editor Mode
 
 on:
   push:
