@@ -1,13 +1,6 @@
 name: Deploy to Heroku (Frontend)
 
-on:
-  push:
-    branches:
-      - herokuaction
-    paths:
-      - "/"
-      - ".github/workflows/frontend.yml"
-
+on: [push]
 jobs:
   deploy:
     runs-on: ubuntu-latest
