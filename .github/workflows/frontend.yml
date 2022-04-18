@@ -26,3 +26,4 @@ jobs:
           heroku_email: ${{ secrets.HEROKU_EMAIL }}
           dontuseforce: true
           dontautocreate: true
+          procfile: "web: gatsby serve --port $PORT --host 0.0.0.0"
