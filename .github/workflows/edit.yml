@@ -1,0 +1,27 @@
+name: Deploy to Heroku (Edit)
+
+on:
+  push:
+    branches:
+      - changeset
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Development Code
+        uses: actions/checkout@v2
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.9
+      - run: npm install
+      - name: Deploy to Heroku Please
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
+          heroku_email: ${{ secrets.HEROKU_EMAIL }}
+          dontautocreate: true
+          procfile: "web: npm start"
