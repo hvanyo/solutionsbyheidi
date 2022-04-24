@@ -1,5 +1,4 @@
 import React, { FC, ComponentType, HTMLProps, useState, useRef, useEffect } from 'react';
-import { flow } from 'lodash';
 import {
   designable,
   DesignableComponentsProps,
@@ -8,7 +7,7 @@ import {
   withDesign,
   addClasses,
   P,
-  H2,
+  flowHoc,
   Section,
 } from '@bodiless/fclasses';
 import { withEditorFullFeatured } from '../Editors';
@@ -179,15 +178,15 @@ const FeaturesTabClean: FC<DesignableProps> = ({ components }) => {
 
 /* TODO add data-aos="zoom-y-out" to Title */
 
-const asFeaturesTab = flow(
+const asFeaturesTab = flowHoc(
   designable(featuresTabComponents, 'FeaturesTab'),
   withDesign({
     Wrapper: addClasses('relative'),    
-    Title: flow(
+    Title: flowHoc(
       withEditorFullFeatured('feature_sectiontitle', 'Insert Section Title'),
       addClasses('h2 mb-4'),
     ),
-    Summary: flow(
+    Summary: flowHoc(
       withEditorFullFeatured('feature_sectionsummary', 'Insert Summary'),
       addClasses('text-xl text-gray-600'),
     ),  

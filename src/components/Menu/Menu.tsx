@@ -12,28 +12,28 @@
  * limitations under the License.
  */
 
- import { ComponentType } from 'react';
- import { asToken } from '@bodiless/fclasses';
- import {
-   asBodilessMenu, withListSubMenu, withColumnSubMenu, withCardsSubMenu,
- } from '@bodiless/navigation';
+import { ComponentType } from 'react';
+import { flowHoc } from '@bodiless/fclasses';
+import {
+  asBodilessMenu, withListSubMenu, withColumnSubMenu, withCardsSubMenu,
+} from '@bodiless/navigation';
  
- import $asNavStyles from './Menu.token';
+import $asNavStyles from './Menu.token';
  
- const $asMenuBase = asToken(
-   asBodilessMenu(),
-   withListSubMenu(),
-   withColumnSubMenu(),
-   withCardsSubMenu(),
- );
+const $asMenuBase = flowHoc(
+  asBodilessMenu(),
+  withListSubMenu(),
+  withColumnSubMenu(),
+  withCardsSubMenu(),
+);
  
- const Menu = asToken(
-   $asMenuBase,
-   $asNavStyles,
- )('ul') as ComponentType<any>;
+const Menu = flowHoc(
+  $asMenuBase,
+  $asNavStyles,
+)('ul') as ComponentType<any>;
  
- export default Menu;
- export {
-   $asMenuBase,
- };
+export default Menu;
+export {
+  $asMenuBase,
+};
  

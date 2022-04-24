@@ -1,6 +1,6 @@
 import { withAppendChild } from '@bodiless/core';
 import {
-  Div, asToken, replaceWith, startWith, withDesign, addClasses, withoutProps, removeClassesIf, addClassesIf,
+  Div, flowHoc, replaceWith, startWith, withDesign, addClasses, withoutProps, removeClassesIf, addClassesIf,
 } from '@bodiless/fclasses';
 import {
   asBurgerMenu, withMenuDesign, BurgerMenuDefaultToggler, asSlideLeft, useIsBurgerMenuVisible,
@@ -17,10 +17,10 @@ import {
  * Tokens
  * ===========================================
  */
- const $withTogglerStyles = asToken(
+const $withTogglerStyles = flowHoc(
   withDesign({
-    Button: asToken(asMobileOnly),
-    Wrapper: asToken(
+    Button: flowHoc(asMobileOnly),
+    Wrapper: flowHoc(
       replaceWith(Div),
       asMobileOnly,
       addClasses('flex'),
@@ -28,10 +28,10 @@ import {
   }),
 );
 
-const $withBurgerMenuHeaderStyles = asToken(
+const $withBurgerMenuHeaderStyles = flowHoc(
   asDefaultLogoStyle,
   withDesign({
-    SiteReturn: asToken(
+    SiteReturn: flowHoc(
       withoutProps('design'),
       withAppendChild(BurgerMenuDefaultToggler, 'MenuToggler'),
       asTealBackground,
@@ -59,7 +59,7 @@ const $withColumnSubMenuStyles = withDesign({
   Item: addClasses('pl-8'),
 });
 
-const $withMenuStyles = asToken(
+const $withMenuStyles = flowHoc(
   asBurgerMenu('List', 'Columns', 'Cards'),
   withMenuDesign()($withTitleEditors),
   withMenuDesign(['List', 'Columns', 'Cards'])($withBaseSubMenuStyles, $withBoldAccordionTitleStyles),
@@ -67,17 +67,17 @@ const $withMenuStyles = asToken(
 );
 
 const withRemoveOverflow = withDesign({
-  Wrapper: asToken(
+  Wrapper: flowHoc(
     removeClassesIf(useIsBurgerMenuVisible)('overflow-y-scroll'),
   ),
   Nav: addClasses('bg-gray-200'),
 });
 
-const $withBurgerMenuStyles = asToken(
+const $withBurgerMenuStyles = flowHoc(
   withDesign({
     Menu: $withMenuStyles,
     Nav: addClasses('p-3'),
-    Header: asToken(
+    Header: flowHoc(
       startWith(Logo),
       $withBurgerMenuHeaderStyles,
     ),

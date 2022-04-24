@@ -25,7 +25,7 @@ const plugins = [
   {
     resolve: 'gatsby-plugin-canonical-urls',
     options: {
-      siteUrl: 'http://solutionsbyheidi.com/',
+      siteUrl: 'https://solutionsbyheidi.com/',
     },
   },
   {

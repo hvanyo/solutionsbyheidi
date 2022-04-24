@@ -14,7 +14,6 @@
 
 import React, { FC, ComponentType, HTMLProps } from 'react';
 import { Link } from "gatsby";
-import { flow } from 'lodash';
 import {
   designable,
   DesignableComponentsProps,
@@ -24,6 +23,7 @@ import {
   Span,
   withDesign,
   addClasses,
+  flowHoc,
 } from '@bodiless/fclasses';
 import { withEditorFullFeatured } from '../Editors';
 
@@ -105,10 +105,10 @@ const FooterClean: FC<DesignableProps> = ({ components }) => {
   );
 };
 
-const asFooterHeader = flow(
+const asFooterHeader = flowHoc(
   designable(footerComponents, 'Footer'),
   withDesign({
-    SiteTitleCopyrightEditable: flow(
+    SiteTitleCopyrightEditable: flowHoc(
       withEditorFullFeatured({ nodeKey: 'sitetitle', nodeCollection: 'site' }, 'Insert Site Title', 'site'),
       addClasses('text-sm text-gray-600 text-left my-3'),
     ),

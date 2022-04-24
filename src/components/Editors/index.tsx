@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-import { flow } from 'lodash';
+
 import {
   asMark,
   asBlock,
@@ -25,7 +25,7 @@ import {
   addClasses,
   startWith,
   Design,
-  asToken,
+  flowHoc,
 } from '@bodiless/fclasses';
 import { GatsbyLink } from '@bodiless/gatsby-theme-bodiless';
 import {
@@ -52,7 +52,7 @@ const basicDesign = {
   Bold: asBold,
   Italic: asItalic,
   Underline: asUnderline,
-  Link: flow(asEditableLink(), asLink),
+  Link: flowHoc(asEditableLink(), asLink),
   ...simpleDesign,
   AlignLeft: asAlignLeft,
   AlignRight: asAlignRight,
@@ -60,12 +60,12 @@ const basicDesign = {
   AlignCenter: asAlignCenter,
 };
 
-export const withQuoteBlockMeta = flow(
+export const withQuoteBlockMeta = flowHoc(
   asBlock,
   withButton('format_quote'),
 );
 
-const asGradient = flow(
+const asGradient = flowHoc(
   addClasses('bg-clip-text text-transparent bg-gradient-to-r from-brandRed-400 via-brandRed-700 to-brandRed-400 bg-clip-text'),
   asMark,
   withKey('gradient'),
@@ -76,7 +76,7 @@ const fullFeaturedDesign: Design = {
   Bold: asBold,
   Italic: asItalic,
   Underline: asUnderline,
-  Link: asToken(asEditableLink(), asLink, startWith(GatsbyLink)),
+  Link: flowHoc(asEditableLink(), asLink, startWith(GatsbyLink)),
   SuperScript: asSuperScript,
   Gradient: asGradient,
   AlignLeft: asAlignLeft,

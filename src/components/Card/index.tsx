@@ -5,7 +5,7 @@ import {
   CardClean,
 } from '@bodiless/card';
 import {
-  withDesign, startWith, asToken,
+  withDesign, startWith, flowHoc,
 } from '@bodiless/fclasses';
 import { GatsbyLink } from '@bodiless/gatsby-theme-bodiless';
 import {
@@ -17,17 +17,17 @@ import {
   withEditorSimple,
 } from '../Editors';
 
-export const withCardEditors = asToken(
+export const withCardEditors = flowHoc(
   withDesign({
     Image: asEditableImage('image'),
-    ImageLink: asToken(
+    ImageLink: flowHoc(
       withSidecarNodes(
         asEditableLink('link'),
       ),
       startWith(GatsbyLink),
     ),
     Title: withEditorSimple('title', 'Card Title Text'),
-    Link: asToken(
+    Link: flowHoc(
       withEditorSimple('ctatext', 'CTA'),
       withSidecarNodes(
         asEditableLink('link', undefined, () => ({ groupLabel: 'CTA' })),
@@ -38,7 +38,7 @@ export const withCardEditors = asToken(
   }),
 );
 
-export const asEditableCard = asToken(
+export const asEditableCard = flowHoc(
   withCardEditors,
 );
 

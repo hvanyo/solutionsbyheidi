@@ -1,5 +1,4 @@
 import React, { FC, ComponentType, HTMLProps } from 'react';
-import { flow } from 'lodash';
 import {
   designable,
   DesignableComponentsProps,
@@ -10,15 +9,15 @@ import {
   Section,
   H4,
   P,
-  replaceWith,
+  flowHoc,
 } from '@bodiless/fclasses';
 import { withNode } from '@bodiless/core';
 import { SquareImage } from '../Image';
 import { withEditorFullFeatured } from '../Editors';
-import { imgRequirements } from '../Image/svgimages';
 
 type FeaturesBlockComponents = {
   Wrapper: ComponentType<any>,
+  BlockWrapper: ComponentType<any>,
   SVGImage: ComponentType<any>,
   Title: ComponentType<any>,
   Body: ComponentType<any>,
@@ -54,18 +53,18 @@ const FeaturesBlockClean: FC<DesignableProps> = ({ components }) => {
   );
 };
 
-const asFeaturesBlock = flow(
+const asFeaturesBlock = flowHoc(
   designable(featuresBlockComponents, 'FeaturesBlock'),
   withNode,  
   withDesign({
     Wrapper: addClasses('shadow-xl m-3 mb-6 bg-white rounded p-3'),
     BlockWrapper: addClasses(' '),
     SVGImage: addClasses('w-16 h-16 p-1 -mt-1 mb-2 mx-auto'),
-    Title: flow(
+    Title: flowHoc(
       withEditorFullFeatured('title', 'Insert Title'),
       addClasses('text-xl font-bold leading-snug tracking-tight mb-1 text-center'),
     ),
-    Body: flow(
+    Body: flowHoc(
       withEditorFullFeatured('body', 'Insert Summary'),
       addClasses('text-gray-600 text-center'),
     ),

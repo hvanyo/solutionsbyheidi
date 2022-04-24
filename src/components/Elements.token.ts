@@ -1,5 +1,4 @@
-import { flow } from 'lodash';
-import { addClasses, asToken, Token, removeClasses } from '@bodiless/fclasses';
+import { addClasses, flowHoc, Token, removeClasses } from '@bodiless/fclasses';
 import {
   asBodilessLink,
   asEditable as asEditableCore,
@@ -20,10 +19,10 @@ import {
 } from './ElementDefault.token';
 
 export const withCategory = <P extends object>(category?: string) => (...hocs: Token[]) => (
-  asToken(
+  flowHoc(
     {}, // see https://github.com/microsoft/TypeScript/issues/28010
     ...hocs,
-    category ? asToken.meta.term('Category')(category) : undefined,
+    category ? flowHoc.meta.term('Category')(category) : undefined,
   )
 );
 
@@ -40,7 +39,7 @@ const withPadding5 = addClasses('p-5');
 
 /* Responsive design */
 const asMobileOnly = addClasses('lg:hidden');
-const asDesktopOnly = asToken(
+const asDesktopOnly = flowHoc(
   addClasses('hidden lg:flex'),
   removeClasses('flex'),
 );
@@ -59,7 +58,7 @@ const asItalic = addClasses('');
 const asLink = addClasses('text-brandRed-400 underline');
 const asSuperScript = addClasses('');
 
-const asHeader1 = flow(addClasses('text-4xl'), asTextColorPrimary);
+const asHeader1 = flowHoc(addClasses('text-4xl'), asTextColorPrimary);
 const asHeader2 = addClasses('text-2xl');
 const asHeader3 = addClasses('text-xl');
 
@@ -82,6 +81,9 @@ const asCta = addClasses('bg-brandRed-400 hover:bg-brandRed-600 text-center text
 
 /* Utility Classes */
 const asDisabled = addClasses('pointer-events-none');
+
+/* add because flowcontainer is not adding it */
+const fakeLg = addClasses('lg:w-1/2');
 
 export {
   asBold,

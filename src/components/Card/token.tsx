@@ -1,7 +1,7 @@
 import {
   addClasses,
   withDesign,
-  asToken,
+  flowHoc,
   remove,
 } from '@bodiless/fclasses';
 import {
@@ -23,7 +23,7 @@ import {
   withCategory,
 } from '../Elements.token';
 
-const asCardHorizontal$ = asToken(
+const asCardHorizontal$ = flowHoc(
   withDesign({
     Title: addClasses('p-2'),
     Body: addClasses('p-2'),
@@ -31,7 +31,7 @@ const asCardHorizontal$ = asToken(
   }),
   asBCardHorizontal,
 );
-const asCardVertical$ = asToken(
+const asCardVertical$ = flowHoc(
   withDesign({
     Title: addClasses('p-2'),
     Body: addClasses('p-2'),
@@ -40,7 +40,7 @@ const asCardVertical$ = asToken(
 );
 
 const asCardDefaultStyle$ = withDesign({
-  Wrapper: asToken(
+  Wrapper: flowHoc(
     asTextColorPrimary,
     addClasses('shadow p-2'),
   ),
@@ -82,7 +82,7 @@ const asCardNoBodyNoTitle = withCategory('Structure')(asCardNoBodyNoTitle$);
 const asCardWithPaddings = withCategory('Layout')(asCardWithPaddings$);
 const asCardTextWhite = withCategory('Appearance')(asCardTextWhite$);
 const asRtlCard = withCategory('Appearance')(asRtlCard$);
-const withMenuCardStyles = asToken(
+const withMenuCardStyles = flowHoc(
   asCardTextWhite,
   asCardWithPaddings,
   asCardDefaultStyle,

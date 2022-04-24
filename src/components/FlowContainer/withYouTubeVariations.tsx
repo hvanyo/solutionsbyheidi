@@ -11,7 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { flow } from 'lodash';
+
 import {
   withTitle,
   withDesc,
@@ -20,13 +20,14 @@ import {
   varyDesign,
   replaceWith,
   withDesign,
+  flowHoc,
 } from '@bodiless/fclasses';
 
 import { DefaultReponsive16By9YouTube } from '../YouTube';
 import { withType } from './Categories';
 
 const youtubeVariation = {
-  YouTube: flow(
+  YouTube: flowHoc(
     replaceWith(DefaultReponsive16By9YouTube),
     withType('YouTube')(),
     withTitle('YouTube'),

@@ -1,11 +1,9 @@
 import React, { FC, ComponentType, HTMLProps } from 'react';
-import { flow } from 'lodash';
 import {
   designable,
   DesignableComponentsProps,
   DesignableProps,
-  Div,
-  H1,
+  flowHoc,
   withDesign,
   addClasses,
   Blockquote,
@@ -86,19 +84,19 @@ const TestimonialsClean: FC<DesignableProps> = ({ components }) => {
 
 /* TODO add data-aos="zoom-y-out" to Title */
 
-const asTestimonials = flow(
+const asTestimonials = flowHoc(
   designable(testimonialsComponents, 'FeaturesBlocks'),
   withDesign({
     Wrapper: addClasses('relative'),    
-    Title: flow(
+    Title: flowHoc(
       withEditorFullFeatured('herotitle', 'Insert Hero Title'),
       addClasses('text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4 z-30'),
     ),
-    Quote: flow(
+    Quote: flowHoc(
       withEditorFullFeatured('quote', 'Insert Quote'),
       addClasses('text-xl font-medium mb-4'),
     ),
-    Submitter: flow(
+    Submitter: flowHoc(
       withEditorFullFeatured('submitter', 'Insert Submitter Name'),
       addClasses('block font-bold text-lg not-italic mb-1'),
     ),    

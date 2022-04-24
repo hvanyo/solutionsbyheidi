@@ -1,12 +1,11 @@
-import { asToken } from '@bodiless/fclasses';
+import { flowHoc } from '@bodiless/fclasses';
 import { Page } from '@bodiless/gatsby-theme-bodiless';
 import { withPageDimensionsContext, BreakpointsType } from '@bodiless/components';
-
-import resolveConfig from 'tailwindcss/resolveConfig';
-import tailwindConfig from '../../../site.tailwind.config';
+import resolvedConfigs from
+  '@bodiless/fclasses/src/tailwindcss/resolveConfig';
 
 const getTailwindBreakpoints = (): BreakpointsType => {
-  const { theme: { screens } } = resolveConfig(tailwindConfig);
+  const { theme: { screens } } = resolvedConfigs;
   const breakpoints = { ...screens };
 
   Object.keys(breakpoints).forEach(key => {
@@ -18,7 +17,7 @@ const getTailwindBreakpoints = (): BreakpointsType => {
 
 const breakpoints: BreakpointsType = getTailwindBreakpoints();
 
-const asResponsivePage = asToken(
+const asResponsivePage = flowHoc(
   withPageDimensionsContext({ breakpoints }),
 )(Page);
 

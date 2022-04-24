@@ -12,7 +12,6 @@
  * limitations under the License.
  */
 import React from 'react';
-import { flow } from 'lodash';
 import { FlowContainer } from '@bodiless/layouts-ui';
 import { getSnapFrom, withTailwindClasses } from '@bodiless/layouts';
 import {
@@ -24,6 +23,7 @@ import {
   varyDesign,
   replaceWith,
   withDesign,
+  flowHoc,
 } from '@bodiless/fclasses';
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailWindConfig from '../../../site.tailwind.config';
@@ -31,7 +31,7 @@ import FeatureBlock from './FeatureBlock';
 import { withType } from '../FlowContainer/Categories';
 
 const featureBlockVariation = {
-  FeatureBlock: flow(
+  FeatureBlock: flowHoc(
     replaceWith(FeatureBlock),
     withType('Block')(),
     withTitle('FeatureBlock'),
@@ -48,21 +48,23 @@ const asFeatureBlockFlowContainer = withDesign({
   ComponentWrapper: addClasses(' '),
 });
 
+/*
 const options = getSnapFrom(
   withTailwindClasses(resolveConfig(tailWindConfig))('w-full lg:w-1/3'),
 );
+*/
 
 const withStrictSnapSize = Component => props => (
   <Component
     {...props}
-    snapData={options}
+    // snapData={options}
   />
 );
 
-const FeatureBlockFlowContainer = flow(
+const FeatureBlockFlowContainer = flowHoc(
   withStrictSnapSize,
   withFeatureBlockVariation,
-  asFeatureBlockFlowContainer
+  asFeatureBlockFlowContainer,
 )(FlowContainer);
 
 export default FeatureBlockFlowContainer;

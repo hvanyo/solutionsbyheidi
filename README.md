@@ -24,7 +24,7 @@ You can then launch the editor:
 
 ```
 cd /path/to/new/site
-npm i
+npm install --legacy-peer-deps
 npm start
 ```
 

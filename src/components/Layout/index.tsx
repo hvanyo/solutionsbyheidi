@@ -1,8 +1,7 @@
 import React, { ComponentType, Fragment, FC } from 'react';
 import {
-  Div, designable, DesignableComponentsProps, asToken, Token,
+  Div, designable, DesignableComponentsProps, flowHoc,
 } from '@bodiless/fclasses';
-import { useNode } from '@bodiless/core';
 import { withBurgerMenuProvider } from '@bodiless/navigation';
 import FullHeader from './header';
 import Footer from './footer';
@@ -13,11 +12,11 @@ import { asSiteHeader, asSiteFooter } from './token';
 const SiteHeader = asSiteHeader(FullHeader);
 const SiteFooter = asSiteFooter(Footer);
 
-const Container = asToken(
+const Container = flowHoc(
 
 )(Div);
 
-const SiteProviders = asToken(
+const SiteProviders = flowHoc(
   withBurgerMenuProvider,
 )(Fragment);
 
@@ -44,17 +43,6 @@ const BaseLayout: FC<LayoutProps> = ({ children, components }) => {
   );
 };
 
-const isHomePage = () => useNode().node.pagePath === '/';
-
-const Layout = designable({
-  /*
-  Breadcrumbs: asToken(
-    withNodeKey({ nodeKey: 'MainMenu', nodeCollection: 'site' }),
-    addClasses('pt-2'),
-    // hide breadcrumbs on home page
-    flowIf(isHomePage)(replaceWith(React.Fragment)),
-  )(BreadcrumbsBase),
-*/
-})(BaseLayout);
+const Layout = designable({})(BaseLayout);
 
 export default Layout;

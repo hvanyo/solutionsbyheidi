@@ -1,5 +1,4 @@
 import React, { FC, ComponentType, HTMLProps } from 'react';
-import { flow } from 'lodash';
 import {
   designable,
   DesignableComponentsProps,
@@ -8,6 +7,7 @@ import {
   H1,
   withDesign,
   addClasses,
+  flowHoc,
 } from '@bodiless/fclasses';
 import { withEditorFullFeatured } from '../Editors';
 
@@ -66,10 +66,10 @@ const HeroClean: FC<DesignableProps> = ({ components }) => {
 
 /* TODO add data-aos="zoom-y-out" to Title */
 
-const asHero = flow(
+const asHero = flowHoc(
   designable(heroComponents, 'Footer'),
   withDesign({
-    Title: flow(
+    Title: flowHoc(
       withEditorFullFeatured('herotitle', 'Insert Hero Title'),
       addClasses('text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4 z-30'),
     ),

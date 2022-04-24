@@ -14,7 +14,6 @@
 
 import React, { FC, ComponentType, HTMLProps } from 'react';
 import { Link } from 'gatsby';
-import { flow } from 'lodash';
 import {
   designable,
   DesignableComponentsProps,
@@ -23,6 +22,7 @@ import {
   replaceWith,
   withDesign,
   addClasses,
+  flowHoc,
 } from '@bodiless/fclasses';
 import { asEditableImage } from '../Elements.token';
 
@@ -58,10 +58,10 @@ const LogoClean: FC<Props> = ({ components }) => {
 // Override asEditableImage nodekey to store in site nodeCollection.
 const LogoImg = asEditableImage({ nodeKey: 'image', nodeCollection: 'site' })(Img);
 
-const asLogo = flow(
+const asLogo = flowHoc(
   designable(logoComponents, 'Logo'),
   withDesign({
-    SiteLogo: flow(
+    SiteLogo: flowHoc(
       replaceWith(LogoImg),
       addClasses('max-w-15'),
     ),      

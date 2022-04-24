@@ -1,5 +1,4 @@
 import React, { FC, ComponentType, HTMLProps } from 'react';
-import { flow } from 'lodash';
 import {
   designable,
   DesignableComponentsProps,
@@ -11,6 +10,7 @@ import {
   P,
   H2,
   replaceWith,
+  flowHoc,
 } from '@bodiless/fclasses';
 import { withEditorFullFeatured } from '../Editors';
 import { withNodeKey } from '@bodiless/core';
@@ -70,22 +70,22 @@ const FeaturesBlocksClean: FC<DesignableProps> = ({ components }) => {
   );
 };
 
-const asFeaturesBlocks = flow(
+const asFeaturesBlocks = flowHoc(
   designable(featuresBlocksComponents, 'FeaturesBlocks'),
   withDesign({
     Wrapper: addClasses('relative'),
     // TODO add aria-hidden="true" to GrayBackground 
     GrayBackground: addClasses('absolute inset-0 top-1/2 md:mt-24 lg:mt-0 bg-gray-700 pointer-events-none'),
     GrayLine: addClasses('absolute left-0 right-0 bottom-0 m-auto w-px p-px h-20 bg-gray-200 transform translate-y-1/2'),
-    Title: flow(
+    Title: flowHoc(
       withEditorFullFeatured('sectiontitle', 'Insert Section Title'),
       addClasses('h2 mb-4'),
     ),
-    Summary: flow(
+    Summary: flowHoc(
       withEditorFullFeatured('sectionsummary', 'Insert Summary'),
       addClasses('text-xl text-gray-600'),
     ),
-    Featured: flow(
+    Featured: flowHoc(
       replaceWith(FeatureBlockFlowContainer),
       withNodeKey('FeatureBlocksFlowContainer'),
     ),

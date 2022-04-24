@@ -1,4 +1,4 @@
-import { flow } from 'lodash';
+import { flowHoc } from '@bodiless/fclasses';
 import { withMandatoryCategories } from '@bodiless/layouts';
 import { FlowContainer } from '@bodiless/layouts-ui';
 import withCardVariations from './withCardVariations';
@@ -8,10 +8,9 @@ import withIframeVariations from './withIframeVariations';
 import withYouTubeVariations from './withYouTubeVariations';
 import { asFlowContainerWithMargins } from './token';
 
-
 // Order of includes currently dictates order in Component Picker
 // thus recommend putting more frequently used components toward top for quicker access.
-const FlowContainerDefault = flow(
+const FlowContainerDefault = flowHoc(
   withRichTextVariations,
   withImageVariations,
   withCardVariations,

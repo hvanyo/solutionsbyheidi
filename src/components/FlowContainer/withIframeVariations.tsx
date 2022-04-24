@@ -11,7 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { flow } from 'lodash';
+
 import {
   withTitle,
   withDesc,
@@ -26,7 +26,7 @@ import { IframeWithResponsiveWidth } from '../Iframe';
 import { withType } from './Categories';
 
 const iframeVariation = {
-  Iframe: flow(
+  Iframe: flowHoc(
     replaceWith(IframeWithResponsiveWidth),
     withType('Iframe')(),
     withTitle('Iframe'),

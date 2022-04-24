@@ -3,11 +3,11 @@ import {
   withDesc,
 } from '@bodiless/layouts';
 import {
-  varyDesign,
+  varyDesigns,
   extendDesign,
   replaceWith,
   withDesign,
-  asToken,
+  flowHoc,
 } from '@bodiless/fclasses';
 import Card from '../Card';
 import {
@@ -26,7 +26,7 @@ export const withStructureFacet = withFacet('Card Structure');
 export const withOrientationFacet = withFacet('Orientation');
 
 const baseVariation = {
-  Card: asToken(
+  Card: flowHoc(
     replaceWith(Card),
     withDesc('A way to promote a Call to Action.\n'),
     withType('Card')(asCardDefaultStyle),
@@ -34,7 +34,7 @@ const baseVariation = {
 };
 
 // Lets make Card version that are Vertical and vary the fields that are used
-const verticalVariations = varyDesign(
+const verticalVariations = varyDesigns(
   {
     Vertical: withOrientationFacet('Vertical')(asCardVertical),
   },
@@ -47,7 +47,7 @@ const verticalVariations = varyDesign(
   },
 );
 // Lets make Card version that are Horizontal and vary the fields that are used
-const horizontalVariations = varyDesign(
+const horizontalVariations = varyDesigns(
   {
     Horizontal: withOrientationFacet('Horizontal')(asCardHorizontal),
   },
@@ -68,8 +68,8 @@ const ctaVariations = {
   NoCTA: withStructureFacet('No CTA')(asCardNoCta),
 };
 
-export default withDesign(varyDesign(
+export default withDesign(varyDesigns(
   baseVariation,
   orientationVariations,
   ctaVariations,
-)());
+));

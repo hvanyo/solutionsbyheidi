@@ -12,11 +12,11 @@
  * limitations under the License.
  */
 
-import { flow } from 'lodash';
+
 import {
   addClasses,
   withDesign,
-  asToken,
+  flowHoc,
 } from '@bodiless/fclasses';
 import {
   asPageContainer,
@@ -28,7 +28,7 @@ const asDefaultLogoStyle = withDesign({
 });
 
 const asSiteHeader = withDesign({
-  Container: asToken(
+  Container: flowHoc(
     asPageContainer,
     addClasses('flex justify-between h-16 lg:h-auto items-center flex-wrap lg:bg-transparent px-4 lg:px-0'),
   ),
@@ -39,7 +39,7 @@ const asSiteHeader = withDesign({
 
 const asSiteFooter = withDesign({
   Wrapper: addClasses('bg-gray-200'),
-  Container: flow(asPageContainer, addClasses('p-3')),
+  Container: flowHoc(asPageContainer, addClasses('p-3')),
 });
 
 export {

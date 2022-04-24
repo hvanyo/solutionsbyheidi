@@ -1,5 +1,5 @@
 import {
-  asToken, withDesign, addClasses, flowIf, addProps,
+  flowHoc, withDesign, addClasses, flowIf, addProps,
 } from '@bodiless/fclasses';
 import {
   asTopNav, useIsActiveTrail, withMenuDesign, withMenuTitleEditors,
@@ -24,7 +24,7 @@ const withActiveMenuBackground = addClasses('bg-brandRed-400');
 const $withTitleEditors = withMenuTitleEditors();
 
 const $withTitleStyles = withDesign({
-  Title: asToken(
+  Title: flowHoc(
     addClasses('text-lg font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out'),
   ),
 });
@@ -45,7 +45,7 @@ const withActiveSubTitleStyles = flowIf(useIsActiveTrail)(
  */
 
 const $withBaseMenuStyles = withDesign({
-  Wrapper: asToken(
+  Wrapper: flowHoc(
     addClasses('flex flex-grow justify-end flex-wrap items-center'),
     addClasses('w-full'),
   ),
@@ -59,12 +59,12 @@ const $withBaseMenuStyles = withDesign({
  */
 
 const $withBaseSubMenuStyles = withDesign({
-  Wrapper: asToken(
+  Wrapper: flowHoc(
     withMenuBackground,
     addClasses('z-10'),
   ),
   Title: withActiveSubTitleStyles,
-  SubmenuIndicator: asToken(
+  SubmenuIndicator: flowHoc(
     addClasses('text-sm text-white'),
     withDesign({
       // Example of the Submenu Indicator 'aria-label' suffix.
@@ -85,7 +85,7 @@ const $withColumnsSublistStyles = withDesign({
   Title: addClasses('pl-6'),
 });
 
-const $asNavStyles = asToken(
+const $asNavStyles = flowHoc(
   asTopNav('Main', 'List', 'Columns', 'Cards'),
   withMenuDesign(['Main', 'List', 'Columns'])($withTitleEditors),
   withMenuDesign()($withTitleStyles),

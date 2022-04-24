@@ -1,5 +1,4 @@
 import React, { FC, ComponentType, HTMLProps, useState, useEffect, useContext } from 'react';
-import { flow } from 'lodash';
 import {
   designable,
   DesignableComponentsProps,
@@ -7,6 +6,7 @@ import {
   Div,
   Header,
   addClassesIf,
+  flowHoc,
 } from '@bodiless/fclasses';
 import { withNodeKey } from '@bodiless/core';
 import ResponsiveMenu, { BurgerMenuToggler } from '../Menu';
@@ -81,14 +81,15 @@ const HeaderClean: FC<Props> = ({ components }) => {
   );
 };
 
-const asSiteHeader = flow(
+const asSiteHeader = flowHoc(
   designable(headerComponents, 'Header'),
   withDesign({
     Menu: withNodeKey({ nodeKey: 'MainMenu', nodeCollection: 'site' }),
-    Wrapper: flow(
+    Wrapper: flowHoc(
       withIsTop(),
       // TODO Not quite working 
-      addClassesIf(isNotTop)('bg-white blur shadow-lg'),
+      // addClassesIf(isNotTop)('bg-white blur shadow-lg'),
+      addClassesIf(isNotTop)('bg-white shadow-lg'),
     ),
   }),
 );

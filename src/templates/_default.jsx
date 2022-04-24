@@ -13,16 +13,16 @@
  */
 
 import React from 'react';
-import { flow } from 'lodash';
+
 import { graphql } from 'gatsby';
 import { Page } from '@bodiless/gatsby-theme-bodiless';
 import Layout from '../components/Layout';
 import { FlowContainerDefault } from '../components/FlowContainer';
 import { withEditorSimple } from '../components/Editors';
-import { addClasses, H1 } from '@bodiless/fclasses';
+import { addClasses, H1, flowHoc } from '@bodiless/fclasses';
 import { asHeader1 } from '../components/Elements.token';
 
-const HeaderTitle = flow(
+const HeaderTitle = flowHoc(
   withEditorSimple('header', 'H1 Title'),
   addClasses('py-6 text-center'),
   asHeader1,
