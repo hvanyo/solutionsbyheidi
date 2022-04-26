@@ -15,12 +15,10 @@ import {
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailWindConfig from '../../../site.tailwind.config';
 import FeatureBlock from './FeatureBlock';
-import { withType } from '../FlowContainer/Categories';
 
 const featureBlockVariation = {
   FeatureBlock: flowHoc(
     replaceWith(FeatureBlock),
-    withType('Block')(),
     withTitle('FeatureBlock'),
     withDesc('Feature Block'),
   ),

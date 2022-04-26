@@ -25,26 +25,10 @@
     ]
   },
   {
-    "type": "paragraph",
-    "children": [
-      {
-        "text": ""
-      }
-    ]
-  },
-  {
     "type": "H2",
     "children": [
       {
         "text": "Technology behind BodilessJS"
-      }
-    ]
-  },
-  {
-    "type": "paragraph",
-    "children": [
-      {
-        "text": "﻿"
       }
     ]
   },
@@ -132,15 +116,7 @@
     ]
   },
   {
-    "type": "paragraph",
-    "children": [
-      {
-        "text": "﻿"
-      }
-    ]
-  },
-  {
-    "type": "paragraph",
+    "type": "H2",
     "children": [
       {
         "text": ""

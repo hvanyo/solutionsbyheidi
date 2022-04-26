@@ -9,9 +9,11 @@ import {
   P,
   A,
   flowHoc,
+  Img,
+  as,
 } from '@bodiless/fclasses';
 import { withEditorFullFeatured } from '../Editors';
-import { SquareImage } from '../Image';
+import { vitalImage } from '@bodiless/vital-image';
 import { asEditableLink } from '../Elements.token';
 
 type TabItemComponents = {
@@ -30,7 +32,7 @@ const tabItemComponents: TabItemComponents = {
   Title: Div,
   Summary: P,
   SVGImgWrapper: Div,
-  SVGImage: SquareImage,
+  SVGImage: Img,
 };
 
 const TabItemClean: FC<DesignableProps> = ({ components }) => {
@@ -70,7 +72,10 @@ const asTabItem = flowHoc(
       withEditorFullFeatured('tab_summary', 'Insert Summary'),
       addClasses('text-gray-600'),
     ),
-    SVGImgWrapper: addClasses('flex justify-center items-center w-8 h-8 bg-brandRed-300 text-white rounded-full shadow flex-shrink-0 ml-3'),
+    SVGImgWrapper: flowHoc(
+      as(vitalImage.Default),
+      addClasses('flex justify-center items-center w-8 h-8 bg-brandRed-300 text-white rounded-full shadow flex-shrink-0 ml-3'),
+    ),
     TabLink: flowHoc(
       asEditableLink('tablink'),
       addClasses('flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3'),
