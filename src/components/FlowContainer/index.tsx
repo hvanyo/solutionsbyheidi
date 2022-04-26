@@ -4,8 +4,6 @@ import { FlowContainer } from '@bodiless/layouts-ui';
 import withCardVariations from './withCardVariations';
 import withRichTextVariations from './withRichTextVariations';
 import withImageVariations from './withImageVariations';
-import withIframeVariations from './withIframeVariations';
-import withYouTubeVariations from './withYouTubeVariations';
 import { asFlowContainerWithMargins } from './token';
 
 // Order of includes currently dictates order in Component Picker
@@ -15,8 +13,6 @@ const FlowContainerDefault = flowHoc(
   withImageVariations,
   withCardVariations,
   asFlowContainerWithMargins,
-//  withIframeVariations,
-//  withYouTubeVariations,
   withMandatoryCategories(['Orientation', 'Type']),
 )(FlowContainer);
 
