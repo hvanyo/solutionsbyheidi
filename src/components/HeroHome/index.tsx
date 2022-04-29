@@ -9,7 +9,7 @@ import {
   addClasses,
   flowHoc,
 } from '@bodiless/fclasses';
-import { withEditorFullFeatured } from '../Editors';
+import { withEditorRich } from '@bodiless/vital-editors';
 
 
 type HeroComponents = {
@@ -70,7 +70,7 @@ const asHero = flowHoc(
   designable(heroComponents, 'Footer'),
   withDesign({
     Title: flowHoc(
-      withEditorFullFeatured('herotitle', 'Insert Hero Title'),
+      withEditorRich('herotitle', 'Insert Hero Title'),
       addClasses('text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4 z-30'),
     ),
     Wrapper: addClasses(''),

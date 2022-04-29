@@ -2,15 +2,14 @@ import React from 'react';
 
 import { graphql } from 'gatsby';
 import { Page } from '@bodiless/gatsby-theme-bodiless';
-import Layout from '../components/Layout';
-import { withEditorSimple } from '../components/Editors';
+import { withEditorPlain } from '@bodiless/vital-editors';
 import { addClasses, H1, flowHoc } from '@bodiless/fclasses';
 import { asHeader1 } from '../components/Elements.token';
 import { vitalFlowContainer, FlowContainerClean } from '@bodiless/vital-flowcontainer';
 import { as } from '@bodiless/fclasses';
 
 const HeaderTitle = flowHoc(
-  withEditorSimple('header', 'H1 Title'),
+  withEditorPlain('header', 'H1 Title'),
   addClasses('py-6 text-center'),
   asHeader1,
 )(H1);

@@ -12,7 +12,7 @@ import {
   Img,
   as,
 } from '@bodiless/fclasses';
-import { withEditorFullFeatured } from '../Editors';
+import { withEditorRich } from '@bodiless/vital-editors';
 import { vitalImage } from '@bodiless/vital-image';
 import { asEditableLink } from '../Elements.token';
 
@@ -65,11 +65,11 @@ const asTabItem = flowHoc(
   withDesign({
     Wrapper: addClasses('relative'),    
     Title: flowHoc(
-      withEditorFullFeatured('tab_title', 'Insert Title'),
+      withEditorRich('tab_title', 'Insert Title'),
       addClasses('font-bold leading-snug tracking-tight mb-1'),
     ),
     Summary: flowHoc(
-      withEditorFullFeatured('tab_summary', 'Insert Summary'),
+      withEditorRich('tab_summary', 'Insert Summary'),
       addClasses('text-gray-600'),
     ),
     SVGImgWrapper: flowHoc(

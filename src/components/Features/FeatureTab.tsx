@@ -10,7 +10,7 @@ import {
   flowHoc,
   Section,
 } from '@bodiless/fclasses';
-import { withEditorFullFeatured } from '../Editors';
+import { withEditorRich } from '@bodiless/vital-editors';
 import Transition from '../utils/Transition.js';
 import TabItem from './TabItem';
 
@@ -183,11 +183,11 @@ const asFeaturesTab = flowHoc(
   withDesign({
     Wrapper: addClasses('relative'),    
     Title: flowHoc(
-      withEditorFullFeatured('feature_sectiontitle', 'Insert Section Title'),
+      withEditorRich('feature_sectiontitle', 'Insert Section Title'),
       addClasses('h2 mb-4'),
     ),
     Summary: flowHoc(
-      withEditorFullFeatured('feature_sectionsummary', 'Insert Summary'),
+      withEditorRich('feature_sectionsummary', 'Insert Summary'),
       addClasses('text-xl text-gray-600'),
     ),  
   }),

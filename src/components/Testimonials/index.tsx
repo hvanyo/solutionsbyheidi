@@ -10,7 +10,7 @@ import {
   Cite,
   Section,
 } from '@bodiless/fclasses';
-import { withEditorFullFeatured } from '../Editors';
+import { withEditorRich } from '@bodiless/vital-editors';
 
 
 type TestimonialsComponents = {
@@ -89,15 +89,15 @@ const asTestimonials = flowHoc(
   withDesign({
     Wrapper: addClasses('relative'),    
     Title: flowHoc(
-      withEditorFullFeatured('herotitle', 'Insert Hero Title'),
+      withEditorRich('herotitle', 'Insert Hero Title'),
       addClasses('text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4 z-30'),
     ),
     Quote: flowHoc(
-      withEditorFullFeatured('quote', 'Insert Quote'),
+      withEditorRich('quote', 'Insert Quote'),
       addClasses('text-xl font-medium mb-4'),
     ),
     Submitter: flowHoc(
-      withEditorFullFeatured('submitter', 'Insert Submitter Name'),
+      withEditorRich('submitter', 'Insert Submitter Name'),
       addClasses('block font-bold text-lg not-italic mb-1'),
     ),    
   }),

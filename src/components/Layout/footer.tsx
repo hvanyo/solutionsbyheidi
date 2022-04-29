@@ -11,7 +11,7 @@ import {
   addClasses,
   flowHoc,
 } from '@bodiless/fclasses';
-import { withEditorFullFeatured } from '../Editors';
+import { withEditorRich } from '@bodiless/vital-editors';
 
 
 const MySocialLinks = () => {
@@ -95,7 +95,7 @@ const asFooterHeader = flowHoc(
   designable(footerComponents, 'Footer'),
   withDesign({
     SiteTitleCopyrightEditable: flowHoc(
-      withEditorFullFeatured({ nodeKey: 'sitetitle', nodeCollection: 'site' }, 'Insert Site Title', 'site'),
+      withEditorRich({ nodeKey: 'sitetitle', nodeCollection: 'site' }, 'Insert Site Title', 'site'),
       addClasses('text-sm text-gray-600 text-left my-3'),
     ),
     SiteCopyright: addClasses('flex items-center justify-between py-4 md:py-8 border-t border-gray-200'),

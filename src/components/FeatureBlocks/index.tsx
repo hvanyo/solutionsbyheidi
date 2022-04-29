@@ -12,7 +12,7 @@ import {
   replaceWith,
   flowHoc,
 } from '@bodiless/fclasses';
-import { withEditorFullFeatured } from '../Editors';
+import { withEditorRich } from '@bodiless/vital-editors';
 import { withNodeKey } from '@bodiless/core';
 import FeatureBlockFlowContainer from './FeatureBlockContainer';
 
@@ -78,11 +78,11 @@ const asFeaturesBlocks = flowHoc(
     GrayBackground: addClasses('absolute inset-0 top-1/2 md:mt-24 lg:mt-0 bg-gray-700 pointer-events-none'),
     GrayLine: addClasses('absolute left-0 right-0 bottom-0 m-auto w-px p-px h-20 bg-gray-200 transform translate-y-1/2'),
     Title: flowHoc(
-      withEditorFullFeatured('sectiontitle', 'Insert Section Title'),
+      withEditorRich('sectiontitle', 'Insert Section Title'),
       addClasses('h2 mb-4'),
     ),
     Summary: flowHoc(
-      withEditorFullFeatured('sectionsummary', 'Insert Summary'),
+      withEditorRich('sectionsummary', 'Insert Summary'),
       addClasses('text-xl text-gray-600'),
     ),
     Featured: flowHoc(

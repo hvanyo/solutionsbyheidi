@@ -12,7 +12,7 @@ import {
   replaceWith,
   flowHoc,
 } from '@bodiless/fclasses';
-import { withEditorFullFeatured } from '../Editors';
+import { withEditorRich } from '@bodiless/vital-editors';
 import FeatureTab from './FeatureTab';
 
 type FeaturesComponents = {
@@ -81,11 +81,11 @@ const asFeatures = flowHoc(
     GrayBackground: addClasses('absolute inset-0 bg-gray-100 pointer-events-none mb-16'),
     GrayLine: addClasses('absolute left-0 right-0 m-auto w-px p-px h-20 bg-gray-200 transform -translate-y-1/2'),       
     Title: flowHoc(
-      withEditorFullFeatured('feature_sectiontitle', 'Insert Section Title'),
+      withEditorRich('feature_sectiontitle', 'Insert Section Title'),
       addClasses('h2 mb-4'),
     ),
     Summary: flowHoc(
-      withEditorFullFeatured('feature_sectionsummary', 'Insert Summary'),
+      withEditorRich('feature_sectionsummary', 'Insert Summary'),
       addClasses('text-xl text-gray-600'),
     ),
     TabbedArea: flowHoc(

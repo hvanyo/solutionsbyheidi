@@ -15,7 +15,7 @@ import {
 } from '@bodiless/fclasses';
 import { withNode } from '@bodiless/core';
 import { vitalImage } from '@bodiless/vital-image';
-import { withEditorFullFeatured } from '../Editors';
+import { withEditorRich } from '@bodiless/vital-editors';
 
 type FeaturesBlockComponents = {
   Wrapper: ComponentType<any>,
@@ -66,11 +66,11 @@ const asFeaturesBlock = flowHoc(
       addClasses('w-16 h-16 p-1 -mt-1 mb-2 mx-auto'),
     ),
     Title: flowHoc(
-      withEditorFullFeatured('title', 'Insert Title'),
+      withEditorRich('title', 'Insert Title'),
       addClasses('text-xl font-bold leading-snug tracking-tight mb-1 text-center'),
     ),
     Body: flowHoc(
-      withEditorFullFeatured('body', 'Insert Summary'),
+      withEditorRich('body', 'Insert Summary'),
       addClasses('text-gray-600 text-center'),
     ),
   }),
