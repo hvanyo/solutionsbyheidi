@@ -1,0 +1,27 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "/learnings/sitebuiltwithBodilessJS/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Built with BodilessJS"
+          }
+        ]
+      },
+      {
+        "text": ""
+      }
+    ]
+  }
+]

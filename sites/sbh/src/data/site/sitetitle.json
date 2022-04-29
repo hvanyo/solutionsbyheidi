@@ -1,0 +1,35 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Made by "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.solutionsbyheidi.com/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Solutions By Heidi LLC"
+          }
+        ]
+      },
+      {
+        "text": ". "
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "All rights reserved."
+      }
+    ]
+  }
+]

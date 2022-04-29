@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "uuid": "87a22ca0-3717-11eb-ad43-43d2eaf9e57a",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "RichText"
+    },
+    {
+      "uuid": "63841ae0-4823-11ec-887c-bb7595be2ca8",
+      "wrapperProps": {
+        "className": "w-full lg:w-1/2"
+      },
+      "type": "RichText"
+    },
+    {
+      "uuid": "7116af10-4823-11ec-887c-bb7595be2ca8",
+      "wrapperProps": {
+        "className": "w-full lg:w-1/2"
+      },
+      "type": "RichText"
+    }
+  ]
+}

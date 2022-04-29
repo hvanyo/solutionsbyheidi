@@ -1,0 +1,117 @@
+[
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Hosting a Static Site"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "There are many ways to host a static site.  I chose "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://dashboard.heroku.com/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Heroku"
+          }
+        ]
+      },
+      {
+        "text": " as an economical way that proved to be easy to setup and work with BodilessJS. Since this is built off Gatsby, you can follow their "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.gatsbyjs.com/docs/deploying-to-heroku/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "directions"
+          }
+        ]
+      },
+      {
+        "text": " to deploy to Heroku by adding app.json and static.json. There was an addition step to serve the site with creating a Procfile  and putting in \"web: gatsby serve --port $PORT --host 0.0.0.0 \"﻿"
+      }
+    ]
+  },
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Adding New Content to the Site"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "﻿"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Anytime, I need to add content, I locally start up the edit environment, make the necessary changes, commit and push to the master branch and my static website is updated automatically ﻿"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Credits:"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Site design inspiration started from Cruip's "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://github.com/cruip/tailwind-landing-page-template"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "tailwind landing page template"
+          }
+        ]
+      },
+      {
+        "text": "."
+      }
+    ]
+  }
+]
