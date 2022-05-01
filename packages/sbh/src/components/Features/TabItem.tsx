@@ -1,8 +1,8 @@
-import React, { FC, ComponentType, HTMLProps, useState, useRef, useEffect } from 'react';
+import React, { FC } from 'react';
 import {
   designable,
+  ComponentOrTag,
   DesignableComponentsProps,
-  DesignableProps,
   Div,
   withDesign,
   addClasses,
@@ -17,14 +17,15 @@ import { vitalImage } from '@bodiless/vital-image';
 import { asEditableLink } from '../Elements.token';
 
 type TabItemComponents = {
-  Wrapper: ComponentType<any>,
-  Title: ComponentType<any>,
-  Summary: ComponentType<any>,
-  SVGImageWrapper: ComponentType<any>,
-  SVGImage: ComponentType<any>,
+  Wrapper: ComponentOrTag<any>,
+  TabLink: ComponentOrTag<any>,
+  Title: ComponentOrTag<any>,
+  Summary: ComponentOrTag<any>,
+  SVGImgWrapper: ComponentOrTag<any>,
+  SVGImage: ComponentOrTag<any>,
 };
 
-export type Props = DesignableComponentsProps<TabItemComponents> & HTMLProps<HTMLElement>;
+export type TabOtemProps = DesignableComponentsProps<TabItemComponents>;
 
 const tabItemComponents: TabItemComponents = {
   Wrapper: Div,
@@ -35,35 +36,24 @@ const tabItemComponents: TabItemComponents = {
   SVGImage: Img,
 };
 
-const TabItemClean: FC<DesignableProps> = ({ components }) => {
-  const {
-    Wrapper,
-    TabLink,
-    Title,
-    Summary,
-    SVGImgWrapper,
-    SVGImage,
-  } = components;
-
-  return (
-    <Wrapper>
-      <TabLink>
-        <div>
-          <Title /> 
-          <Summary /> 
-        </div>
-        <SVGImgWrapper> 
-          <SVGImage />
-        </SVGImgWrapper> 
-      </TabLink>
-    </Wrapper>
-  );
-};
+const TabItemClean: FC<TabOtemProps> = ({ components: C, ...rest }) => (
+  <C.Wrapper {...rest}>
+    <C.TabLink>
+      <div>
+        <C.Title />
+        <C.Summary />
+      </div>
+      <C.SVGImgWrapper>
+        <C.SVGImage />
+      </C.SVGImgWrapper>
+    </C.TabLink>
+  </C.Wrapper>
+);
 
 const asTabItem = flowHoc(
   designable(tabItemComponents, 'TabItem'),
   withDesign({
-    Wrapper: addClasses('relative'),    
+    Wrapper: addClasses('relative'),
     Title: flowHoc(
       withEditorRich('tab_title', 'Insert Title'),
       addClasses('font-bold leading-snug tracking-tight mb-1'),
@@ -80,10 +70,10 @@ const asTabItem = flowHoc(
       asEditableLink('tablink'),
       addClasses('flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3'),
     )
-      // TO DO 
-      // className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 1 ? 'bg-white shadow-md border-gray-200 hover:shadow-lg' : 'bg-gray-200 border-transparent'}`}
-      // </Wrapper>href="#0"
-      // onClick={(e) => { e.preventDefault(); setTab(1); }}
+    // TO DO
+    // className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 1 ? 'bg-white shadow-md border-gray-200 hover:shadow-lg' : 'bg-gray-200 border-transparent'}`}
+    // </Wrapper>href="#0"
+    // onClick={(e) => { e.preventDefault(); setTab(1); }}
   }),
 );
 

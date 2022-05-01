@@ -1,6 +1,4 @@
-import React from 'react';
 import { FlowContainer } from '@bodiless/layouts-ui';
-import { getSnapFrom, withTailwindClasses } from '@bodiless/layouts';
 import {
   withTitle,
   withDesc,
@@ -12,8 +10,6 @@ import {
   withDesign,
   flowHoc,
 } from '@bodiless/fclasses';
-import resolveConfig from 'tailwindcss/resolveConfig';
-import tailWindConfig from '../../../site.tailwind.config';
 import FeatureBlock from './FeatureBlock';
 
 const featureBlockVariation = {
@@ -37,7 +33,6 @@ const asFeatureBlockFlowContainer = withDesign({
 const options = getSnapFrom(
   withTailwindClasses(resolveConfig(tailWindConfig))('w-full lg:w-1/3'),
 );
-*/
 
 const withStrictSnapSize = Component => props => (
   <Component
@@ -45,9 +40,10 @@ const withStrictSnapSize = Component => props => (
     // snapData={options}
   />
 );
+*/
 
 const FeatureBlockFlowContainer = flowHoc(
-  withStrictSnapSize,
+  // withStrictSnapSize,
   withFeatureBlockVariation,
   asFeatureBlockFlowContainer,
 )(FlowContainer);

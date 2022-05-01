@@ -1,6 +1,6 @@
 {
   "name": "@sites/sbh",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
   "author": "",
   "homepage": "",
@@ -39,6 +39,7 @@
     "gatsby": "^4.11.2",
     "gatsby-plugin-canonical-urls": "^4.10.0",
     "gatsby-plugin-sitemap": "^5.10.2",
+    "gatsby-plugin-google-gtag": "^4.10.0",
     "glob": "^7.1.6",
     "informed": "^3.34.0",
     "lodash": "^4.17.19",
@@ -51,7 +52,7 @@
     "react-helmet": "^6.1.0",
     "react-markdown": "^8.0.0",
     "react-mde": "^11.0.0",
-    "sbh": "^0.0.0"
+    "sbh": "^1.0.0"
   },
   "files": [
     "lib"

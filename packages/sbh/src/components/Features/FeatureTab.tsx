@@ -1,8 +1,8 @@
-import React, { FC, ComponentType, HTMLProps, useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   designable,
+  ComponentOrTag,
   DesignableComponentsProps,
-  DesignableProps,
   Div,
   withDesign,
   addClasses,
@@ -10,17 +10,16 @@ import {
   flowHoc,
   Section,
 } from '@bodiless/fclasses';
-import { withEditorRich } from '@bodiless/vital-editors';
-import Transition from '../utils/Transition.js';
-import TabItem from './TabItem';
+// import Transition from '../utils/Transition.js';
+// import TabItem from './TabItem';
 
 type FeaturesTabComponents = {
-  Wrapper: ComponentType<any>,
-  Title: ComponentType<any>,
-  Summary: ComponentType<any>,
+  Wrapper: ComponentOrTag<any>,
+  Title: ComponentOrTag<any>,
+  Summary: ComponentOrTag<any>,
 };
 
-export type Props = DesignableComponentsProps<FeaturesTabComponents> & HTMLProps<HTMLElement>;
+export type FeaturesTabProps = DesignableComponentsProps<FeaturesTabComponents>;
 
 const featuresTabComponents: FeaturesTabComponents = {
   Wrapper: Section,
@@ -28,17 +27,14 @@ const featuresTabComponents: FeaturesTabComponents = {
   Summary: P,
 };
 
-const FeaturesTabClean: FC<DesignableProps> = ({ components }) => {
-  const {
-    Wrapper,
-    Title,
-    Summary,
-  } = components;
+const FeaturesTabClean = (props: FeaturesTabProps) => {
+  const { components: C, ...rest } = props;
 
   const [tab, setTab] = useState(1);
 
   const tabs = useRef(null);
 
+  /*
   const heightFix = () => {
     if (tabs.current.children[tab]) {
       tabs.current.style.height = tabs.current.children[tab - 1].offsetHeight + 'px'
@@ -49,9 +45,10 @@ const FeaturesTabClean: FC<DesignableProps> = ({ components }) => {
     heightFix()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tab])
+  */
 
   return (
-    <Wrapper>
+    <C.Wrapper {...rest}>
 
       {/* Section content */}
       <div className="md:grid md:grid-cols-12 md:gap-6">
@@ -115,64 +112,11 @@ const FeaturesTabClean: FC<DesignableProps> = ({ components }) => {
         <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1" data-aos="zoom-y-out" ref={tabs}>
           <div className="relative flex flex-col text-left pl-8">
             {/* Item 1 */}
-            <Transition
-              show={tab === 1}
-              appear={true}
-              className="w-full"
-              enter="transition ease-in-out duration-700 transform order-first"
-              enterStart="opacity-0 translate-y-16"
-              enterEnd="opacity-100 translate-y-0"
-              leave="transition ease-in-out duration-300 transform absolute"
-              leaveStart="opacity-100 translate-y-0"
-              leaveEnd="opacity-0 -translate-y-16"
-            >
-              <div className="relative inline-flex flex-col">
-                <ul>
-                  <li>Bullets Coming Soon</li>
-                </ul>
-              </div>
-            </Transition>
-            {/* Item 2 */}
-            <Transition
-              show={tab === 2}
-              appear={true}
-              className="w-full"
-              enter="transition ease-in-out duration-700 transform order-first"
-              enterStart="opacity-0 translate-y-16"
-              enterEnd="opacity-100 translate-y-0"
-              leave="transition ease-in-out duration-300 transform absolute"
-              leaveStart="opacity-100 translate-y-0"
-              leaveEnd="opacity-0 -translate-y-16"
-            >
-              <div className="relative inline-flex flex-col">
-                <ul>
-                  <li>Bullets Coming Soon</li>
-                </ul>
-              </div>
-            </Transition>
-            {/* Item 3 */}
-            <Transition
-              show={tab === 3}
-              appear={true}
-              className="w-full"
-              enter="transition ease-in-out duration-700 transform order-first"
-              enterStart="opacity-0 translate-y-16"
-              enterEnd="opacity-100 translate-y-0"
-              leave="transition ease-in-out duration-300 transform absolute"
-              leaveStart="opacity-100 translate-y-0"
-              leaveEnd="opacity-0 -translate-y-16"
-            >
-              <div className="relative inline-flex flex-col">
-                <ul>
-                  <li>Bullets Coming Soon</li>
-                </ul>
-              </div>
-            </Transition>
           </div>
-        </div >
+        </div>
 
-      </div >
-    </Wrapper>
+      </div>
+    </C.Wrapper>
   );
 };
 
@@ -181,15 +125,7 @@ const FeaturesTabClean: FC<DesignableProps> = ({ components }) => {
 const asFeaturesTab = flowHoc(
   designable(featuresTabComponents, 'FeaturesTab'),
   withDesign({
-    Wrapper: addClasses('relative'),    
-    Title: flowHoc(
-      withEditorRich('feature_sectiontitle', 'Insert Section Title'),
-      addClasses('h2 mb-4'),
-    ),
-    Summary: flowHoc(
-      withEditorRich('feature_sectionsummary', 'Insert Summary'),
-      addClasses('text-xl text-gray-600'),
-    ),  
+    Wrapper: addClasses('relative'),
   }),
 );
 

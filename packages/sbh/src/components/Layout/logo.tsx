@@ -50,7 +50,7 @@ const asLogo = flowHoc(
     SiteLogo: flowHoc(
       replaceWith(LogoImg),
       addClasses('max-w-15'),
-    ),      
+    ),
   }),
 );
 

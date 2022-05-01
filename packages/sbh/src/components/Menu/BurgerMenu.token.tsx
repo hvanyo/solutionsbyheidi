@@ -1,6 +1,6 @@
 import { withAppendChild } from '@bodiless/core';
 import {
-  Div, flowHoc, replaceWith, startWith, withDesign, addClasses, withoutProps, removeClassesIf, addClassesIf,
+  Div, flowHoc, replaceWith, startWith, withDesign, addClasses, withoutProps, removeClassesIf,
 } from '@bodiless/fclasses';
 import {
   asBurgerMenu, withMenuDesign, BurgerMenuDefaultToggler, asSlideLeft, useIsBurgerMenuVisible,

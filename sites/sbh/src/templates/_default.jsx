@@ -3,10 +3,11 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Page } from '@bodiless/gatsby-theme-bodiless';
 import { withEditorPlain } from '@bodiless/vital-editors';
-import { addClasses, H1, flowHoc } from '@bodiless/fclasses';
-import { asHeader1 } from '../components/Elements.token';
+import {
+  addClasses, H1, flowHoc, as
+} from '@bodiless/fclasses';
 import { vitalFlowContainer, FlowContainerClean } from '@bodiless/vital-flowcontainer';
-import { as } from '@bodiless/fclasses';
+import { Layout, asHeader1 } from 'sbh';
 
 const HeaderTitle = flowHoc(
   withEditorPlain('header', 'H1 Title'),
@@ -21,8 +22,8 @@ const FlowContainerDefault = as(
 export default props => (
   <Page {...props}>
     <Layout>
-      <div className='px-2 mt-16 container mx-auto'>
-        <HeaderTitle nodeKey='title' />
+      <div className="px-2 mt-16 container mx-auto">
+        <HeaderTitle nodeKey="title" />
         <div className="flex flex-wrap my-3 flex-col-reverse md:flex-row">
           <div className="w-full md:w-1/4 sm:pr-3 lg:pr-5">
             <FlowContainerDefault nodeKey="sidebar_l" />
@@ -32,9 +33,9 @@ export default props => (
           </div>
           <div className="w-full md:w-1/4 sm:pl-3 lg:pl-5">
             <FlowContainerDefault nodeKey="sidebar_r" />
-          </div>          
+          </div>
         </div>
-        
+
       </div>
     </Layout>
   </Page>
@@ -42,7 +43,15 @@ export default props => (
 
 export const query = graphql`
   query($slug: String!) {
-    ...PageQuery,
+    ...PageQuery
     ...SiteQuery
+    ...DefaultContentQuery
+    allSite(filter: {pathPrefix: {eq: $slug}}) {
+      edges {
+        node {
+          buildTime
+        }
+      }
+    }
   }
 `;

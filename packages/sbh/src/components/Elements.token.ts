@@ -1,15 +1,9 @@
-import { addClasses, flowHoc, Token, removeClasses } from '@bodiless/fclasses';
+import { addClasses, flowHoc, removeClasses } from '@bodiless/fclasses';
 import {
   asBodilessLink,
   asEditable as asEditableCore,
 } from '@bodiless/components';
 import { asBodilessImage } from '@bodiless/components-ui';
-import {
-  asResponsive21By9Embed,
-  asResponsive16By9Embed,
-  asResponsive4By3Embed,
-  asResponsive1By1Embed,
-} from '@bodiless/organisms';
 import {
   asAlignCenter,
   asAlignRight,
@@ -17,14 +11,6 @@ import {
   asUnderline,
   asAlignJustify,
 } from './ElementDefault.token';
-
-export const withCategory = <P extends object>(category?: string) => (...hocs: Token[]) => (
-  flowHoc(
-    {}, // see https://github.com/microsoft/TypeScript/issues/28010
-    ...hocs,
-    category ? flowHoc.meta.term('Category')(category) : undefined,
-  )
-);
 
 /* Page Structure */
 const asBlockItem = addClasses('p-1 w-full');
@@ -82,9 +68,6 @@ const asCta = addClasses('bg-brandRed-400 hover:bg-brandRed-600 text-center text
 /* Utility Classes */
 const asDisabled = addClasses('pointer-events-none');
 
-/* add because flowcontainer is not adding it */
-const fakeLg = addClasses('lg:w-1/2');
-
 export {
   asBold,
   asItalic,
@@ -121,8 +104,4 @@ export {
   withPadding1,
   withPadding3,
   withPadding5,
-  asResponsive21By9Embed,
-  asResponsive16By9Embed,
-  asResponsive4By3Embed,
-  asResponsive1By1Embed,
 };

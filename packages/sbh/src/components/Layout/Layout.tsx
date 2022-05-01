@@ -33,7 +33,7 @@ const BaseLayout: FC<LayoutProps> = ({ children, components }) => {
       <SeoHelmet />
       <SiteProviders>
         <SiteHeader />
-        <Container >
+        <Container>
           { Breadcrumbs && <Breadcrumbs />}
           {children}
         </Container>
@@ -43,6 +43,4 @@ const BaseLayout: FC<LayoutProps> = ({ children, components }) => {
   );
 };
 
-const Layout = designable({})(BaseLayout);
-
-export default Layout;
+export const Layout = designable({})(BaseLayout);

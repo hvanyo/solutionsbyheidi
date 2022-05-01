@@ -1,8 +1,8 @@
-import React, { FC, ComponentType, HTMLProps } from 'react';
+import React, { FC } from 'react';
 import {
   designable,
+  ComponentOrTag,
   DesignableComponentsProps,
-  DesignableProps,
   withDesign,
   addClasses,
   Div,
@@ -18,14 +18,14 @@ import { vitalImage } from '@bodiless/vital-image';
 import { withEditorRich } from '@bodiless/vital-editors';
 
 type FeaturesBlockComponents = {
-  Wrapper: ComponentType<any>,
-  BlockWrapper: ComponentType<any>,
-  SVGImage: ComponentType<any>,
-  Title: ComponentType<any>,
-  Body: ComponentType<any>,
+  Wrapper: ComponentOrTag<any>,
+  BlockWrapper: ComponentOrTag<any>,
+  SVGImage: ComponentOrTag<any>,
+  Title: ComponentOrTag<any>,
+  Body: ComponentOrTag<any>,
 };
 
-export type Props = DesignableComponentsProps<FeaturesBlockComponents> & HTMLProps<HTMLElement>;
+export type FeaturesBlockProps = DesignableComponentsProps<FeaturesBlockComponents>;
 
 const featuresBlockComponents: FeaturesBlockComponents = {
   Wrapper: Section,
@@ -35,29 +35,19 @@ const featuresBlockComponents: FeaturesBlockComponents = {
   Body: P,
 };
 
-const FeaturesBlockClean: FC<DesignableProps> = ({ components }) => {
-  const {
-    Wrapper,
-    BlockWrapper,
-    SVGImage,
-    Title,
-    Body,
-  } = components;
-
-  return (
-    <Wrapper>
-      <BlockWrapper>
-        <SVGImage />
-        <Title />
-        <Body />
-        </BlockWrapper>
-    </Wrapper>
-  );
-};
+const FeaturesBlockClean: FC<FeaturesBlockProps> = ({ components: C, ...rest }) => (
+  <C.Wrapper {...rest}>
+    <C.BlockWrapper>
+      <C.SVGImage />
+      <C.Title />
+      <C.Body />
+    </C.BlockWrapper>
+  </C.Wrapper>
+);
 
 const asFeaturesBlock = flowHoc(
   designable(featuresBlockComponents, 'FeaturesBlock'),
-  withNode,  
+  withNode,
   withDesign({
     Wrapper: addClasses('shadow-xl m-3 mb-6 bg-white rounded p-3'),
     BlockWrapper: addClasses(' '),
