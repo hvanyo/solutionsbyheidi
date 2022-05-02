@@ -52,6 +52,7 @@
     "react-helmet": "^6.1.0",
     "react-markdown": "^8.0.0",
     "react-mde": "^11.0.0",
+    "react-transition-group": "^4.4.2",
     "sbh": "^1.0.0"
   },
   "files": [
