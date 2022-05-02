@@ -6,6 +6,8 @@
 
 // You can delete this file if you're not using it
 
+import './src/styles/style.css';
+
 const enabled = (process.env.BODILESS_TAILWIND_THEME_ENABLED || '1') === '1';
 if (enabled) {
   // This try/catch hack prevents failure in building the static site even if index.css
