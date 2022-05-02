@@ -24,6 +24,7 @@ const withIsTop = () => (Component: any) => (props: any) => {
   // detect whether user has scrolled the page down by 10px
   useEffect(() => {
     const scrollHandler = () => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       window.pageYOffset > 10 ? setTop(false) : setTop(true);
     };
     window.addEventListener('scroll', scrollHandler);

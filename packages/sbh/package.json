@@ -51,7 +51,9 @@
     "@bodiless/vital-list": "^1.0.0-beta.11",
     "@bodiless/vital-templates": "^1.0.0-beta.11",
     "@bodiless/gatsby-theme-bodiless": "^1.0.0-beta.11",
+    "gatsby": "^4.11.2",
     "lodash": "^4.17.19",
+    "react-helmet": "^6.1.0",
     "tailwindcss": "^3.0.23",
     "tailwindcss-dir": "^4.0.0"
   }

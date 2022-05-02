@@ -36,10 +36,12 @@ function CSSTransition({
   const removeFromDom = unmountOnExit;
 
   function addClasses(node, classes) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     classes.length && node.classList.add(...classes);
   }
 
   function removeClasses(node, classes) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     classes.length && node.classList.remove(...classes);
   }
 

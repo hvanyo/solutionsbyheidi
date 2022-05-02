@@ -70,9 +70,7 @@ const HeroClean: FC<HeroProps> = ({ components: C, ...rest }) => (
 
 /* TODO add data-aos="zoom-y-out" to Title */
 /* TODO
-.text-transparent {
-    color: transparent;
-}
+
 .bg-clip-text {
     background-clip: text;
     -webkit-background-clip: text;
