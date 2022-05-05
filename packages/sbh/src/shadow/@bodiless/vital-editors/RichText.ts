@@ -18,6 +18,7 @@ const Default = asFluidToken({
     ...(vitalRichTextBase.Default.Compose || {}),
     WithShadowedBy: addProps({ 'data-shadowed-by': '__vitalstarter_:RichText' }),
   },
+  // TODO -- omit... not working
   Core: {
     ...omit(vitalRichTextBase.Default.Core, 'H4'),
     ...omit(vitalRichTextBase.Default.Core, 'H5'),

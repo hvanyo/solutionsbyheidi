@@ -12,6 +12,7 @@ const twConfig = {
     extend: {
       colors: {
         transparent: 'transparent',
+        white: '#FFFFFF',
         gray: {
           100: '#FBFBFB',
           200: '#EAEAEA',
