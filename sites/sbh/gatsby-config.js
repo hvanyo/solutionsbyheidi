@@ -1,5 +1,7 @@
 const fs = require('fs');
 const express = require('express');
+const { execSync } = require('child_process');
+
 // const {
 //   createDefaultContentPlugins,
 //   getSampleDefaultContentConfig,
@@ -12,6 +14,7 @@ const { getDisabledPages } = require('@bodiless/components/node-api');
 
 const activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development';
 
+execSync('npm run build:env-vars');
 require('dotenv').config({
   path: `.env.${activeEnv}`,
 });
