@@ -26,6 +26,7 @@ type LayoutComponents = {
 
 type LayoutProps = DesignableComponentsProps<LayoutComponents>;
 
+// @ts-ignore
 const BaseLayout: FC<LayoutProps> = ({ children, components }) => {
   const { Breadcrumbs } = components;
   return (
