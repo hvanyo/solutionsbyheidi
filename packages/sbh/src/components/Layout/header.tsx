@@ -7,13 +7,14 @@ import {
   DesignableComponentsProps,
   withDesign,
   Div,
+  Img,
   Header,
   addClassesIf,
   flowHoc,
 } from '@bodiless/fclasses';
 import { withNodeKey } from '@bodiless/core';
 import ResponsiveMenu, { BurgerMenuToggler } from '../Menu';
-import Logo from './logo';
+// import Logo from './logo';
 
 const IsTopContext = React.createContext({
   top: false,
@@ -60,7 +61,7 @@ const headerComponents:HeaderComponents = {
   Menu: ResponsiveMenu,
   MenuToggler: BurgerMenuToggler,
   SiteBranding: Div,
-  SiteLogoReturn: Logo,
+  SiteLogoReturn: Img,
 };
 
 const HeaderClean: FC<HeaderProps> = ({ components: C, ...rest }) => (

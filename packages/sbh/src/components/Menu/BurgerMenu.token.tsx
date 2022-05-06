@@ -1,17 +1,16 @@
 import { withAppendChild } from '@bodiless/core';
 import {
-  Div, flowHoc, replaceWith, startWith, withDesign, addClasses, withoutProps, removeClassesIf,
+  Div, flowHoc, replaceWith, withDesign, addClasses, withoutProps, removeClassesIf, as,
 } from '@bodiless/fclasses';
 import {
   asBurgerMenu, withMenuDesign, BurgerMenuDefaultToggler, asSlideLeft, useIsBurgerMenuVisible,
 } from '@bodiless/navigation';
 
+import { vitalColor, vitalTextDecoration } from '@bodiless/vital-elements';
 import { $withTitleEditors } from './Menu.token';
-import Logo from '../Layout/logo';
+// import Logo from '../Layout/logo';
 import { asDefaultLogoStyle } from '../Layout/token';
-import {
-  asTealBackground, asMobileOnly, asBold,
-} from '../Elements.token';
+import { asMobileOnly } from '../Elements.token';
 
 /**
  * Tokens
@@ -34,7 +33,7 @@ const $withBurgerMenuHeaderStyles = flowHoc(
     SiteReturn: flowHoc(
       withoutProps('design'),
       withAppendChild(BurgerMenuDefaultToggler, 'MenuToggler'),
-      asTealBackground,
+      as(vitalColor.BgPrimaryCard),
       withDesign({
         MenuToggler: $withTogglerStyles,
       }),
@@ -46,7 +45,7 @@ const $withBurgerMenuHeaderStyles = flowHoc(
 const $withBoldAccordionTitleStyles = withDesign({
   OuterWrapper: withDesign({
     Title: withDesign({
-      Label: asBold,
+      Label: vitalTextDecoration.Bold,
     }),
   }),
 });
@@ -78,7 +77,7 @@ const $withBurgerMenuStyles = flowHoc(
     Menu: $withMenuStyles,
     Nav: addClasses('p-3'),
     Header: flowHoc(
-      startWith(Logo),
+      // startWith(Logo),
       $withBurgerMenuHeaderStyles,
     ),
   }),

@@ -3,16 +3,17 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Page } from '@bodiless/gatsby-theme-bodiless';
 import { withEditorPlain } from '@bodiless/vital-editors';
+import { vitalTypography } from '@bodiless/vital-elements';
 import {
   addClasses, H1, flowHoc, as
 } from '@bodiless/fclasses';
 import { vitalFlowContainer, FlowContainerClean } from '@bodiless/vital-flowcontainer';
-import { Layout, asHeader1 } from 'sbh';
+import { Layout } from 'sbh';
 
 const HeaderTitle = flowHoc(
   withEditorPlain('header', 'H1 Title'),
   addClasses('py-6 text-center'),
-  asHeader1,
+  vitalTypography.H1,
 )(H1);
 
 const FlowContainerDefault = as(
