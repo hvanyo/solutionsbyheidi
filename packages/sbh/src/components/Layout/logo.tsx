@@ -9,8 +9,10 @@ import {
   withDesign,
   addClasses,
   flowHoc,
+  as,
 } from '@bodiless/fclasses';
-import { asEditableImage } from '../Elements.token';
+import { vitalImage } from '@bodiless/vital-image';
+import { withNodeKey } from '@bodiless/core';
 
 type LogoComponents = {
   SiteReturn: ComponentType<any>,
@@ -42,7 +44,10 @@ const LogoClean: FC<Props> = ({ components }) => {
 };
 
 // Override asEditableImage nodekey to store in site nodeCollection.
-const LogoImg = asEditableImage({ nodeKey: 'image', nodeCollection: 'site' })(Img);
+const LogoImg = as(
+  vitalImage.Default,
+  withNodeKey({ nodeKey: 'image', nodeCollection: 'site' }),
+)(Img);
 
 const asLogo = flowHoc(
   designable(logoComponents, 'Logo'),
