@@ -7,6 +7,9 @@
     "gatsby"
   ],
   "license": "Apache-2.0",
+	"workspaces": [
+    "packages/sbh"
+  ],
   "scripts": {
     "bootstrap": "npm run clean:symlinks && npx lerna bootstrap --hoist --strict",
     "bootstrap:gatsby-cloud": "npm i && npx lerna bootstrap",
