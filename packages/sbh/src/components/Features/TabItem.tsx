@@ -15,7 +15,7 @@ import {
 } from '@bodiless/fclasses';
 import { withEditorRich } from '@bodiless/vital-editors';
 import { vitalImage } from '@bodiless/vital-image';
-import { asEditableLink } from '../Elements.token';
+import { vitalLink } from '@bodiless/vital-link';
 
 type TabItemComponents = {
   Wrapper: ComponentOrTag<any>,
@@ -26,7 +26,7 @@ type TabItemComponents = {
   SVGImage: ComponentOrTag<any>,
 };
 
-export type TabOtemProps = DesignableComponentsProps<TabItemComponents>;
+export type TabItemProps = DesignableComponentsProps<TabItemComponents>;
 
 const tabItemComponents: TabItemComponents = {
   Wrapper: Div,
@@ -37,7 +37,7 @@ const tabItemComponents: TabItemComponents = {
   SVGImage: Img,
 };
 
-const TabItemClean: FC<TabOtemProps> = ({ components: C, ...rest }) => (
+const TabItemClean: FC<TabItemProps> = ({ components: C, ...rest }) => (
   <C.Wrapper {...rest}>
     <C.TabLink>
       <div>
@@ -67,9 +67,9 @@ const asTabItem = flowHoc(
       as(vitalImage.Default),
       addClasses('flex justify-center items-center w-8 h-8 bg-brandRed-300 text-white rounded-full shadow flex-shrink-0 ml-3'),
     ),
-    TabLink: flowHoc(
-      asEditableLink('tablink'),
-      addClasses('flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3'),
+    TabLink: as(
+      vitalLink.Default,
+      'flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3',
     )
     // TO DO
     // className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 1 ? 'bg-white shadow-md border-gray-200 hover:shadow-lg' : 'bg-gray-200 border-transparent'}`}

@@ -1,16 +1,9 @@
-import { asFluidToken } from '@bodiless/vital-elements';
+import {
+  asFluidToken, vitalColor, vitalTextDecoration, vitalTypography
+} from '@bodiless/vital-elements';
 import { vitalRichTextBase } from '@bodiless/vital-editors';
 import { addProps } from '@bodiless/fclasses';
 import omit from 'lodash/omit';
-import {
-  asBold,
-  asHeader1,
-  asHeader2,
-  asHeader3,
-  asLink,
-  asSuperScript,
-  asTextColorPrimary
-} from '../../../components/Elements.token';
 
 const Default = asFluidToken({
   ...vitalRichTextBase.Default,
@@ -28,14 +21,14 @@ const Default = asFluidToken({
     ...omit(vitalRichTextBase.Default.Components, 'H5'),
   },
   Theme: {
-    paragraph: asTextColorPrimary,
-    Bold: asBold,
-    Underline: 'underline',
-    SuperScript: asSuperScript,
-    H1: asHeader1,
-    H2: asHeader2,
-    H3: asHeader3,
-    Link: asLink,
+    paragraph: vitalColor.TextPrimaryBodyCopy,
+    Bold: vitalTextDecoration.Bold,
+    Underline: vitalTextDecoration.Underline,
+    SuperScript: vitalTextDecoration.Superscript,
+    H1: vitalTypography.H1,
+    H2: vitalTypography.H2,
+    H3: vitalTypography.H3,
+    Link: vitalTypography.Link,
   },
 });
 

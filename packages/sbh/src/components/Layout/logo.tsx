@@ -1,58 +1,44 @@
-import React, { FC, ComponentType, HTMLProps } from 'react';
-import { Link } from 'gatsby';
+import React, { FC, HTMLProps } from 'react';
 import {
+  ComponentOrTag,
   designable,
   DesignableComponentsProps,
-  Div,
+  Span,
   Img,
-  replaceWith,
-  withDesign,
-  addClasses,
-  flowHoc,
+  A,
 } from '@bodiless/fclasses';
-import { asEditableImage } from '../Elements.token';
+import { asVitalTokenSpec } from '@bodiless/vital-elements';
 
 type LogoComponents = {
-  SiteReturn: ComponentType<any>,
-  SiteLogo: ComponentType<any>,
-  SiteLink: ComponentType<any>,
+  Wrapper: ComponentOrTag<any>,
+  Image: ComponentOrTag<any>,
+  Link: ComponentOrTag<any>,
 };
-export type Props = DesignableComponentsProps<LogoComponents> & HTMLProps<HTMLElement>;
+type LogoProps = DesignableComponentsProps<LogoComponents> & HTMLProps<HTMLElement>;
 
-// SiteLink uses Gatsby Link, so we can benefit from gatsby performance that page doesn't reload.
-const logoComponents:LogoComponents = {
-  SiteReturn: Div,
-  SiteLogo: Img,
-  SiteLink: Link,
-};
-const LogoClean: FC<Props> = ({ components }) => {
-  const {
-    SiteReturn,
-    SiteLogo,
-    SiteLink,
-  } = components;
-
-  return (
-    <SiteReturn>
-      <SiteLink to="/">
-        <SiteLogo />
-      </SiteLink>
-    </SiteReturn>
-  );
+const logoComponents: LogoComponents = {
+  Wrapper: Span,
+  Image: Img,
+  Link: A,
 };
 
-// Override asEditableImage nodekey to store in site nodeCollection.
-const LogoImg = asEditableImage({ nodeKey: 'image', nodeCollection: 'site' })(Img);
-
-const asLogo = flowHoc(
-  designable(logoComponents, 'Logo'),
-  withDesign({
-    SiteLogo: flowHoc(
-      replaceWith(LogoImg),
-      addClasses('max-w-15'),
-    ),
-  }),
+const LogoBase: FC<LogoProps> = ({ components: C }) => (
+  <C.Wrapper>
+    <C.Link>
+      <C.Image />
+    </C.Link>
+  </C.Wrapper>
 );
 
-const Logo = asLogo(LogoClean);
-export default Logo;
+/**
+ * Crete a logo token.
+ */
+const asLogoToken = asVitalTokenSpec<LogoComponents>();
+
+/**
+  * Clean component to be used for the site logo
+  */
+const LogoClean = designable(logoComponents, 'Logo')(LogoBase);
+
+export default LogoClean;
+export { asLogoToken };
