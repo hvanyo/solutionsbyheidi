@@ -7,14 +7,14 @@ import {
   DesignableComponentsProps,
   withDesign,
   Div,
-  Img,
   Header,
   addClassesIf,
   flowHoc,
 } from '@bodiless/fclasses';
 import { withNodeKey } from '@bodiless/core';
 import ResponsiveMenu, { BurgerMenuToggler } from '../Menu';
-// import Logo from './logo';
+import LogoClean from './logo';
+import sbhLogo from './logotokens';
 
 const IsTopContext = React.createContext({
   top: false,
@@ -61,7 +61,7 @@ const headerComponents:HeaderComponents = {
   Menu: ResponsiveMenu,
   MenuToggler: BurgerMenuToggler,
   SiteBranding: Div,
-  SiteLogoReturn: Img,
+  SiteLogoReturn: LogoClean,
 };
 
 const HeaderClean: FC<HeaderProps> = ({ components: C, ...rest }) => (
@@ -86,6 +86,7 @@ const asSiteHeader = flowHoc(
       // addClassesIf(isNotTop)('bg-white blur shadow-lg'),
       addClassesIf(isNotTop)('bg-white shadow-lg'),
     ),
+    SiteLogoReturn: sbhLogo.Default,
   }),
 );
 
