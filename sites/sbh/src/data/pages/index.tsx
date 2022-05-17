@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import { Page } from '@bodiless/gatsby-theme-bodiless';
 import {
   Layout, FeaturesBlocks, Features, Testimonials, HeroHome
-} from 'sbh';
+} from '@sbh/sbh';
 
 export default (props: any) => (
   <Page {...props}>
