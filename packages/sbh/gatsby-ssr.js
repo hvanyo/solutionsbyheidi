@@ -16,5 +16,6 @@ export const onRenderBody = (
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap"
       rel="stylesheet"
     />,
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js" />
   ]);
 };
