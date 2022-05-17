@@ -8,7 +8,7 @@ import {
   addClasses, H1, flowHoc, as
 } from '@bodiless/fclasses';
 import { vitalFlowContainer, FlowContainerClean } from '@bodiless/vital-flowcontainer';
-import { Layout } from '@sbh/sbh';
+import { Layout } from '../../../../packages/sbh/src/components/Layout';
 
 const HeaderTitle = flowHoc(
   withEditorPlain('header', 'H1 Title'),
