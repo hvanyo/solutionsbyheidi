@@ -1,7 +1,6 @@
 import { withAppendChild } from '@bodiless/core';
 import {
-  // eslint-disable-next-line max-len
-  Div, flowHoc, replaceWith, withDesign, addClasses, withoutProps, removeClassesIf, as, startWith, on,
+  Div, flowHoc, replaceWith, withDesign, addClasses, withoutProps, removeClassesIf, as,
 } from '@bodiless/fclasses';
 import {
   asBurgerMenu, withMenuDesign, BurgerMenuDefaultToggler, asSlideLeft, useIsBurgerMenuVisible,
@@ -9,8 +8,8 @@ import {
 
 import { vitalColor, vitalTextDecoration } from '@bodiless/vital-elements';
 import { $withTitleEditors } from './Menu.token';
-import LogoClean from '../Layout/logo';
-import sbhLogo from '../Layout/logotokens';
+// import LogoClean from '../Layout/logo';
+// import sbhLogo from '../Layout/logotokens';
 import { asDefaultLogoStyle } from '../Layout/token';
 import { asMobileOnly } from '../Elements.token';
 
@@ -74,14 +73,14 @@ const withRemoveOverflow = withDesign({
   Nav: addClasses('bg-gray-200'),
 });
 
-const Logo = on(LogoClean)(sbhLogo.Default);
+// const Logo = on(LogoClean)(sbhLogo.Default);
 
 const $withBurgerMenuStyles = flowHoc(
   withDesign({
     Menu: $withMenuStyles,
     Nav: addClasses('p-3'),
     Header: flowHoc(
-      startWith(Logo),
+      // startWith(Logo),
       $withBurgerMenuHeaderStyles,
     ),
   }),
