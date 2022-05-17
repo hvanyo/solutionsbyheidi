@@ -1,10 +1,10 @@
 import {
-  flowHoc, withDesign, addClasses, flowIf, addProps,
+  flowHoc, withDesign, addClasses, flowIf, addProps, as,
 } from '@bodiless/fclasses';
 import {
   asTopNav, useIsActiveTrail, withMenuDesign, withMenuTitleEditors,
 } from '@bodiless/navigation';
-import { asBold } from '../Elements.token';
+import { vitalTextDecoration } from '@bodiless/vital-elements';
 
 /**
  * Colors
@@ -31,13 +31,12 @@ const $withTitleStyles = withDesign({
 
 /*
 const withActiveTitleStyles = flowIf(useIsActiveTrail)(
-  asUnderline, asBold, withActiveMenuBackground,
+  asUnderline, vitalTextDecoration.Bold, withActiveMenuBackground,
 );
 */
+const ActiveTrailStyle = as(vitalTextDecoration.Bold, withActiveMenuBackground);
 
-const withActiveSubTitleStyles = flowIf(useIsActiveTrail)(
-  asBold, withActiveMenuBackground,
-);
+const withActiveSubTitleStyles = flowIf(useIsActiveTrail)(ActiveTrailStyle);
 
 /**
  * Base Menu Styles
