@@ -1,7 +1,7 @@
 import { withAppendChild } from '@bodiless/core';
 import {
   // eslint-disable-next-line max-len
-  Div, flowHoc, replaceWith, withDesign, addClasses, withoutProps, removeClassesIf, as, startWith, on,
+  Div, flowHoc, replaceWith, withDesign, addClasses, withoutProps, removeClassesIf, as, startWith,
 } from '@bodiless/fclasses';
 import {
   asBurgerMenu, withMenuDesign, BurgerMenuDefaultToggler, asSlideLeft, useIsBurgerMenuVisible,
@@ -74,7 +74,7 @@ const withRemoveOverflow = withDesign({
   Nav: addClasses('bg-gray-200'),
 });
 
-const Logo = on(LogoClean)(sbhLogo.Default);
+const Logo = as(sbhLogo.Default)(LogoClean);
 
 const $withBurgerMenuStyles = flowHoc(
   withDesign({

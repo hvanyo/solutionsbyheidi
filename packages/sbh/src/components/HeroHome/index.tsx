@@ -6,11 +6,13 @@ import {
   Div,
   H1,
   Span,
-  withDesign,
   addClasses,
   flowHoc,
+  as,
 } from '@bodiless/fclasses';
 import { withEditorPlain } from '@bodiless/vital-editors';
+import { asVitalTokenSpec } from '@bodiless/vital-elements';
+import { withNode } from '@bodiless/core';
 
 type HeroComponents = {
   Wrapper: ComponentOrTag<any>,
@@ -30,7 +32,7 @@ const heroComponents: HeroComponents = {
   TitlePost: Span,
 };
 
-const HeroClean: FC<HeroProps> = ({ components: C, ...rest }) => (
+const HeroBase: FC<HeroProps> = ({ components: C, ...rest }) => (
 
   <section className="relative" {...rest}>
 
@@ -77,9 +79,19 @@ const HeroClean: FC<HeroProps> = ({ components: C, ...rest }) => (
 }
 */
 
-const asHero = flowHoc(
+const HeroClean = as(
   designable(heroComponents, 'Hero'),
-  withDesign({
+  withNode,
+)(HeroBase);
+
+const asHeroToken = asVitalTokenSpec<HeroComponents>();
+
+const heroTokens = asHeroToken({
+  Editors: {
+    TitlePre: withEditorPlain('herotitlepre', 'Insert Pre Title'),
+    TitlePost: withEditorPlain('herotitlepost', 'Insert Post Color'),
+  },
+  Theme: {
     TitleWrapper: addClasses('text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4 z-30'),
     TitlePre: withEditorPlain('herotitlepre', 'Insert Pre Title'),
     TitlePost: withEditorPlain('herotitlepost', 'Insert Post Color'),
@@ -87,10 +99,11 @@ const asHero = flowHoc(
       withEditorPlain('herotitlehighlighted', 'Insert Highlighted Color'),
       addClasses('bg-clip-text text-transparent bg-gradient-to-r from-brandRed-400 via-brandRed-700 to-brandRed-400 bg-clip-text'),
     ),
-    Wrapper: addClasses(''),
-  }),
-);
+  },
+});
 
-const HeroHome = asHero(HeroClean);
+const HeroHome = as(heroTokens)(HeroClean);
 
 export default HeroHome;
+
+export { HeroClean, asHeroToken };
