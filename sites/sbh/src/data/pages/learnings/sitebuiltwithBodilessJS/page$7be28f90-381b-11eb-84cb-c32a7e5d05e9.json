@@ -11,14 +11,6 @@
     "type": "paragraph",
     "children": [
       {
-        "text": ""
-      }
-    ]
-  },
-  {
-    "type": "paragraph",
-    "children": [
-      {
         "text": "There are many ways to host a static site.  I chose "
       },
       {
@@ -62,14 +54,6 @@
     "children": [
       {
         "text": "Adding New Content to the Site"
-      }
-    ]
-  },
-  {
-    "type": "paragraph",
-    "children": [
-      {
-        "text": "﻿"
       }
     ]
   },

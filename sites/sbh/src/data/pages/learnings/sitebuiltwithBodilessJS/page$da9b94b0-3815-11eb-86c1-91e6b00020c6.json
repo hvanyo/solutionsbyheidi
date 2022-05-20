@@ -36,14 +36,6 @@
     "type": "paragraph",
     "children": [
       {
-        "text": ""
-      }
-    ]
-  },
-  {
-    "type": "paragraph",
-    "children": [
-      {
         "text": "BodilessJS is built off three popular tools.  "
       },
       {
@@ -103,23 +95,7 @@
     "type": "H2",
     "children": [
       {
-        "text": "﻿"
-      }
-    ]
-  },
-  {
-    "type": "H2",
-    "children": [
-      {
         "text": "BodilessJS Edit:"
-      }
-    ]
-  },
-  {
-    "type": "H2",
-    "children": [
-      {
-        "text": ""
       }
     ]
   },

@@ -11,7 +11,7 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "﻿"
+        "text": "As a Senior Technical Product and Project Leader, I excel at bridging the gap between technology and business teams to deliver cost-effective, reliable, and scalable solutions."
       }
     ]
   },
@@ -19,7 +19,33 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "Experienced Independent Contractor with a demonstrated history of working in the computer software industry. Skilled in website architecture using CMS technologies and Software Development.﻿"
+        "text": "My profile demonstrates 20+ years of progressive experience quarterbacking complex technology projects to successful delivery. This includes directly managing and overseeing multiple scrum teams of globally dispersed technologists as well as building cohesiveness to ensure the timely and high-quality deliverables."
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Read more at "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.linkedin.com/in/heidi-vanyo",
+            "aria-label": "Linked In"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Linkedin"
+          }
+        ]
+      },
+      {
+        "text": ""
       }
     ]
   },
@@ -27,15 +53,7 @@
     "type": "H2",
     "children": [
       {
-        "text": "Project"
-      }
-    ]
-  },
-  {
-    "type": "paragraph",
-    "children": [
-      {
-        "text": "﻿"
+        "text": "Project﻿"
       }
     ]
   },

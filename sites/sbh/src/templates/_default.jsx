@@ -12,8 +12,7 @@ import { Layout } from 'sbh';
 
 const HeaderTitle = flowHoc(
   withEditorPlain('header', 'H1 Title'),
-  addClasses('py-6 text-center'),
-  vitalTypography.H1,
+  addClasses('text-4xl py-6 text-center'),
 )(H1);
 
 const FlowContainerDefault = as(

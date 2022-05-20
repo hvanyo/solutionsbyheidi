@@ -11,14 +11,6 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "﻿"
-      }
-    ]
-  },
-  {
-    "type": "paragraph",
-    "children": [
-      {
         "text": "Once you are happy with your site, you can run a build and it will produce a "
       },
       {
