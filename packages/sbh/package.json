@@ -38,6 +38,7 @@
     "@bodiless/components-ui": "^v1.0.0-rc.1",
     "@bodiless/core": "^v1.0.0-rc.1",
     "@bodiless/fclasses": "^v1.0.0-rc.1",
+    "@bodiless/hydration": "^1.0.0-rc.1",
     "@bodiless/layouts": "^v1.0.0-rc.1",
     "@bodiless/layouts-ui": "^v1.0.0-rc.1",
     "@bodiless/richtext": "^v1.0.0-rc.1",
