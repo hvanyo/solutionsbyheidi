@@ -49,12 +49,12 @@ const FooterBase: FC<FooterProps> = ({ components: C, ...rest }) => (
   </C.Wrapper>
 );
 
-const FooterClean = as(
+export const FooterClean = as(
   designable(footerComponents, 'Footer'),
   withNode,
 )(FooterBase);
 
-const asFooterToken = asVitalTokenSpec<FooterComponents>();
+export const asFooterToken = asVitalTokenSpec<FooterComponents>();
 
 const footerTokens = asFooterToken({
   Editors: {

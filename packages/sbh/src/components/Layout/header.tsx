@@ -5,16 +5,17 @@ import {
   designable,
   ComponentOrTag,
   DesignableComponentsProps,
-  withDesign,
   Div,
   Header,
   addClassesIf,
   flowHoc,
+  as,
 } from '@bodiless/fclasses';
-import { withNodeKey } from '@bodiless/core';
+import { withNode, withNodeKey } from '@bodiless/core';
 import ResponsiveMenu, { BurgerMenuToggler } from '../Menu';
 import LogoClean from './logo';
 import sbhLogo from './logotokens';
+import { asVitalTokenSpec } from '@bodiless/vital-elements';
 
 const IsTopContext = React.createContext({
   top: false,
@@ -64,7 +65,7 @@ const headerComponents:HeaderComponents = {
   SiteLogoReturn: LogoClean,
 };
 
-const HeaderClean: FC<HeaderProps> = ({ components: C, ...rest }) => (
+const HeaderBase: FC<HeaderProps> = ({ components: C, ...rest }) => (
   <C.Wrapper {...rest}>
     <C.Container>
       <C.SiteLogoReturn />
@@ -76,19 +77,31 @@ const HeaderClean: FC<HeaderProps> = ({ components: C, ...rest }) => (
   </C.Wrapper>
 );
 
-const asSiteHeader = flowHoc(
-  designable(headerComponents, 'Header'),
-  withDesign({
-    Menu: withNodeKey({ nodeKey: 'MainMenu', nodeCollection: 'site' }),
+export const HeaderClean = as(
+  designable(headerComponents, 'Footer'),
+  withNode,
+)(HeaderBase);
+
+export const asHeaderToken = asVitalTokenSpec<HeaderComponents>();
+
+const headerTokens = asHeaderToken({
+  Components: {
+    SiteLogoReturn: sbhLogo.Default,
+  },
+  Theme: {
     Wrapper: flowHoc(
       withIsTop(),
       // TODO Not quite working
       // addClassesIf(isNotTop)('bg-white blur shadow-lg'),
       addClassesIf(isNotTop)('bg-white shadow-lg'),
     ),
-    SiteLogoReturn: sbhLogo.Default,
-  }),
-);
+  },
+  Schema: {
+    Menu: withNodeKey({ nodeKey: 'MainMenu', nodeCollection: 'site' }),
+    _: withNode,
+  },
+});
 
-const FullHeader = asSiteHeader(HeaderClean);
+const FullHeader = as(headerTokens)(HeaderClean);
+
 export default FullHeader;
