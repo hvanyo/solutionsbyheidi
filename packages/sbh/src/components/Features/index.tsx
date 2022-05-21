@@ -4,16 +4,18 @@ import {
   ComponentOrTag,
   DesignableComponentsProps,
   Div,
-  withDesign,
   addClasses,
   P,
   H2,
   Section,
-  replaceWith,
-  flowHoc,
+  as,
+  on,
 } from '@bodiless/fclasses';
-import { withEditorRich } from '@bodiless/vital-editors';
-import FeatureTab from './FeatureTab';
+import { withNode, withNodeKey } from '@bodiless/core';
+import { asVitalTokenSpec } from '@bodiless/vital-elements';
+import { RichTextClean, vitalRichText } from '@bodiless/vital-editors';
+import FeatureTabs from './FeatureTabToken';
+import { FeatureTabsClean } from './FeatureTab';
 
 type FeaturesComponents = {
   Wrapper: ComponentOrTag<any>,
@@ -35,7 +37,7 @@ const featuresComponents: FeaturesComponents = {
   TabbedArea: Div,
 };
 
-const FeaturesClean: FC<FeaturesProps> = ({ components: C, ...rest }) => (
+const FeaturesBase: FC<FeaturesProps> = ({ components: C, ...rest }) => (
   <C.Wrapper {...rest}>
 
     {/* Section background (needs .relative class on parent and next sibling elements) */}
@@ -62,28 +64,39 @@ const FeaturesClean: FC<FeaturesProps> = ({ components: C, ...rest }) => (
 
 /* TODO add data-aos="zoom-y-out" to Title */
 
-const asFeatures = flowHoc(
+const FeaturesClean = as(
   designable(featuresComponents, 'Features'),
-  withDesign({
+  withNode,
+)(FeaturesBase);
+
+const asFeaturesToken = asVitalTokenSpec<FeaturesComponents>();
+
+const featureTokens = asFeaturesToken({
+  Components: {
+    TabbedArea: on(FeatureTabsClean)(FeatureTabs.Default),
+  },
+  Layout: {
     Wrapper: addClasses('relative'),
-    // TODO add aria-hidden="true" to GrayBackground
+  },
+  Theme: {
     GrayBackground: addClasses('absolute inset-0 bg-gray-100 pointer-events-none mb-16'),
     GrayLine: addClasses('absolute left-0 right-0 m-auto w-px p-px h-20 bg-gray-200 transform -translate-y-1/2'),
-    Title: flowHoc(
-      withEditorRich('feature_sectiontitle', 'Insert Section Title'),
-      addClasses('h2 mb-4'),
-    ),
-    Summary: flowHoc(
-      withEditorRich('feature_sectionsummary', 'Insert Summary'),
-      addClasses('text-xl text-gray-600'),
-    ),
-    TabbedArea: flowHoc(
-      replaceWith(FeatureTab),
-      addClasses('md:grid md:grid-cols-12 md:gap-6'),
-    ),
-  }),
-);
+    Title: 'h2 mb-4',
+    Summary: 'text-xl text-gray-600',
+    TabbedArea: 'md:grid md:grid-cols-12 md:gap-6',
+  },
+  Editors: {
+    Title: on(RichTextClean)(vitalRichText.Default),
+    Summary: on(RichTextClean)(vitalRichText.Default),
+  },
+  Schema: {
+    Title: withNodeKey('feature_sectiontitle'),
+    Summary: withNodeKey('feature_sectionsummary'),
+  },
+});
 
-const Features = asFeatures(FeaturesClean);
+const Features = as(featureTokens)(FeaturesClean);
 
 export default Features;
+
+export { FeaturesClean, asFeaturesToken };

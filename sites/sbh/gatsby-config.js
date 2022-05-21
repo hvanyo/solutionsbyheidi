@@ -35,12 +35,6 @@ const plugins = [
     },
   },
   {
-    resolve: 'gatsby-plugin-manifest',
-    options: {
-      icon: 'src/images/solutionsbyheidifavicon.png',
-    },
-  },
-  {
     resolve: '@bodiless/gatsby-theme-bodiless',
     options: {
       gatsbyImage: {
@@ -72,12 +66,12 @@ const plugins = [
       }
     },
   },
-  // {
-  //   resolve: '@bodiless/gatsby-plugin-ssi',
-  //   options: {
-  //     ssiEntities: getSSIEntities('ssi/ssi_conf.json'),
-  //   }
-  // },
+  {
+    resolve: 'gatsby-plugin-manifest',
+    options: {
+      icon: 'src/images/solutionsbyheidifavicon.png',
+    },
+  },
   {
     resolve: 'gatsby-plugin-canonical-urls',
     options: {
@@ -88,7 +82,7 @@ const plugins = [
     resolve: 'gatsby-plugin-robots-txt',
     options: {
       host: 'https://www.solutionsbyheidi.com',
-      sitemap: 'https://www.solutionsbyheidi.com/sitemap.xml',
+      sitemap: 'https://www.solutionsbyheidi.com/sitemap-index.xml',
       policy: [{ userAgent: '*', allow: '/' }],
     },
   },
@@ -96,10 +90,6 @@ const plugins = [
     resolve: 'gatsby-plugin-sitemap',
     options: { excludes: disabledPages },
   },
-  // ...createDefaultContentPlugins(
-  //   ...getSampleDefaultContentConfig(),
-  //   ...getSiteDefaultContentConfig(),
-  // ),
   {
     resolve: 'gatsby-plugin-google-gtag',
     options: {
