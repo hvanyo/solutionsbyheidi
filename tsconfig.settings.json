@@ -29,9 +29,8 @@
     "useDefineForClassFields": true,
     "baseUrl": "packages",
     "paths": {
-      "sbh": [
-        "packages/sbh/src"
-      ]
+      "sbh": ["sbh/src/"],
+      "sbh/*": ["sbh/src/*"],
     }
   }
 }

@@ -6,11 +6,12 @@ import {
   Div,
   P,
   Span,
-  withDesign,
-  addClasses,
-  flowHoc,
+  as,
+  on,
 } from '@bodiless/fclasses';
-import { withEditorRich } from '@bodiless/vital-editors';
+import { RichTextClean, vitalRichText } from '@bodiless/vital-editors';
+import { withNode, withNodeKey } from '@bodiless/core';
+import { asVitalTokenSpec } from '@bodiless/vital-elements';
 import { MySocialLinks } from './sociallinks';
 
 type FooterComponents = {
@@ -35,7 +36,7 @@ const footerComponents:FooterComponents = {
   SocialLinks: MySocialLinks,
 };
 
-const FooterClean: FC<FooterProps> = ({ components: C, ...rest }) => (
+const FooterBase: FC<FooterProps> = ({ components: C, ...rest }) => (
   <C.Wrapper {...rest}>
     <C.Container>
       <C.SiteTitleCopyright>
@@ -48,16 +49,27 @@ const FooterClean: FC<FooterProps> = ({ components: C, ...rest }) => (
   </C.Wrapper>
 );
 
-const asFooterHeader = flowHoc(
+const FooterClean = as(
   designable(footerComponents, 'Footer'),
-  withDesign({
-    SiteTitleCopyrightEditable: flowHoc(
-      withEditorRich({ nodeKey: 'sitetitle', nodeCollection: 'site' }, 'Insert Site Title'),
-      addClasses('text-sm text-gray-600 text-left my-3'),
-    ),
-    SiteCopyright: addClasses('flex items-center justify-between py-4 md:py-8 border-t border-gray-200'),
-  }),
-);
+  withNode,
+)(FooterBase);
 
-const Footer = asFooterHeader(FooterClean);
+const asFooterToken = asVitalTokenSpec<FooterComponents>();
+
+const footerTokens = asFooterToken({
+  Editors: {
+    SiteTitleCopyrightEditable: on(RichTextClean)(vitalRichText.Default),
+  },
+  Theme: {
+    SiteTitleCopyrightEditable: 'text-sm text-gray-600 text-left my-3',
+    SiteCopyright: 'flex items-center justify-between py-4 md:py-8 border-t border-gray-200',
+  },
+  Schema: {
+    SiteTitleCopyrightEditable: withNodeKey({ nodeKey: 'sitetitle', nodeCollection: 'site' }),
+    _: withNode,
+  },
+});
+
+const Footer = as(footerTokens)(FooterClean);
+
 export default Footer;
