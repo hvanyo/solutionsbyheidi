@@ -6,6 +6,7 @@ const tailwindcssDir = require('tailwindcss-dir')();
 const twConfig = {
   content: [
     './lib/**/!(*.d).{ts,js,jsx,tsx}',
+    './node_modules/tw-elements/dist/js/**/*.js'
   ],
 
   theme: {
@@ -130,6 +131,7 @@ const twConfig = {
   corePlugins: {},
   plugins: [
     tailwindcssDir,
+    require('tw-elements/dist/plugin')
   ],
 };
 

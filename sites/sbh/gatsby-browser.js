@@ -7,6 +7,7 @@
 // You can delete this file if you're not using it
 
 import './src/styles/style.css';
+import 'tw-elements';
 
 const enabled = (process.env.BODILESS_TAILWIND_THEME_ENABLED || '1') === '1';
 if (enabled) {

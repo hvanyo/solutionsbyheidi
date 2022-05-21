@@ -53,7 +53,8 @@
     "react-helmet": "^6.1.0",
     "react-markdown": "^8.0.0",
     "react-mde": "^11.0.0",
-    "sbh": "^1.0.0"
+    "sbh": "^1.0.0",
+    "tw-elements": "^1.0.0-alpha12"
   },
   "files": [
     "lib"
