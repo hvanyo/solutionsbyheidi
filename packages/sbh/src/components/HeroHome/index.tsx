@@ -7,7 +7,6 @@ import {
   H1,
   Span,
   addClasses,
-  flowHoc,
   as,
 } from '@bodiless/fclasses';
 import { withEditorPlain } from '@bodiless/vital-editors';
