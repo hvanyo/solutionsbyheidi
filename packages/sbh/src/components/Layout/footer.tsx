@@ -13,6 +13,7 @@ import { RichTextClean, vitalRichText } from '@bodiless/vital-editors';
 import { withNode, withNodeKey } from '@bodiless/core';
 import { asVitalTokenSpec } from '@bodiless/vital-elements';
 import { MySocialLinks } from './sociallinks';
+import { asPageContainer } from '../Elements.token';
 
 type FooterComponents = {
   Wrapper: ComponentOrTag<any>,
@@ -63,6 +64,8 @@ const footerTokens = asFooterToken({
   Theme: {
     SiteTitleCopyrightEditable: 'text-sm text-gray-600 text-left my-3',
     SiteCopyright: 'flex items-center justify-between py-4 md:py-8 border-t border-gray-200',
+    Container: asPageContainer,
+    Wrapper: 'bg-gray-200',
   },
   Schema: {
     SiteTitleCopyrightEditable: withNodeKey({ nodeKey: 'sitetitle', nodeCollection: 'site' }),

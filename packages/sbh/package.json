@@ -51,6 +51,7 @@
     "@bodiless/vital-link": "^v1.0.0-rc.1",
     "@bodiless/vital-list": "^v1.0.0-rc.1",
     "@bodiless/vital-meta": "^v1.0.0-rc.1",
+    "@bodiless/vital-navigation": "^v1.0.0-rc.1",
     "@bodiless/vital-templates": "^v1.0.0-rc.1",
     "@bodiless/gatsby-theme-bodiless": "^v1.0.0-rc.1",
     "gatsby": "^4.11.2",

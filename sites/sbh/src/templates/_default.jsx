@@ -3,12 +3,12 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Page } from '@bodiless/gatsby-theme-bodiless';
 import { withEditorPlain } from '@bodiless/vital-editors';
-import { vitalTypography } from '@bodiless/vital-elements';
 import {
-  addClasses, H1, flowHoc, as
+  addClasses, H1, flowHoc, as, on
 } from '@bodiless/fclasses';
 import { vitalFlowContainer, FlowContainerClean } from '@bodiless/vital-flowcontainer';
-import { Layout } from 'sbh';
+import { LayoutClean } from '@bodiless/vital-layout';
+import { SBHLayout } from 'sbh';
 
 const HeaderTitle = flowHoc(
   withEditorPlain('header', 'H1 Title'),
@@ -18,6 +18,8 @@ const HeaderTitle = flowHoc(
 const FlowContainerDefault = as(
   vitalFlowContainer.Default,
 )(FlowContainerClean);
+
+const Layout = as(SBHLayout)(LayoutClean);
 
 export default props => (
   <Page {...props}>

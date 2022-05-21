@@ -10,9 +10,6 @@ import {
 import { asLogoToken } from './logo';
 
 const Default = asLogoToken({
-  Layout: {
-    Wrapper: 'w-full max-w-15',
-  },
   Components: {
     Image: vitalImage.Plain,
   },
@@ -26,6 +23,9 @@ const Default = asLogoToken({
     ),
     _: withNode,
   },
+  Theme: {
+    Image: 'h-126 lg:h-16 max-w-1 max-w-15',
+  }
 });
 
 export default {

@@ -90,15 +90,11 @@ const heroTokens = asHeroToken({
   Editors: {
     TitlePre: withEditorPlain('herotitlepre', 'Insert Pre Title'),
     TitlePost: withEditorPlain('herotitlepost', 'Insert Post Color'),
+    TitleColored: withEditorPlain('herotitlehighlighted', 'Insert Highlighted Color'),
   },
   Theme: {
     TitleWrapper: addClasses('text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4 z-30'),
-    TitlePre: withEditorPlain('herotitlepre', 'Insert Pre Title'),
-    TitlePost: withEditorPlain('herotitlepost', 'Insert Post Color'),
-    TitleColored: flowHoc(
-      withEditorPlain('herotitlehighlighted', 'Insert Highlighted Color'),
-      addClasses('bg-clip-text text-transparent bg-gradient-to-r from-brandRed-400 via-brandRed-700 to-brandRed-400 bg-clip-text'),
-    ),
+    TitleColored: addClasses('whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-brandRed-400 via-brandRed-700 to-brandRed-400 bg-clip-text'),
   },
 });
 

@@ -1,9 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { Page } from '@bodiless/gatsby-theme-bodiless';
+import { LayoutClean } from '@bodiless/vital-layout';
 import {
-  Layout, FeaturesBlocks, Features, Testimonials, HeroHome
+  SBHLayout, FeaturesBlocks, Features, Testimonials, HeroHome
 } from 'sbh';
+import { as } from '@bodiless/fclasses';
+
+const Layout = as(SBHLayout)(LayoutClean);
 
 export default (props: any) => (
   <Page {...props}>
