@@ -1,18 +1,17 @@
 const requireEsm = require('esm')(module);
-const glob = require('glob');
 const tailwindcssDir = require('tailwindcss-dir')();
-
-const content = glob.sync(
-  './lib/**/!(*.d).{ts,js,jsx,tsx}',
-  './node_modules/tw-elements/dist/js/**/*.js'
-);
 
 const { buildTailwindConfig } = requireEsm(
   '@bodiless/fclasses'
 );
 
 const twConfig = {
-  content,
+  content: [
+    './lib/**/!(*.d).{ts,js,jsx,tsx}',
+    './src/components/**/!(*.d).{ts,js,jsx,tsx}',
+    './src/data/pages/**/!(*.d).{ts,js,jsx,tsx}',
+    './node_modules/tw-elements/dist/js/**/*.js'
+  ],
 
   theme: {
     extend: {

@@ -9,10 +9,15 @@ import {
   Ul,
   Li,
   A,
+  as,
 } from '@bodiless/fclasses';
 import {
   asVitalTokenSpec,
 } from '@bodiless/vital-elements';
+import {
+  FlowContainerClean, vitalFlowContainer,
+} from '@bodiless/vital-flowcontainer';
+import { withNodeKey } from '@bodiless/core';
 
 type FeatureTabComponents = {
   Wrapper: ComponentOrTag<any>,
@@ -50,7 +55,7 @@ const featureTabComponents: FeatureTabComponents = {
   FullTabWrapper: Div,
 };
 
-const Tab1 = (props: any) => (
+const Tab2 = (props: any) => (
   <>
     <div {...props}>
       <div className="font-bold leading-snug tracking-tight mb-1">Technical Business Analyst</div>
@@ -63,7 +68,7 @@ const Tab1 = (props: any) => (
     </div>
   </>
 );
-const Tab2 = (props: any) => (
+const Tab3 = (props: any) => (
   <>
     <div {...props}>
       <div className="font-bold leading-snug tracking-tight mb-1">Website Development</div>
@@ -76,7 +81,7 @@ const Tab2 = (props: any) => (
     </div>
   </>
 );
-const Tab3 = (props: any) => (
+const Tab1 = (props: any) => (
   <>
     <div {...props}>
       <div className="font-bold leading-snug tracking-tight mb-1">Technical Product Owner</div>
@@ -89,21 +94,19 @@ const Tab3 = (props: any) => (
     </div>
   </>
 );
-const TabContent1 = (props: any) => (
-  <div>
-    Coming Soon! 1ac
-  </div>
-);
-const TabContent2 = (props: any) => (
-  <div>
-    Coming Soon! 2bc
-  </div>
-);
-const TabContent3 = (props: any) => (
-  <div>
-    Coming Soon! 3cc
-  </div>
-);
+
+const TabContent1 = as(
+  vitalFlowContainer.Default,
+  withNodeKey('tab1content'),
+)(FlowContainerClean);
+const TabContent2 = as(
+  vitalFlowContainer.Default,
+  withNodeKey('tab2content'),
+)(FlowContainerClean);
+const TabContent3 = as(
+  vitalFlowContainer.Default,
+  withNodeKey('tab3content'),
+)(FlowContainerClean);
 
 const FeatureTabsBase = (props: FeaturesTabProps) => {
   const { components: C, ...rest } = props;

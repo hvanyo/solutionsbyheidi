@@ -18,7 +18,7 @@ export default {
       _: as('text-xl', vitalColor.TextPrimaryHeaderCopy),
     },
   }),
-  Link: asElementToken(vitalTypographyBase.H3, {
+  Link: asElementToken(vitalTypographyBase.Link, {
     Theme: {
       _: as('underline', vitalColor.TextPrimaryInteractive),
     },

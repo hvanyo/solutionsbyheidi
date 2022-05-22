@@ -21,9 +21,9 @@ const Default = asFeatureTabsToken({
     TabA_2: as('nav-link', tabitem),
     TabA_3: as('nav-link', tabitem),
     TabContent: 'tab-content max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1',
-    TabC_1: 'tab-pane fade show active',
-    TabC_2: 'tab-pane fade',
-    TabC_3: 'tab-pane fade',
+    TabC_1: 'tab-pane fade show active my-10',
+    TabC_2: 'tab-pane fade my-10',
+    TabC_3: 'tab-pane fade my-10',
   },
   Behavior: {
     TabUL: addProps({id: 'tabs-tabVertical', role: 'tablist'}),

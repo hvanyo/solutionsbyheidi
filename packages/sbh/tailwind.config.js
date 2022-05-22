@@ -55,6 +55,7 @@ const twConfig = {
   corePlugins: {},
   plugins: [
     tailwindcssDir,
+    // eslint-disable-next-line global-require
     require('tw-elements/dist/plugin')
   ],
 };
