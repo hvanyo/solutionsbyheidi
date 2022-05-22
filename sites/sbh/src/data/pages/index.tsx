@@ -2,10 +2,12 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Page } from '@bodiless/gatsby-theme-bodiless';
 import { LayoutClean } from '@bodiless/vital-layout';
-import {
-  SBHLayout, FeaturesBlocks, Features, Testimonials, HeroHome
-} from 'sbh';
 import { as } from '@bodiless/fclasses';
+import { SBHLayout } from '../../components/Layout';
+import FeaturesBlocks from '../../components/FeatureBlocks';
+import Features from '../../components/Features';
+import Testimonials from '../../components/Testimonials';
+import HeroHome from '../../components/HeroHome';
 
 const Layout = as(SBHLayout)(LayoutClean);
 

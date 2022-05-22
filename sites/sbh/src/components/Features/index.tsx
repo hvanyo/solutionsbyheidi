@@ -83,7 +83,7 @@ const featureTokens = asFeaturesToken({
     GrayLine: addClasses('absolute left-0 right-0 m-auto w-px p-px h-20 bg-gray-200 transform -translate-y-1/2'),
     Title: 'h2 mb-4',
     Summary: 'text-xl text-gray-600',
-    TabbedArea: 'md:grid md:grid-cols-12 md:gap-6',
+    TabbedArea: '',
   },
   Editors: {
     Title: on(RichTextClean)(vitalRichText.Default),

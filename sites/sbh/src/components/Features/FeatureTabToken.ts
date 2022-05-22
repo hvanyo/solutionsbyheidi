@@ -14,10 +14,7 @@ const tabitem = as(
 const Default = asFeatureTabsToken({
   Layout: {
     FullTabWrapper: 'relative md:grid md:grid-cols-12 md:gap-6',
-    TabWrapper: as(
-      'max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6',
-      'flex items-start',
-    ),
+    TabWrapper: 'max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6 flex items-start',
     TabUL: 'nav nav-tabs flex flex-col flex-wrap list-none border-b-0 pl-0 mr-4',
     TabLI: 'nav-item flex-grow text-left',
     TabA_1: as('nav-link', tabitem),

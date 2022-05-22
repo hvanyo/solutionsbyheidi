@@ -41,3 +41,10 @@
 .btn-sm {
   @apply px-4 py-2 shadow;
 }
+
+/* overriding tw-elements */
+.nav-link.active,
+.nav-item.show .nav-link {
+  color:#d72027 !important;
+  border-color:#d72027 !important;
+}
