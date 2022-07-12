@@ -31,6 +31,9 @@
     "paths": {
       "minimal-demo": [
         "packages/minimal-demo/src"
+      ],
+      "sbh": [
+        "packages/sbh/src"
       ]
     }
   }

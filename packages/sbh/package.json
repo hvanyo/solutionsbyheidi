@@ -1,0 +1,52 @@
+{
+  "name": "sbh",
+  "sideEffects": false,
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "Apache-2.0",
+  "private": true,
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "/lib",
+    "/bodiless.docs.json",
+    "/getDocs.js",
+    "/tailwind.config.js",
+    "/doc",
+    "./shadow.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hvanyo/solutionsbyheidi.git"
+  },
+  "scripts": {
+    "build": "npm run build:lib && npm run build:api-doc",
+    "build:lib": "tsc -p ./tsconfig.json",
+    "build:watch": "npm run build:lib -- --watch",
+    "build:api-doc": "typedoc --out doc/api ./src",
+    "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./src",
+    "clean": "rimraf \"lib/*\" && rimraf tsconfig.tsbuildinfo"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2"
+  },
+  "dependencies": {   
+    "autoprefixer": "^10.4.2",
+    "@bodiless/cli": "^1.0.0-rc.10",
+    "@bodiless/core": "^1.0.0-rc.10",
+    "@bodiless/fclasses": "^1.0.0-rc.10",
+    "@bodiless/vital-editors": "^1.0.0-rc.10",
+    "@bodiless/vital-elements": "^1.0.0-rc.10",
+    "@bodiless/vital-layout": "^1.0.0-rc.10",
+    "@bodiless/vital-list": "^1.0.0-rc.10",
+    "@bodiless/vital-navigation": "^1.0.0-rc.10",
+    "gatsby": "^4.11.2",
+    "lodash": "^4.17.19",
+    "react-helmet": "^6.1.0",
+    "react-transition-group": "^4.4.2",
+    "tailwindcss": "^3.0.23",
+    "tailwindcss-dir": "^4.0.0",
+    "tw-elements": "^1.0.0-alpha12"
+  }
+}

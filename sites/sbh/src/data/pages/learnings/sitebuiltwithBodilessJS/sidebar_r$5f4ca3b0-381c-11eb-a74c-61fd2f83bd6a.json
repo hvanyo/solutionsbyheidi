@@ -1,0 +1,27 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "More "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "/learnings/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Learnings"
+          }
+        ]
+      },
+      {
+        "text": ""
+      }
+    ]
+  }
+]

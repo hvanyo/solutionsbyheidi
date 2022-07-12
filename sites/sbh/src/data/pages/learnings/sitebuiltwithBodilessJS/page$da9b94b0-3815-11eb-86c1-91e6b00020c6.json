@@ -1,0 +1,110 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "This site was built with "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://github.com/johnsonandjohnson/Bodiless-JS"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "BodilessJS"
+          }
+        ]
+      },
+      {
+        "text": ", BodilessJS is a toolset for building editable websites in a JAMstack technology.  ﻿"
+      }
+    ]
+  },
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Technology behind BodilessJS"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "BodilessJS is built off three popular tools.  "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.gatsbyjs.com/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Gatsby"
+          }
+        ]
+      },
+      {
+        "text": ": a JAMstack framework, "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://tailwindcss.com/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "TailwindCss"
+          }
+        ]
+      },
+      {
+        "text": ": utility-first CSS framework and "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.slatejs.org/examples/richtext"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "SlateJS"
+          }
+        ]
+      },
+      {
+        "text": ": a simple rich text editor."
+      }
+    ]
+  },
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "BodilessJS Edit:"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "BodilessJS provides an editing app that allows you to edit the content inline on your page.  Similar to a traditional CMS, but instead of the content being saved in database, it is saved with the site in the site's code repository as .json files. Components can be easily added to extend the site functionality and each components manage their own data.   "
+      }
+    ]
+  }
+]

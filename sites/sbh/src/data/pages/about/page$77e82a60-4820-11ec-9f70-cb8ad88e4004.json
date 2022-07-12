@@ -1,0 +1,85 @@
+[
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Summary "
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "As a Senior Technical Product and Project Leader, I excel at bridging the gap between technology and business teams to deliver cost-effective, reliable, and scalable solutions."
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "My profile demonstrates 20+ years of progressive experience quarterbacking complex technology projects to successful delivery. This includes directly managing and overseeing multiple scrum teams of globally dispersed technologists as well as building cohesiveness to ensure the timely and high-quality deliverables."
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Read more at "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.linkedin.com/in/heidi-vanyo",
+            "aria-label": "Linked In"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Linkedin"
+          }
+        ]
+      },
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Project﻿"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "A contributor to "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://github.com/johnsonandjohnson/Bodiless-JS"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "BodilessJS"
+          }
+        ]
+      },
+      {
+        "text": " : BodilessJS is a toolset for building editable websites in a JAMStack. "
+      }
+    ]
+  }
+]

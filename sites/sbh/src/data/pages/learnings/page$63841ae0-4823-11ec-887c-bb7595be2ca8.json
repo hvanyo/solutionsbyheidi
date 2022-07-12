@@ -1,0 +1,60 @@
+[
+  {
+    "type": "H4",
+    "children": [
+      {
+        "text": "Built with BodilessJS"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "/learnings/sitebuiltwithBodilessJS/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": ""
+          }
+        ]
+      },
+      {
+        "text": "Technology behind this site."
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "/learnings/sitebuiltwithBodilessJS/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Read More"
+          }
+        ]
+      },
+      {
+        "text": ""
+      }
+    ]
+  }
+]

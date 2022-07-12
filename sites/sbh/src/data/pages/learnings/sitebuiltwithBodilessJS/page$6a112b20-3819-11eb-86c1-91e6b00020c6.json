@@ -1,0 +1,35 @@
+[
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Bodiless Static:"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Once you are happy with your site, you can run a build and it will produce a "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.gatsbyjs.com/docs/glossary/static-site-generator/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "static generated html site "
+          }
+        ]
+      },
+      {
+        "text": "without the editing interface. This is directly deployed on hosting/internet, with the benefits of improved performance and security compared to traditional CMS systems."
+      }
+    ]
+  }
+]
