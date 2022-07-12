@@ -1,26 +1,22 @@
 import {
   asFluidToken, vitalColor, vitalTextDecoration, vitalTypography
 } from '@bodiless/vital-elements';
-/*
 import {
-  asBlock,
+  asMark,
   withButton,
 } from '@bodiless/richtext';
-import {
-  addProps, Blockquote, replaceWith, flowHoc, as
-} from '@bodiless/fclasses';
-*/
 import { vitalRichTextBase } from '@bodiless/vital-editors';
+import { flowHoc } from '@bodiless/fclasses';
 
-/*
 const withGradient = flowHoc(
-  asBlock,
-  withButton('invert_colors'),
+  asMark,
+  withButton('graphic_eq'),
 );
-const GradientBlock = as(withGradient)(Blockquote);
-*/
 
 const Default = asFluidToken(vitalRichTextBase.Default, {
+  Core: {
+    Gradient: withGradient,
+  },
   Theme: {
     paragraph: vitalColor.TextPrimaryBodyCopy,
     Bold: vitalTextDecoration.Bold,

@@ -1,20 +1,21 @@
 import { addProps, replaceWith } from '@bodiless/fclasses';
 import { vitalFooterBase, asFooterToken } from '@bodiless/vital-layout';
 import { asPageContainer } from '../../../components/Elements.token';
-import sbhCopyrightRow from '../../../components/CopyrightRow';
 
 const Default = asFooterToken({
   ...vitalFooterBase.Default,
   Components: {
+    ...vitalFooterBase.Default.Components,
     FooterMenuWrapper: replaceWith(() => null),
     FooterMenu: replaceWith(() => null),
-    CopyrightRow: sbhCopyrightRow.Default,
+    MenuRow: replaceWith(() => null),
   },
   Layout: {
     Column2Wrapper: asPageContainer,
   },
   Spacing: {
     CopyrightRow: 'py-8 md:py-16',
+    Column2Wrapper: 'px-8',
   },
   Theme: {
     CopyrightRow: 'flex items-center justify-between border-t border-gray-200',
