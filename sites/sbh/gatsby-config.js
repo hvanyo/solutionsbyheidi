@@ -82,7 +82,7 @@ const plugins = [
     resolve: 'gatsby-plugin-robots-txt',
     options: {
       host: 'https://www.solutionsbyheidi.com',
-      sitemap: 'https://www.solutionsbyheidi.com/sitemap-index.xml',
+      sitemap: process.env.ROBOTSTXT_SITEMAP,
       policy: [{ userAgent: '*', allow: '/' }],
     },
   },
