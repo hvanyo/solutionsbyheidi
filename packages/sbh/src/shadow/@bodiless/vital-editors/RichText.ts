@@ -1,5 +1,5 @@
 import {
-  asFluidToken, vitalColor, vitalTextDecoration, vitalTypography
+  asFluidToken, vitalColor, vitalTextDecoration,
 } from '@bodiless/vital-elements';
 import {
   asMark,
@@ -22,9 +22,6 @@ const Default = asFluidToken(vitalRichTextBase.Default, {
     Bold: vitalTextDecoration.Bold,
     Underline: vitalTextDecoration.Underline,
     SuperScript: vitalTextDecoration.Superscript,
-    H1: 'text-black text-4xl',
-    H2: vitalTypography.H2,
-    H3: vitalTypography.H3,
     Gradient: 'bg-clip-text text-transparent bg-gradient-to-r from-brandRed-400 via-brandRed-700 to-brandRed-400 bg-clip-text',
     Link: 'text-brandRed-400 underline hover:text-brandRed-600',
   },

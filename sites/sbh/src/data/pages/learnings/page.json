@@ -8,18 +8,11 @@
       "type": "RichText"
     },
     {
-      "uuid": "7116af10-4823-11ec-887c-bb7595be2ca8",
-      "wrapperProps": {
-        "className": "w-full lg:w-full"
-      },
-      "type": "RichText"
-    },
-    {
       "uuid": "63841ae0-4823-11ec-887c-bb7595be2ca8",
       "wrapperProps": {
         "className": "w-full lg:w-full"
       },
-      "type": "RichText"
+      "type": "HeroPrimaryButtonLeftContentCentered"
     }
   ]
 }

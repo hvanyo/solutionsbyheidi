@@ -4,7 +4,7 @@ import { addProps } from '@bodiless/fclasses';
 const Default = asLogoToken({
   ...vitalLogoBase.Default,
   Layout: {
-    Image: 'h-126 lg:h-16 max-w-1 max-w-15',
+    Image: 'h-16 max-w-1 max-w-15',
   },
   Spacing: {},
   Behavior: {

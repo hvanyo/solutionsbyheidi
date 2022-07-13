@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import { Page } from '@bodiless/gatsby-theme-bodiless';
 import { withEditorPlain } from '@bodiless/vital-editors';
 import {
-  addClasses, H1, flowHoc, as, on
+  addClasses, H1, flowHoc, as,
 } from '@bodiless/fclasses';
 import { vitalFlowContainer, FlowContainerClean } from '@bodiless/vital-flowcontainer';
 import { LayoutClean, vitalLayout } from '@bodiless/vital-layout';

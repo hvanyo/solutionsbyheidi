@@ -54,7 +54,7 @@ const HeroBase: FC<HeroProps> = ({ components: C, ...rest }) => (
 
     <div className="max-w-6xl mx-auto px-4 sm:px-6 ">
       {/* Hero content */}
-      <div className="pt-32 pb-12 md:pt-64 md:pb-20">
+      <div className="pt-32 pb-12 md:pt-64 md:pb-32">
         {/* Section header */}
         <div className="text-center pb-12 md:pb-16">
           <C.TitleWrapper>
@@ -92,7 +92,7 @@ const heroTokens = asHeroToken({
     TitleColored: withEditorPlain('herotitlehighlighted', 'Insert Highlighted Color'),
   },
   Theme: {
-    TitleWrapper: addClasses('text-4xl lg:text-5xl font-extrabold leading-tighter tracking-tighter mb-4 z-30'),
+    TitleWrapper: addClasses('text-4xl lg:text-5xl font-extrabold leading-tighter tracking-tighter mb-4 z-30 flex flex-wrap justify-center'),
     TitleColored: addClasses('bg-clip-text text-transparent bg-gradient-to-r from-brandRed-400 via-brandRed-700 to-brandRed-400 bg-clip-text'),
   },
 });
