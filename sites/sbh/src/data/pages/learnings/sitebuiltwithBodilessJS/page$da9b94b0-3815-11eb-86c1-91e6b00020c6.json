@@ -25,7 +25,7 @@
     ]
   },
   {
-    "type": "H2",
+    "type": "H4",
     "children": [
       {
         "text": "Technology behind BodilessJS"
@@ -92,7 +92,7 @@
     ]
   },
   {
-    "type": "H2",
+    "type": "H4",
     "children": [
       {
         "text": "BodilessJS Edit:"

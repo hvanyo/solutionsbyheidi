@@ -1,6 +1,6 @@
 [
   {
-    "type": "H2",
+    "type": "H4",
     "children": [
       {
         "text": "Hosting a Static Site"
@@ -50,7 +50,7 @@
     ]
   },
   {
-    "type": "H2",
+    "type": "H4",
     "children": [
       {
         "text": "Adding New Content to the Site"
