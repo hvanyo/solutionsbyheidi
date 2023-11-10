@@ -1,3 +1,10 @@
 {
-  "disabledPages": {}
+  "disabledPages": {
+    "/learnings/": {
+      "pageDisabled": true,
+      "menuLinksDisabled": true,
+      "contentLinksDisabled": true,
+      "indexingDisabled": true
+    }
+  }
 }
